@@ -1,0 +1,9 @@
+.site-header {
+    background: $bleu;
+    height: 10em;
+    position: relative; // super important sinon off-canvas marche pas, pourquoi???
+}
+
+.site-title {
+	@include span(3);
+}

@@ -1,0 +1,7 @@
+.wrapper {
+	@include break;
+	@include container(90%);
+}
+
+.site-title {
+	}
