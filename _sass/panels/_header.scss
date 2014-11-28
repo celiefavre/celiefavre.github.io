@@ -1,9 +1,82 @@
 .site-header {
     background: $bleu;
-    height: 10em;
-    position: relative; // super important sinon off-canvas marche pas, pourquoi???
+    height: em(142px);
+    position: relative;
+    // super important sinon off-canvas marche pas, pourquoi???
+
 }
 
 .site-title {
-	@include span(3);
+    @include span(4);
+    @include push(0.2);
+    margin-top: 1em;
+    &:hover {
+        transform: rotateX(360deg);
+        transition: 2s ease-in-out;
+    }
+    @include breakpoint($small) {
+        @include span(2);
+    }
+
+    img {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+.celie {
+    font-size: 1.6em;
+    color: lighten(#61A4B1, 25);
+    font-family: 'Parisienne', cursive;
+    @include span(4);
+    @include breakpoint($small) {
+        margin-top: 30px;
+        margin-bottom: 0;
+        line-height: 40px;
+        @include span(2.3);
+    }
+}
+
+.hero {
+    @include container(100%);
+    margin-top: 0;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    -moz-border-image: -moz-linear-gradient(top left, #3078A8 0%, #F4C377 100%);  
+    -webkit-border-image: -webkit-linear-gradient(top left, #3078A8 0%, #F4C377 100%);  
+    border-image: linear-gradient(to bottom right, #3078A8 0%, #F4C377 100%);  
+    border-image-slice: 1;  
+    background-image: url("/images/psychomob.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 116px;
+    @include breakpoint($img520) {
+        background: url("/images/psycho520.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 189px;
+    }
+
+    @include breakpoint($small) {
+        background: url("/images/psycho1000.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 333px;
+    }
+
+    @include breakpoint($xlarge) {
+        background: url("/images/psychofull.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 370px;
+    }
+}
+
+.essai {
+    @include full;
 }
