@@ -40,29 +40,70 @@ input:checked ~ .content {
     height: 200vh;
     background: lighten($rouge, 50);
     transition: right .3s ease;
-    h4 {color: white;}
+    h4 {
+        color: white;
+    }
     @include breakpoint($small) {
-        h4 {display: none;}
-        @include span(9 last);
+        h4 {
+            display: none;
+        }
+        @include span(7.5 last);
         height: auto;
         border-top: none;
         position: relative;
         background: $bleu;
-        margin-top: em(10px);
     }
 }
 
 .navigation {
-    ul > li {
-      @include breakpoint($small) {
+    @include breakpoint($small) {
+        background: darken($bleu, 6);
+        border-radius: 5px;
+        width: em(510px);
+    }
+    @include breakpoint($menu) {
+        width: em(600px);
+    }
+}
+
+.navul {
+    @include breakpoint($small) {
+        margin: 0;
+    }
+}
+
+.navli {
+    width: 65px;
+    padding-right: 3px;
+    @include breakpoint($small) {
         display: inline-block;
         a {
             color: $ecru;
             text-decoration: none;
+            display: block;
+            padding: 23px 0 15px 0;
+            text-align: center;
+            line-height: 1.6em;
+            &:hover {
+                background: lighten($rouge,15);
+                color: lighten(#61A4B1, 35);
+            }
         }
-    }  
+    }
+
+    @include breakpoint($menu) {
+        width: 80px;
+        padding-right: 0;
+    }
 }
-    
+.active {
+    background: $bleu;
+    box-shadow: 3px 7px 0px darken($bleu, 6);
+}
+.off-canvas {
+    @include breakpoint($small) {
+        right: 0;
+    }
 }
 
 .content {
