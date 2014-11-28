@@ -6,23 +6,28 @@
 
     <header class="site-header">
 
+      <label for="checkbox" class="open">&#9776; Menu</label>
+      <label for="checkbox" class="close"></label>
+
       <a href="index.html" class="site-title">
         <img src="images/logo.png" alt="celie favre">
       </a>
 
-      <label for="checkbox" class="open">&#9776; Menu</label>
-      <label for="checkbox" class="close"></label>
+      <h4 class="celie">Célie Favre Psychologue</h4>
 
       <section class="off-canvas">
         <h4>Navigation</h4>
         <nav class="navigation" role="navigation">
-          <ul>
-            <li><a href="#">Lien</a></li>
-            <li><a href="#">Lien</a></li>
-            <li><a href="#">Lien</a></li>
-            <li><a href="#">Lien</a></li>
+          <ul class="navul">
+            <li {% if page.url == '/index.html' %} class="navli active"{% else %} class="navli" {% endif %}><a href="index.html">Enfants</a></li>
+            <li class="navli"><a href="#">Adultes</a></li>
+            <li class="navli"><a href="#">EMDR</a></li>
+            <li class="navli"><a href="#">Bilans</a></li>
+            <li class="navli"><a href="#">Cabinet</a></li>
+            <li class="navli"><a href="#">A propos</a></li>
           </ul>
         </nav>
       </section>
+      
 
     </header>
