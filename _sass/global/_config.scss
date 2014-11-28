@@ -1,8 +1,3 @@
-// breakpoints
-$small  : 47.938em; //767px
-$medium : 52.500em; //840px
-$large  : 62.500em; //1200px
-$xlarge : 105.000em;
 // fonts
 $base-font-size: 16px;
 // margin
@@ -38,9 +33,9 @@ $rouge: #BE311A;
 
 $susy: (
         columns: 12,
-        gutters: 1/4,
+        gutters: 1/2,
         math: fluid,
-        gutter-position: outside,
+        gutter-position: inside,
         debug: (
                 image: hide,
                 color: rgba(#bada56, .40),
@@ -53,3 +48,10 @@ $susy: (
 @function em($target, $context: 16px) {
   @return ($target / $context) * 1em;
 }
+// breakpoints
+$small  : 47.938em; //767px
+$medium : 52.500em; //840px
+$large  : 62.500em; //1200px
+$xlarge : 105.000em;
+$img520 : em(520px);
+$menu  : em(980px);
