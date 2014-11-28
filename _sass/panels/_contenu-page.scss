@@ -1,0 +1,60 @@
+.rang-un {
+    @include break;
+    @include container(95%);
+    margin-top: 2em;
+    @include breakpoint($large) {
+    	@include container(80%);
+    }
+}
+
+.carre {
+	a {
+		text-decoration: none;
+		color: $rouge;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+    h1, h2 {
+    	font-size: 1.3em;
+    	text-align: center;
+    	font-weight: 500;
+    }
+    p {
+    	color: #4A4A4A;
+    }
+}
+
+.carre p:last-of-type {
+	padding-top: em(10px);
+	&:before {
+		content: '\003E';
+		color: $rouge;
+		font-size: 1.2em;
+	}
+}
+
+.emdr {
+    @include breakpoint($small) {
+        @include span(4);
+    }
+}
+.evaluation {
+    @include breakpoint($small) {
+        @include span(4);
+    }
+}
+
+.suivi {
+    @include breakpoint($small) {
+        @include span(4 last);
+    }
+}
+
+.lien-dans-carre {
+	&:hover {
+		background: darken($ecru, 10);
+		padding: 2px;
+		border-radius: 10px;
+		color: lighten($rouge, 10);
+		transition: .3s ease-in-out;
+	}
+}
