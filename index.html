@@ -6,17 +6,52 @@ layout: default
 <section class="rang-un">
 	<div class="carre emdr">
 		<a href=""><h1>EMDR</h1></a>
-		<p>Je  vous propose un suivi thérapeutique par l'EMDR. L'EMDR s'adresse aux adultes et aux enfants et permet...</p>
-		<p>	En savoir plus sur<a href="#" class="lien-dans-carre"> l'EMDR</a></p>
+		<p>L’EMDR est une thérapie reconnue par l’OMS et la HAS en France. Elle permet de « digérer » les expériences douloureuses et s’adresse à tout individu dès le plus jeune âge.</p>
+		<p>	En savoir plus sur :<a href="#" class="lien-dans-carre"> l'EMDR</a></p>
 	</div>
 	<div class="carre evaluation">
 		<a href=""><h2>Evaluation</h2></a>
-		<p>Bilans et tests cognitifs permettent d'évaluer les compétences et les difficultés des enfants et des adultes.</p>
-		<p>	En savoir plus sur<a href="#" class="lien-dans-carre"> l'évaluation psychologique</a></p>
+		<p>Tests projectifs et psychométriques permettent d’appréhender le fonctionnement cognitif et psychoaffectif des enfants et adolescents en difficulté ou suspectés de haut potentiel.</p>
+		<p>	En savoir plus sur :<a href="#" class="lien-dans-carre"> l'évaluation psychologique</a></p>
 	</div>
 	<div class="carre suivi">
 		<a href="#"><h2>Suivi psychologique</h2></a>
-		<p>Il est possible de mettre en place un suivi psychologique pour l'adulte ou l'enfant, sous forme d'un soutien ou d'une psychothérapie.</p>
-		<p>	En savoir plus sur<a href="#" class="lien-dans-carre"> le suivi psychologique</a></p>
+		<p>Ponctuel ou régulier, il est possible de mettre en place un suivi psychologique pour l’adulte ou l’enfant, sous forme d’un soutien ou d’une psychothérapie.</p>
+		<p>	En savoir plus sur :<a href="#" class="lien-dans-carre"> le suivi psychologique</a></p>
+	</div>
+</section>
+<div class="plus">
+	
+</div>
+<section class="rang-un">
+	<div class="carre emdr">
+		<a href=""><h2>Derniers articles</h2></a>
+		<ul class="post-list">
+    {% for post in site.posts %}
+        <li>
+        <span class="post-meta">{{ post.date | date: "%-d %b, %Y" }}</span>
+        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        </li>
+    {% endfor %}
+</ul>
+	</div>
+	<div class="carre evaluation">
+		<a href=""><h2>Cabinet</h2></a>
+		<div id="schema" itemscope itemtype="http://schema.org/Person">
+			<span itemprop="name">Célie Favre</span><br/>
+			<span itemprop="jobTitle">Psychologue</span>
+			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<span itemprop="streetAddress"> 4, rue de l'imprimerie </span><br>
+				<span itemprop="postalCode">64200</span>
+				<span itemprop="addressLocality">Biarritz</span>
+			</div>
+			<span itemprop="telephone" class="tel">06 52 46 76 36</span>
+		</div>
+	</div>
+	<div class="carre suivi">
+		<a href="#"><h2>Plan d'accès</h2></a>
+		<img class="map" src="https://maps.googleapis.com/maps/api/staticmap?center=43.482147,-1.554812\
+		&zoom=15&size=350x300&maptype=roadmap&language=fr&
+		markers=color:0xBE311A%7C43.482147,-1.554812&style=feature:poi%7Cvisibility:off&style=feature:transit%7Cvisibility:on" alt="cabinet psychologie biarritz">
 	</div>
 </section>
