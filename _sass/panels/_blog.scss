@@ -1,0 +1,12 @@
+.post-list {
+	list-style-type: none;
+}
+
+.post-meta {
+	&:before {
+		content: '\21DD ';
+		color: $rouge;
+		font-size: 1.7em;
+		padding-right: 5px;
+	}
+}
