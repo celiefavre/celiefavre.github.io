@@ -3,58 +3,116 @@
     @include container(95%);
     margin-top: 2em;
     @include breakpoint($large) {
-    	@include container(80%);
+        @include container(90%);
     }
 }
 
 .carre {
-	a {
-		text-decoration: none;
-		color: $rouge;
-		font-family: Arial, Helvetica, sans-serif;
-	}
+    a {
+        text-decoration: none;
+        color: $rouge;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h2 {
+        margin: 0.67em 0;
+    }
     h1, h2 {
-    	font-size: 1.3em;
-    	text-align: center;
-    	font-weight: 500;
+        margin-bottom: 40px;
+        font-size: 1.5em;
+        text-align: center;
+        font-weight: 500;
     }
     p {
-    	color: #4A4A4A;
+        color: #4A4A4A;
+    }
+    @include breakpoint($small) {
+        min-height: em(330px);
+        position: relative;
+        display: table;
+    }
+
+    @include breakpoint($medium) {
+        min-height: 320px;
+    }
+    @include breakpoint($l-900) {
+        min-height: 270px;
+    }
+    @include breakpoint($large) {
+        min-height: 290px;
+    }
+    @include breakpoint($l-1300) {
+        min-height: 250px;
     }
 }
 
 .carre p:last-of-type {
-	padding-top: em(10px);
-	&:before {
-		content: '\003E';
-		color: $rouge;
-		font-size: 1.2em;
-	}
+    &:before {
+        content: '\003E';
+        color: $rouge;
+        font-size: 1.2em;
+    }
+    @include breakpoint($small) {
+        display: table-footer-group;
+        border: 1px dashed black;
+    }
 }
 
 .emdr {
     @include breakpoint($small) {
         @include span(4);
+        @include pad(1%);
     }
 }
+
 .evaluation {
     @include breakpoint($small) {
         @include span(4);
+        @include pad(1%);
     }
 }
 
 .suivi {
     @include breakpoint($small) {
         @include span(4 last);
+        @include pad(1%);
     }
 }
 
 .lien-dans-carre {
-	&:hover {
-		background: darken($ecru, 10);
-		padding: 2px;
-		border-radius: 10px;
-		color: lighten($rouge, 10);
-		transition: .3s ease-in-out;
-	}
+    &:hover {
+        background: darken($ecru, 10);
+        padding: 0 2px 0 2px;
+        border-radius: 10px;
+        color: lighten($rouge, 10);
+        transition: .3s ease-in-out;
+    }
+    @include breakpoint($small) {
+        display: block;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
+#schema {
+    font-family: Georgia, serif;
+    color: #4A4A4A;
+    span {
+        line-height: $lh-p;
+    }
+}
+
+.map {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 3em;
+}
+
+.tel {
+    display: block;
+    padding-top: 20px;
+    color: $rouge;
+    &:before {
+        content: 'Contact et rv : ';
+        color: #4A4A4A;
+    }
 }
