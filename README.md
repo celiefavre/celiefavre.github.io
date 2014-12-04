@@ -3,4 +3,4 @@ celie
 
 # TO DO
 
-[ ] footer
+- [ ] footer
