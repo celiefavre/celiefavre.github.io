@@ -5,14 +5,14 @@ layout: default
 <div class="hero" role="img" aria-label="photo plage biarritz"></div>
 <section class="rang-un">
 	<div class="carre emdr">
-		<a href=""><h1>EMDR</h1></a>
-		<p>L’EMDR est une thérapie reconnue par l’OMS et la HAS en France. Elle permet de « digérer » les expériences douloureuses et s’adresse à tout individu dès le plus jeune âge.</p>
-		<p>	En savoir plus sur :<a href="#" class="lien-dans-carre"> l'EMDR</a></p>
+		<a href="/emdr"><h1>EMDR</h1></a>
+		<p>L’EMDR est une thérapie reconnue par l’OMS et la HAS en France. Elle permet de « digérer » les expériences douloureuses et s’adresse aussi bien aux <a href="/emdr-adultes">adultes</a> qu'aux <a href="/emdr-enfants">enfants</a>.</p>
+		<p>	En savoir plus sur :<a href="/emdr" class="lien-dans-carre"> l'EMDR</a></p>
 	</div>
 	<div class="carre evaluation">
-		<a href=""><h2>Evaluation</h2></a>
+		<a href="/bilan-psychologique"><h2>Evaluation</h2></a>
 		<p>Tests projectifs et psychométriques permettent d’appréhender le fonctionnement cognitif et psychoaffectif des enfants et adolescents en difficulté ou suspectés de haut potentiel.</p>
-		<p>	En savoir plus sur :<a href="#" class="lien-dans-carre"> l'évaluation psychologique</a></p>
+		<p>	En savoir plus sur :<a href="/bilan-psychologique" class="lien-dans-carre"> l'évaluation psychologique</a></p>
 	</div>
 	<div class="carre suivi">
 		<a href="#"><h2>Suivi psychologique</h2></a>
@@ -27,13 +27,13 @@ layout: default
 	<div class="carre emdr">
 		<a href=""><h2>Derniers articles</h2></a>
 		<ul class="post-list">
-    {% for post in site.posts %}
-        <li>
-        <span class="post-meta">{{ post.date | date: "%-d %b, %Y" }}</span>
-        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-        </li>
-    {% endfor %}
-</ul>
+			{% for post in site.posts %}
+				<li>
+					<span class="post-meta">{{ post.date | date: "%-d %b, %Y" }}</span>
+					<h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+				</li>
+			{% endfor %}
+		</ul>
 	</div>
 	<div class="carre evaluation">
 		<a href=""><h2>Cabinet</h2></a>
@@ -47,6 +47,7 @@ layout: default
 			</div>
 			<span itemprop="telephone" class="tel">06 52 46 76 36</span>
 		</div>
+		<div class="adeli"><p>N° ADELI : 64 93 0651 1</p></div>
 	</div>
 	<div class="carre suivi">
 		<a href="#"><h2>Plan d'accès</h2></a>
