@@ -1,3 +1,32 @@
+.main-content {
+    @include full;
+    @include pad(5%);
+    section {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        @include breakpoint($small) {
+            height: em(820px);
+        }
+    }
+}
+.content-left {
+    @include breakpoint($small) {
+        @include span(6);
+    }
+}
+
+.content-right {
+    @include breakpoint($small) {
+        @include span(6 last);
+    }
+}
+.info {
+    padding: 5px 0 5px 30px;
+    color: darken($bleu, 20);
+    border-radius: 15px;
+    border-left: 5px solid $rouge;
+    margin-left: 3%;
+}
 .rang-un {
     @include break;
     @include container(95%);
@@ -10,8 +39,12 @@
 .carre {
     a {
         text-decoration: none;
-        color: $rouge;
         font-family: Arial, Helvetica, sans-serif;
+        color: $rouge;
+        display: inline;
+    }
+    h1 {
+        padding-left: 0;
     }
     h2 {
         margin: 0.67em 0;
@@ -19,6 +52,9 @@
     h1, h2 {
         margin-bottom: 40px;
         font-size: 1.5em;
+        color: $rouge;
+        padding-bottom: 8px;
+        border-bottom: 1px dotted #4A4A4A;
         text-align: center;
         font-weight: 500;
     }

@@ -432,8 +432,40 @@ th {
 }
 
 /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_base.scss */
+h1, h2, h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_base.scss */
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+  color: #BE311A;
+}
+@media (min-width: 47.9375em) {
+  /* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_base.scss */
+  h1 {
+    font-size: 2.5em;
+    padding-left: 1.38889%;
+  }
+}
+
+/* line 13, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_base.scss */
+h2 {
+  font-size: 1.625em;
+  font-weight: 200;
+  color: #c2321b;
+}
+@media (min-width: 47.9375em) {
+  /* line 13, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_base.scss */
+  h2 {
+    font-size: 2.25em;
+  }
+}
+
+/* line 22, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_base.scss */
 p {
-  font-family: Georgia, serif;
+  font-family: 'Lora', serif;
   line-height: 1.375em;
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
@@ -441,13 +473,24 @@ p {
           hyphens: auto;
 }
 @media (min-width: 47.9375em) {
-  /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_base.scss */
+  /* line 22, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_base.scss */
   p {
     -webkit-hyphens: none;
        -moz-hyphens: none;
         -ms-hyphens: none;
             hyphens: none;
   }
+}
+
+/* line 31, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_base.scss */
+a {
+  color: #BE311A;
+  text-decoration: none;
+  display: inline-block;
+}
+/* line 35, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_base.scss */
+a:hover {
+  color: #e24329;
 }
 
 /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/global/_layout.scss */
@@ -770,6 +813,60 @@ input:checked ~ .close {
 }
 
 /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+.main-content {
+  clear: both;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+  padding-left: 6.38889%;
+  padding-right: 6.38889%;
+}
+/* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+.main-content section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+@media (min-width: 47.9375em) {
+  /* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  .main-content section {
+    height: 51.25em;
+  }
+}
+
+@media (min-width: 47.9375em) {
+  /* line 12, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  .content-left {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+
+@media (min-width: 47.9375em) {
+  /* line 18, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  .content-right {
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+
+/* line 23, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+.info {
+  padding: 5px 0 5px 30px;
+  color: #27444a;
+  border-radius: 15px;
+  border-left: 5px solid #BE311A;
+  margin-left: 3%;
+}
+
+/* line 30, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 .rang-un {
   clear: both;
   max-width: 95%;
@@ -784,7 +881,7 @@ input:checked ~ .close {
   clear: both;
 }
 @media (min-width: 75em) {
-  /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 30, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .rang-un {
     max-width: 90%;
     margin-left: auto;
@@ -798,29 +895,37 @@ input:checked ~ .close {
   }
 }
 
-/* line 11, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 40, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 .carre a {
   text-decoration: none;
-  color: #BE311A;
   font-family: Arial, Helvetica, sans-serif;
+  color: #BE311A;
+  display: inline;
 }
-/* line 16, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 46, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+.carre h1 {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 .carre h2 {
   margin: 0.67em 0;
 }
-/* line 19, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 52, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 .carre h1, .carre h2 {
   margin-bottom: 40px;
   font-size: 1.5em;
+  color: #BE311A;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted #4A4A4A;
   text-align: center;
   font-weight: 500;
 }
-/* line 25, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 61, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 .carre p {
   color: #4A4A4A;
 }
 @media (min-width: 47.9375em) {
-  /* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 39, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .carre {
     min-height: 20.625em;
     position: relative;
@@ -828,38 +933,38 @@ input:checked ~ .close {
   }
 }
 @media (min-width: 52.5em) {
-  /* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 39, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .carre {
     min-height: 320px;
   }
 }
 @media (min-width: 56.25em) {
-  /* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 39, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .carre {
     min-height: 270px;
   }
 }
 @media (min-width: 75em) {
-  /* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 39, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .carre {
     min-height: 290px;
   }
 }
 @media (min-width: 81.25em) {
-  /* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 39, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .carre {
     min-height: 250px;
   }
 }
 
-/* line 49, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 85, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 .carre p:last-of-type:before {
   content: '\003E';
   color: #BE311A;
   font-size: 1.2em;
 }
 @media (min-width: 47.9375em) {
-  /* line 48, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 84, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .carre p:last-of-type {
     display: table-footer-group;
     border: 1px dashed black;
@@ -867,7 +972,7 @@ input:checked ~ .close {
 }
 
 @media (min-width: 47.9375em) {
-  /* line 60, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 96, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .emdr {
     box-sizing: border-box;
     width: 33.33333%;
@@ -880,7 +985,7 @@ input:checked ~ .close {
 }
 
 @media (min-width: 47.9375em) {
-  /* line 67, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 103, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .evaluation {
     box-sizing: border-box;
     width: 33.33333%;
@@ -893,7 +998,7 @@ input:checked ~ .close {
 }
 
 @media (min-width: 47.9375em) {
-  /* line 74, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 110, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .suivi {
     box-sizing: border-box;
     width: 33.33333%;
@@ -905,7 +1010,7 @@ input:checked ~ .close {
   }
 }
 
-/* line 82, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 118, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 .lien-dans-carre:hover {
   background: #d9d3bf;
   padding: 0 2px 0 2px;
@@ -915,7 +1020,7 @@ input:checked ~ .close {
           transition: .3s ease-in-out;
 }
 @media (min-width: 47.9375em) {
-  /* line 81, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+  /* line 117, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
   .lien-dans-carre {
     display: block;
     text-align: center;
@@ -923,41 +1028,62 @@ input:checked ~ .close {
   }
 }
 
-/* line 96, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 132, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 #schema {
   font-family: Georgia, serif;
   color: #4A4A4A;
 }
-/* line 99, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 135, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 #schema span {
   line-height: 1.375em;
 }
 
-/* line 104, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 140, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 .map {
   max-width: 100%;
   height: auto;
   margin-bottom: 3em;
 }
 
-/* line 110, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 146, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 .tel {
   display: block;
   padding-top: 20px;
   color: #BE311A;
 }
-/* line 114, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+/* line 150, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
 .tel:before {
   content: 'Contact et rv : ';
   color: #4A4A4A;
 }
 
 /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_blog.scss */
+.post-wrapper {
+  clear: both;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+}
+@media (min-width: 47.9375em) {
+  /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_blog.scss */
+  .post-wrapper {
+    box-sizing: border-box;
+    width: 83.33333%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+    margin-left: 8.33333%;
+  }
+}
+
+/* line 9, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_blog.scss */
 .post-list {
   list-style-type: none;
 }
 
-/* line 6, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_blog.scss */
+/* line 14, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_blog.scss */
 .post-meta:before {
   content: '\21DD ';
   color: #BE311A;

@@ -1,12 +1,20 @@
+.post-wrapper {
+    @include full;
+    @include breakpoint($small) {
+        @include span(10);
+        @include push(1);
+    }
+}
+
 .post-list {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 .post-meta {
-	&:before {
-		content: '\21DD ';
-		color: $rouge;
-		font-size: 1.7em;
-		padding-right: 5px;
-	}
+    &:before {
+        content: '\21DD ';
+        color: $rouge;
+        font-size: 1.7em;
+        padding-right: 5px;
+    }
 }

@@ -1,33 +1,32 @@
 <div class="canvas">
-
+  
   <input type="checkbox" id="checkbox" />
-
+  
   <div class="content">
-
+    
     <header class="site-header">
-
+      
       <label for="checkbox" class="open">&#9776; Menu</label>
       <label for="checkbox" class="close"></label>
-
-      <a href="index.html" class="site-title">
-        <img src="images/logo.png" alt="celie favre">
+      
+      <a href="{{ site.url }}" class="site-title">
+        <img src="/images/logo.png" alt="celie favre">
       </a>
-
+      
       <h4 class="celie">Célie Favre Psychologue</h4>
-
+      
       <section class="off-canvas">
         <h4>Navigation</h4>
         <nav class="navigation" role="navigation">
           <ul class="navul">
-            <li {% if page.url == '/index.html' %} class="navli active"{% else %} class="navli" {% endif %}><a href="index.html">Enfants</a></li>
-            <li class="navli"><a href="#">Adultes</a></li>
-            <li class="navli"><a href="#">EMDR</a></li>
-            <li class="navli"><a href="#">Bilans</a></li>
-            <li class="navli"><a href="#">Cabinet</a></li>
-            <li class="navli"><a href="#">A propos</a></li>
+            <li {% if page.url == '/emdr-enfants/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr-enfants">Enfants</a></li>
+            <li {% if page.url == '/emdr-adultes/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr-adultes">Adultes</a></li>
+            <li {% if page.url == '/emdr/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr">EMDR</a></li>
+            <li {% if page.url == '/bilan-psychologique/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/bilan-psychologique">Bilans</a></li>
+            <li {% if page.url == '/cabinet-psychologue-biarritz/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/cabinet-psychologue-biarritz">Cabinet</a></li>
+            <li {% if page.url == '/psychologue-favre/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/psychologue-favre">A propos</a></li>
           </ul>
         </nav>
+        
       </section>
-      
-
     </header>

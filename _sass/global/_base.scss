@@ -1,8 +1,38 @@
+h1, h2, h3, h4 {
+	font-family: 'Open Sans', sans-serif;
+}
+h1 {
+	font-size: $fs-h1--phone;
+	font-weight: 400;
+	color: $rouge;
+	@include breakpoint($small) {
+		font-size: $fs-h1--desktop;
+		padding-left: 1.38889%;
+	}
+}
+h2 {
+	font-size: $fs-h2--phone;
+	font-weight: 200;
+	color: lighten($rouge, 1);
+	@include breakpoint($small) {
+		font-size: $fs-h2--desktop;
+	}
+}
+
 p {
-	font-family: Georgia, serif;
+	font-family: 'Lora', serif;
 	line-height: $lh-p;
 	hyphens: auto;
 	@include breakpoint($small) {
 		hyphens: none;
+	}
+}
+
+a {
+	color: $rouge;
+	text-decoration: none;
+	display: inline-block;
+	&:hover {
+		color: lighten($rouge, 10);
 	}
 }
