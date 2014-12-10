@@ -1,5 +1,37 @@
 .site-footer {
-	@include full;
-	background: $bleu;
-	padding-top: 2em;
+    @include full;
+    background: $bleu;
+    padding-top: 2em;
+}
+
+.sitemap {
+    @include breakpoint($small) {
+        @include span(4);
+        @include prefix(10%);
+    }
+}
+.informations {
+	@include breakpoint($small) {
+        @include span(4);
+       @include prefix(10%);
+    }
+}
+.cabinet-footer {
+	@include breakpoint($small) {
+        @include span(4 last);
+        @include prefix(5%);
+    }
+}
+.sitemap, .informations, .cabinet-footer {
+	h3 {
+		color: lighten(#61A4B1, 25);
+	}
+    ul {
+        padding-left: 0;
+        list-style-type: none;
+        line-height: 25px;
+    }
+    a, li {
+        color: transparentize($ecru, .5);
+    }
 }
