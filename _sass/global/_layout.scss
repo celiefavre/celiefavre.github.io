@@ -1,8 +1,8 @@
 .wrapper {
 	@include break;
 	@include container(100%);
-	background: $ecru;
 	height: auto;
+	position: relative;
 }
 
 .site-title {

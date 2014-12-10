@@ -9,6 +9,7 @@
         }
     }
 }
+
 .content-left {
     @include breakpoint($small) {
         @include span(6);
@@ -20,6 +21,7 @@
         @include span(6 last);
     }
 }
+
 .info {
     padding: 5px 0 5px 30px;
     color: darken($bleu, 20);
@@ -27,6 +29,7 @@
     border-left: 5px solid $rouge;
     margin-left: 3%;
 }
+
 .rang-un {
     @include break;
     @include container(95%);
@@ -70,12 +73,15 @@
     @include breakpoint($medium) {
         min-height: 320px;
     }
+
     @include breakpoint($l-900) {
         min-height: 270px;
     }
+
     @include breakpoint($large) {
         min-height: 290px;
     }
+
     @include breakpoint($l-1300) {
         min-height: 250px;
     }
@@ -145,10 +151,33 @@
 
 .tel {
     display: block;
-    padding-top: 20px;
+    position: relative;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin-top: 12px;
+    text-align: center;
+    width: span(6);
     color: $rouge;
+    border: 1px solid #DDD9D9;
+    border-radius: 0 0 120px 120px / 0 0 6px 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 15px;
+        left: 10px;
+        width: 60%;
+        height: 20%;
+        box-shadow: 0 13px 12px rgba(31, 31, 31, 0.7);
+    }
+    &:after {
+        right: 10px;
+        left: auto;
+        transform: skew(8deg) rotate(8deg);
+    }
     &:before {
-        content: 'Contact et rv : ';
-        color: #4A4A4A;
+        left: 10px;
+        transform: skew(-8deg) rotate(-8deg);
     }
 }
