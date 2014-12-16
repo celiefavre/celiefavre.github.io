@@ -33,10 +33,15 @@ p {
 }
 
 a {
+	font-family: 'Lora', serif;
 	color: $rouge;
-	text-decoration: none;
 	display: inline-block;
+	text-decoration: none;
 	&:hover {
 		color: lighten($rouge, 10);
 	}
+}
+
+strong {
+	color: darken($bleu, 10);
 }
