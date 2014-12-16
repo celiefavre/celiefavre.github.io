@@ -1,12 +1,12 @@
 # Site settings
-title: nicodev3
-email: contact.nicodev@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Nicolas Devaux est développeur Web front-end. Création, optimisation, refonte de sites internet, responsive design, optimisation SEO
+# title: psychologue biarritz
+# email: contact.nicodev@gmail.com
+# description: > # this means to ignore newlines until "baseurl:"
+#   Célie Favre, psychologue à Biarritz, Bayonne et Anglet. EMDR adultes et enfants, bilans et suivis psychologiques. 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "/" # the base hostname & protocol for your site
-twitter_username: nicodevaux
-github_username:  nicodev3
+# twitter_username: nicodevaux
+# github_username:  nicodev3
 
 # Build settings
 markdown: kramdown
@@ -34,7 +34,7 @@ comments: true
 #     - strikethrough
 #     - fenced_code_blocks
 # Exclude directories and/or files from the conversion.
-exclude: [node_modules, gulpfile.js, package.json, Gemfile, Gemfile.lock]
+exclude: [node_modules, gulpfile.js, package.json, gemfile, Gemfile.lock]
 
 #defaults:
 #  -
