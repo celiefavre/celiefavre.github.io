@@ -12,22 +12,55 @@
 
 .content-left {
     @include breakpoint($small) {
-        @include span(6);
+        @include span(7);
+        padding-right: span(1);
     }
 }
 
 .content-right {
+    position: relative;
+    background-color: darken($ecru, 2);
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    padding-bottom: span(1);
     @include breakpoint($small) {
-        @include span(6 last);
+        @include span(5 last);
+        @include pad(2%);
+        margin-top: span(1);
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            border: 1px solid #ccc;
+            width: 100%;
+            height: 100%;
+        }
+        &:before {
+            transform: rotateZ(1deg);
+            background-color: darken($ecru, 5);
+            z-index: -1;
+            left: 10px;
+            top: 7px;
+        }
+        &:after {
+            transform: rotateZ(3deg);
+            background-color: darken($ecru, 10);
+            z-index: -2;
+            left: 11px;
+            top: 7px;
+        }
     }
 }
 
 .info {
-    padding: 5px 0 5px 30px;
-    color: darken($bleu, 20);
+    margin-left: 1%;
     border-radius: 15px;
     border-left: 5px solid $rouge;
-    margin-left: 3%;
+    color: darken($bleu, 20);
+    padding: 5px 0 5px 15px;
+    @include breakpoint($small) {
+        padding: 5px 0 5px 30px;
+        margin-left: 3%;
+    }
 }
 
 .rang-un {
@@ -40,11 +73,14 @@
 }
 
 .carre {
+    margin-bottom: span(1);
     a {
         text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
         color: $rouge;
         display: inline;
+        &:hover {
+            color: #e24329;
+        }
     }
     h1 {
         padding-left: 0;
@@ -53,18 +89,22 @@
         margin: 0.67em 0;
     }
     h1, h2 {
-        margin-bottom: 40px;
         font-size: 1.5em;
         color: $rouge;
         padding-bottom: 8px;
         border-bottom: 1px dotted #4A4A4A;
+        width: 100%;
         text-align: center;
         font-weight: 500;
+        @include breakpoint($small) {
+            margin-bottom: 40px;
+        }
     }
     p {
         color: #4A4A4A;
     }
     @include breakpoint($small) {
+        margin-bottom: 40px;
         min-height: em(330px);
         position: relative;
         display: table;
@@ -116,7 +156,6 @@
 .suivi {
     @include breakpoint($small) {
         @include span(4 last);
-        @include pad(1%);
     }
 }
 
@@ -138,13 +177,18 @@
 #schema {
     font-family: Georgia, serif;
     color: #4A4A4A;
+    margin-left: span(2);
+    @include breakpoint($small) {
+        margin-left: 0;
+    }
+
     span {
         line-height: $lh-p;
     }
 }
 
 .map {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin-bottom: 3em;
 }
@@ -153,10 +197,11 @@
     display: block;
     position: relative;
     background-color: whitesmoke;
+    font-size: 1.2em;
     padding: 10px;
     margin-top: 12px;
     text-align: center;
-    width: span(6);
+    width: span(8);
     color: $rouge;
     border: 1px solid #DDD9D9;
     border-radius: 0 0 120px 120px / 0 0 6px 6px;
@@ -179,5 +224,9 @@
     &:before {
         left: 10px;
         transform: skew(-8deg) rotate(-8deg);
+    }
+    @include breakpoint($small) {
+        width: span(8);
+        margin-left: span(2);
     }
 }
