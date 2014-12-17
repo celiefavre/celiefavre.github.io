@@ -3,47 +3,70 @@
     width: 100%;
     overflow: hidden;
 }
-
+label {
+    float: right;
+}
 input {
     display: none;
 }
-
+// semble régler le problème avec les navigateurs sous android !!!
+:checked {
+    display: inline-block;
+    margin: 3em;
+    display: none;
+}
 // target the sibbling of input
-input:checked ~ .off-canvas {
+input[type=checkbox]:checked + .off-canvas {
     right: 0;
 }
 
-input:checked + label {
+input[type=checkbox]:checked + label {
     margin-right: 15em;
 }
 
-input:checked ~ .content {
+input[type=checkbox]:checked + .content {
     margin-left: -15em;
 }
 
 .open {
-    color: $ecru;
-    font-size: 1.2em;
-    margin-top: 18px;
-    @include span(3 last);
+    cursor: pointer;
+    margin-top: 25px;
+    @include span(4 last);
+    @include bleed-x(1.5em);
+    z-index: 1;
     transition: margin-right .3s ease;
     @include breakpoint($small) {
         display: none;
     }
 }
+.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    pointer-events: none;
+}
 
+input:checked ~ .close {
+    pointer-events: auto;
+}
 .off-canvas {
     position: absolute;
     top: -6px;
     right: -15em;
     width: 15em;
     height: 200vh;
-    background: lighten($rouge, 50);
+    background: #3F5357;
     transition: right .3s ease;
+    z-index: 1;
     h4 {
-        color: white;
+        padding-left: span(1);
+        color: $bleu;
+        font-size: 1.2em;
     }
     @include breakpoint($small) {
+        right: 0;
         h4 {
             display: none;
         }
@@ -61,21 +84,34 @@ input:checked ~ .content {
         border-radius: 5px;
         width: em(510px);
     }
+
     @include breakpoint($menu) {
         width: em(600px);
     }
 }
 
 .navul {
+    text-decoration: none;
+    line-height: 60px;
     @include breakpoint($small) {
         margin: 0;
+        line-height: 18px;
     }
 }
 
 .navli {
-    width: 65px;
-    padding-right: 3px;
+    list-style-type: none;
+    width: 150px;
+    padding-left: 20px;
+    a {
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        color: $ecru;
+    }
     @include breakpoint($small) {
+        width: 65px;
+        padding-right: 3px;
+        padding-left: 0;
         display: inline-block;
         a {
             color: $ecru;
@@ -85,7 +121,7 @@ input:checked ~ .content {
             text-align: center;
             line-height: 1.6em;
             &:hover {
-                background: lighten($rouge,15);
+                background: lighten($rouge, 15);
                 color: lighten(#61A4B1, 35);
             }
         }
@@ -96,31 +132,14 @@ input:checked ~ .content {
         padding-right: 0;
     }
 }
+
 .active {
     background: $bleu;
     box-shadow: 3px 7px 0px darken($bleu, 6);
-}
-.off-canvas {
-    @include breakpoint($small) {
-        right: 0;
-    }
 }
 
 .content {
     width: 100%;
     height: 100vh;
     transition: margin-left .3s ease;
-}
-
-.close {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-input:checked ~ .close {
-    pointer-events: auto;
 }
