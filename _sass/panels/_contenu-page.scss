@@ -230,3 +230,15 @@
         margin-left: span(2);
     }
 }
+
+.liste, .liste-ordo {
+    font-family: 'Lora', serif;
+    line-height: 30px;
+}
+
+.liste-ordo {
+    li {
+        line-height: 25px;
+        padding-bottom: 20px;
+    }
+}
