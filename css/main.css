@@ -1249,6 +1249,18 @@ input:checked ~ .close {
   }
 }
 
+/* line 234, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+.liste, .liste-ordo {
+  font-family: 'Lora', serif;
+  line-height: 30px;
+}
+
+/* line 240, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_contenu-page.scss */
+.liste-ordo li {
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+
 /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3/celie/_sass/panels/_blog.scss */
 .post-wrapper {
   clear: both;
