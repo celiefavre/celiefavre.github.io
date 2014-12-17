@@ -8,16 +8,18 @@ h1, h2, h3, h4 {
 h1 {
 	font-size: $fs-h1--phone;
 	font-weight: 400;
-	color: $rouge;
+	color: darken($bleu, 6);
+	letter-spacing: -1;
+	border-bottom: 1px dotted #4A4A4A;
 	@include breakpoint($small) {
 		font-size: $fs-h1--desktop;
-		padding-left: 1.38889%;
+		padding-left: gutter();
 	}
 }
 h2 {
 	font-size: $fs-h2--phone;
 	font-weight: 200;
-	color: lighten($rouge, 1);
+	color: $bleu;
 	@include breakpoint($small) {
 		font-size: $fs-h2--desktop;
 	}
