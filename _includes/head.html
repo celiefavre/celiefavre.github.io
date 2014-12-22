@@ -16,4 +16,50 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link href='http://fonts.googleapis.com/css?family=Parisienne|Open+Sans|Lora:400,700' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  {% if page.url == '/cabinet-psychologue-biarritz/index.html' %} 
+<script>
+    function initialize() {
+        var maPosition = new google.maps.LatLng(43.482147, -1.554812);
+        var parking = new google.maps.LatLng(43.481601, -1.554144);
+
+        var map;
+        var mapOptions = {
+            zoom: 16,
+            center: maPosition
+        };
+
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+        var parkIcon = '../images/park-icon.png';
+        var maisonIcon = '../images/maison-icon.png';
+
+            var marker = new google.maps.Marker({
+                position: maPosition,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                title: 'Cabinet de psychologie',
+                icon: maisonIcon
+            });
+
+            var park = new google.maps.Marker({
+                position: parking,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                title: 'parking',
+                icon: parkIcon
+            });
+    }
+
+    function loadScript() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+            'callback=initialize';
+        document.body.appendChild(script);
+    }
+
+    window.onload = loadScript;
+</script>
+{% endif %}
 </head>
