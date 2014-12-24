@@ -1,12 +1,15 @@
 .site-header {
     background: $bleu;
-    height: 100px;
+    height: em(100px);
     position: relative;
     @include breakpoint($small) {
-        height: 120px;
+        height: em(120px);
     }
     @include breakpoint($l-900) {
-        height: 125px;
+        height: em(125px);
+    }
+    @include breakpoint($xlarge) {
+        height: em(135px);
     }
 
     // super important sinon off-canvas marche pas, pourquoi???
@@ -23,10 +26,12 @@
     }
     @include breakpoint($small) {
         @include span(2);
+        margin-left: 0;
     }
 
     @include breakpoint($medium) {
         width: 13.66667%;
+        margin-left: gutter();
     }
 }
 
@@ -48,19 +53,23 @@
     margin-bottom: 16px;
     @include span(4.1);
     @include breakpoint($small) {
-        font-size: 1.6em;
+        font-size: 1.4em;
         margin-top: 20px;
         margin-bottom: 0;
         line-height: 40px;
-        @include span(2.3);
+        @include span(2);
     }
-
+    @include breakpoint($l-900) {
+        font-size: 1.7em;
+    }
     @include breakpoint($l-950) {
-        font-size: 2.2em;
         margin-top: 12px;
         line-height: 50px;
     }
-
+    @include breakpoint($large) {
+        font-size: 2em;
+        margin-left: 2em;
+    }
     @include breakpoint($xlarge) {
         font-size: 2.8em;
         line-height: 59px;

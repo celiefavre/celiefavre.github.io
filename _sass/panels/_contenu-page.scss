@@ -4,9 +4,6 @@
     section {
         padding-top: 32px;
         padding-bottom: 32px;
-        @include breakpoint($small) {
-            height: em(820px);
-        }
     }
 }
 
@@ -26,7 +23,7 @@
     @include breakpoint($small) {
         @include span(5 last);
         @include pad(2%);
-        margin-top: span(1);
+        margin-top: em(40px);
         &:before, &:after {
             content: '';
             position: absolute;
@@ -48,6 +45,24 @@
             left: 11px;
             top: 7px;
         }
+    }
+}
+
+.content-under {
+    @include full;
+}
+
+.column-left {
+    @include breakpoint($medium) {
+        @include span(6);
+        padding-right: span(1);
+    }
+}
+
+.column-right {
+    @include breakpoint($medium) {
+        @include span(6 last);
+        @include pad(2%);
     }
 }
 
@@ -240,5 +255,32 @@
     li {
         line-height: 25px;
         padding-bottom: 20px;
+    }
+}
+
+.image-icone {
+    display: block;
+    margin-top: 20px;
+    padding: 0;
+    position: relative;
+    margin: 0 auto;
+    background: lighten(#61A4B1, 25);
+    border-radius: 15px;
+    &:hover {
+        transform: rotate(360deg);
+        transition: .5s ease-in-out;
+    }
+}
+
+#map-canvas {
+    height: 22em;
+    margin: 2em auto 0;
+    width: 22em;
+    padding: 0px;
+    @include breakpoint($small) {
+      width: 42em;  
+    }
+    @include breakpoint($large) {
+        width: 52em;
     }
 }

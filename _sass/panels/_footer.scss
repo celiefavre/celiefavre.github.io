@@ -8,6 +8,9 @@
     background-attachment: fixed;
     padding-top: 2em;
     margin-top: span(1);
+    @include breakpoint($small) {
+       margin-top: span(0.5); 
+    }
 }
 
 .sitemap {
@@ -57,4 +60,11 @@
         color: $ecru;
         font-size: em(20px);
     }
+}
+
+.fa {
+    color: $rouge;
+}
+.fa-child:before, .fa-eye:before {
+    font-size: 1.5em;
 }

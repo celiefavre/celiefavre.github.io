@@ -3,18 +3,22 @@
     width: 100%;
     overflow: hidden;
 }
+
 label {
     float: right;
 }
+
 input {
     display: none;
 }
-// semble régler le problème avec les navigateurs sous android !!!
+
+// android
 :checked {
     display: inline-block;
     margin: 3em;
     display: none;
 }
+
 // target the sibbling of input
 input[type=checkbox]:checked + .off-canvas {
     right: 0;
@@ -39,6 +43,7 @@ input[type=checkbox]:checked + .content {
         display: none;
     }
 }
+
 .close {
     position: absolute;
     top: 0;
@@ -51,6 +56,7 @@ input[type=checkbox]:checked + .content {
 input:checked ~ .close {
     pointer-events: auto;
 }
+
 .off-canvas {
     position: absolute;
     top: -6px;
@@ -70,11 +76,14 @@ input:checked ~ .close {
         h4 {
             display: none;
         }
-        @include span(7.5 last);
+        @include span(7.5);
         height: auto;
         border-top: none;
         position: relative;
         background: $bleu;
+    }
+    @include breakpoint($large) {
+        @include span(7.5 last);
     }
 }
 
@@ -82,11 +91,17 @@ input:checked ~ .close {
     @include breakpoint($small) {
         background: darken($bleu, 6);
         border-radius: 5px;
-        width: em(510px);
+        width: 510px;
     }
 
-    @include breakpoint($menu) {
-        width: em(600px);
+    @include breakpoint($l-900) {
+        width: 605px;
+    }
+    @include breakpoint($l-950) {
+        width: 642px;
+    }
+    @include breakpoint($large) {
+        margin-left: 100px;
     }
 }
 
@@ -95,6 +110,7 @@ input:checked ~ .close {
     line-height: 60px;
     @include breakpoint($small) {
         margin: 0;
+        padding-left: 0;
         line-height: 18px;
     }
 }
@@ -109,21 +125,31 @@ input:checked ~ .close {
         color: $ecru;
     }
     @include breakpoint($small) {
-        width: 65px;
-        padding-right: 3px;
-        padding-left: 0;
+        width: 62px;
         display: inline-block;
+        padding-left: 5px;
         a {
             color: $ecru;
+            font-size: 0.9em;
             text-decoration: none;
             display: block;
-            padding: 23px 0 15px 0;
+            padding: 20px 0 15px 0;
             text-align: center;
             line-height: 1.6em;
             &:hover {
                 background: lighten($rouge, 15);
                 color: lighten(#61A4B1, 35);
+                transition: .3s ease-in-out;
+                @include bleed-x(7px);
             }
+        }
+    }
+
+    @include breakpoint($l-900) {
+        width: 75px;
+        padding-left: 6px;
+        a {
+            font-size: 1em;
         }
     }
 

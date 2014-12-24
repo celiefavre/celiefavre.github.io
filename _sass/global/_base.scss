@@ -24,7 +24,14 @@ h2 {
 		font-size: $fs-h2--desktop;
 	}
 }
-
+h3 {
+	font-size: $fs-h2--phone;
+	font-weight: 200;
+	color: lighten($bleu, 5);
+	@include breakpoint($small) {
+		font-size: $fs-h3--desktop;
+	}
+}
 p {
 	font-family: 'Lora', serif;
 	line-height: $lh-p;
