@@ -11,3 +11,8 @@ site celie
 - [ ] lien page d'accueil suivi psychologique
 - [ ] favicon
 
+# Notes de débogage
+
+- head -> remplacer les | par %7C qui est valide pour UTF-8 pour validation html5
+- map acceuil -> & doit être remplacé par `&amp`;
+- 
