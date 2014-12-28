@@ -6,10 +6,14 @@ site celie
 - [x] footer
 - [x] styler ADELI
 - [x] lien vers cabinet sous ADELI
-- [ ] souci Google map Iphone
+- [x] souci Google map Iphone
 - [ ] article
-- [ ] lien page d'accueil suivi psychologique
-- [ ] favicon
+- [x] lien page d'accueil suivi psychologique
+- [x] favicon
+- [ ] page mentions légales
+- [ ] crédits
+- [x] horaires: du lundi, mardi 8h 16h, mercredi, jeudi 12h30 21h, vendredi 8h 21h, samedi 8h 21h
+- [ ] tarifs: psychothérapie adulte 55€ les 50 minutes, 80 € les 80 min (EMDR), 
 
 # Notes de débogage
 
@@ -22,3 +26,6 @@ site celie
 
 - [ ] vérifier baseurl
 - [ ] vérifier les liens
+- [x] identifiants ndd
+- [ ] compte github ou autre
+- [ ] minifier css
