@@ -22,7 +22,7 @@ gulp.task('styles', function() {
         //.pipe(notify('SASS compilé !'))
         .pipe(sass({
             style: 'expanded',
-            lineNumbers: true,
+            lineNumbers: false,
             require: ['susy', 'breakpoint']
         }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
