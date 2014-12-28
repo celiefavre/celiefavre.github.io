@@ -82,6 +82,9 @@
     @include break;
     @include container(95%);
     margin-top: 2em;
+    @include breakpoint($small) {
+        margin-top: 3em;
+    }
     @include breakpoint($large) {
         @include container(90%);
     }
@@ -117,6 +120,9 @@
     }
     p {
         color: #4A4A4A;
+        @include breakpoint($small) {
+            min-height: 130px;
+        }
     }
     @include breakpoint($small) {
         margin-bottom: 40px;
@@ -150,7 +156,6 @@
     }
     @include breakpoint($small) {
         display: table-footer-group;
-        border: 1px dashed black;
     }
 }
 
@@ -243,6 +248,7 @@
     @include breakpoint($small) {
         width: span(8);
         margin-left: span(2);
+        margin-bottom: 22px;
     }
 }
 
@@ -260,15 +266,16 @@
 
 .image-icone {
     display: block;
-    margin-top: 20px;
-    padding: 0;
     position: relative;
-    margin: 0 auto;
+    margin: 37px auto 37px;
     background: lighten(#61A4B1, 25);
     border-radius: 15px;
     &:hover {
         transform: rotate(360deg);
         transition: .5s ease-in-out;
+    }
+    @include breakpoint($small) {
+        margin-bottom: 0;
     }
 }
 
@@ -283,4 +290,17 @@
     @include breakpoint($large) {
         width: 52em;
     }
+}
+
+table {
+    margin-top: 20px;
+}
+tr {
+    &:nth-child(odd) {
+        background-color: lighten($ecru, 3);
+    }
+}
+td {
+    padding: 10px;
+    width: 110px;
 }
