@@ -1092,17 +1092,44 @@ input:checked ~ .close {
   }
 }
 
-table {
-  margin-top: 20px;
+.table-horaires, .table-tarifs {
+  margin: 20px auto;
+}
+@media (min-width: 47.9375em) {
+  .table-horaires, .table-tarifs {
+    margin: 20px 0px 0px 0px;
+  }
+}
+.table-horaires td, .table-tarifs td {
+  padding: 10px;
+  width: 110px;
 }
 
-tr:nth-child(odd) {
+.table-horaires tr:nth-child(odd) {
   background-color: #f2f0e9;
 }
 
-td {
-  padding: 10px;
-  width: 110px;
+.table-tarifs thead {
+  background: #4B818C;
+  color: #ECE9DF;
+}
+
+.bilan {
+  background: #B6D5DB;
+}
+
+.tarif-emdr {
+  background-color: #c7dfe3;
+}
+
+.image-cabinet {
+  display: block;
+  margin: 40px auto;
+  box-shadow: 1px 1px 1px 10px rgba(255, 255, 255, 0.8);
+}
+
+.title-center {
+  text-align: center;
 }
 
 .post-wrapper {
