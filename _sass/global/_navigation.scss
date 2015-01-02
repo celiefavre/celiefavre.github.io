@@ -39,6 +39,9 @@ $off-canvas-width: 260px;
 // close btn
 .close {
     padding-left: 1.5em;
+    @include breakpoint($small) {
+        display: none;
+    }
 }
 
 .close-btn {
@@ -52,9 +55,6 @@ $off-canvas-width: 260px;
     &:active,
     &:focus {
         opacity: 1;
-    }
-    @include breakpoint($small) {
-        display: none;
     }
 }
 

@@ -357,6 +357,11 @@ strong {
 .close {
   padding-left: 1.5em;
 }
+@media (min-width: 47.9375em) {
+  .close {
+    display: none;
+  }
+}
 
 .close-btn {
   display: block;
@@ -369,11 +374,6 @@ strong {
 }
 .close-btn:hover, .close-btn:active, .close-btn:focus {
   opacity: 1;
-}
-@media (min-width: 47.9375em) {
-  .close-btn {
-    display: none;
-  }
 }
 
 .off-canvas {
