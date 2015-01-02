@@ -382,8 +382,7 @@ strong {
   right: -260px;
   top: 0;
   bottom: 0;
-  height: 200vh;
-  z-index: 2;
+  height: 1000px;
   background: #3F5357;
 }
 @media (min-width: 47.9375em) {

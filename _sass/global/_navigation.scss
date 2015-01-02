@@ -64,8 +64,7 @@ $off-canvas-width: 260px;
     right: -$off-canvas-width;
     top: 0;
     bottom: 0;
-    height: 200vh;
-    z-index: 2;
+    height: 1000px;
     background: #3F5357;
     @include breakpoint($small) {
         right: 0;
