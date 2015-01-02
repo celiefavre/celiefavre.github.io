@@ -64,7 +64,7 @@ $off-canvas-width: 260px;
     right: -$off-canvas-width;
     top: 0;
     bottom: 0;
-    height: 100vh;
+    height: 200vh;
     z-index: 1;
     background: #3F5357;
     @include breakpoint($small) {
@@ -110,7 +110,6 @@ $off-canvas-width: 260px;
 .navul {
     text-decoration: none;
     line-height: 50px;
-    margin-top: 6em;
     @include breakpoint($small) {
         margin: 0;
         padding-left: 0;

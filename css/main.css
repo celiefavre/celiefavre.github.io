@@ -382,7 +382,7 @@ strong {
   right: -260px;
   top: 0;
   bottom: 0;
-  height: 100vh;
+  height: 200vh;
   z-index: 1;
   background: #3F5357;
 }
@@ -443,7 +443,6 @@ strong {
 .navul {
   text-decoration: none;
   line-height: 50px;
-  margin-top: 6em;
 }
 @media (min-width: 47.9375em) {
   .navul {
