@@ -353,8 +353,8 @@ strong {
 
 .off-canvas {
   position: fixed;
-  right: -29em;
-  width: 29em;
+  right: -23em;
+  width: 23em;
   height: 100%;
   background: #3F5357;
   -webkit-transition: right 0.3s ease;
@@ -395,7 +395,7 @@ strong {
 }
 
 .off-canvas:target ~ .wrapper {
-  left: -29em;
+  left: -23em;
 }
 
 .off-canvas h4 {
@@ -468,7 +468,7 @@ strong {
 .navli {
   list-style-type: none;
   width: 150px;
-  padding-left: 60px;
+  padding-left: 4em;
 }
 .navli a {
   text-decoration: none;
