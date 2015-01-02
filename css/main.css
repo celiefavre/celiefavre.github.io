@@ -344,6 +344,11 @@ strong {
   height: 100%;
   z-index: 2;
 }
+@media (min-width: 47.9375em) {
+  .body-close {
+    z-index: 0;
+  }
+}
 
 .off-canvas {
   position: fixed;
