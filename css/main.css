@@ -346,7 +346,6 @@ strong {
   perspective: 1000;
   -webkit-transition: -webkit-transform 0.3s ease;
           transition: transform 0.3s ease;
-  overflow: hidden;
 }
 .content.is-open {
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -414,6 +413,7 @@ strong {
 .on-canvas {
   position: relative;
   left: 0;
+  overflow: hidden;
   -webkit-transition: left .3s ease;
           transition: left .3s ease;
 }

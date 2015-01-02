@@ -30,7 +30,6 @@ $off-canvas-width: 260px;
 .content {
     @include trans-prep;
     transition: transform 0.3s ease;
-    overflow: hidden;
     &.is-open {
         transition: transform 0.3s ease;
         transform: translate3d(-$off-canvas-width, 0, 0);
@@ -85,6 +84,7 @@ $off-canvas-width: 260px;
 .on-canvas {
     position: relative;
     left: 0;
+    overflow: hidden;
     transition: left .3s ease;
 }
 
