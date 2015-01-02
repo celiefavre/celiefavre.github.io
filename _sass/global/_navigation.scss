@@ -1,28 +1,10 @@
 .icon {
-    // position: absolute;
-    // right: 0;
-    // width: 1.625em;
-    // height: .313em;
-    // background: #000;
-    // margin: 1.5em;
-    // transition: right 0.3s ease;
-
-    // &::before,
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     background: #000;
-    //     width: 1.625em;
-    //     height: .313em;
-    // }
-
-    // &::before {
-    //     top: -.625em;
-    // }
-
-    // &::after {
-    //     bottom: -.625em;
-    // }
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px;
+    background-color: $bleu;
+    transition: right 0.3s ease;
     @include breakpoint($small) {
         display: none;
     }
@@ -56,6 +38,16 @@
 
 .off-canvas:target ~ .icon {
     right: 17.5em;
+    background-color: #b6d5db;
+    &:after {
+        content: "X";
+        font-family: sans-serif;
+        font-size: 3.4em;
+        color: $rouge;
+        position: absolute;
+        right: 18px;
+        top: 6px;
+    }
 }
 
 .off-canvas:target ~ .body-close {
@@ -65,74 +57,8 @@
 .off-canvas:target ~ .wrapper {
     left: -17.5em;
 }
-// .canvas {
-//     position: relative;
-//     width: 100%;
-//     overflow: hidden;
-// }
-
-// label {
-//     float: right;
-// }
-
-// input {
-//     display: none;
-// }
-
-// // android
-// :checked {
-//     display: inline-block;
-//     margin: 3em;
-//     display: none;
-// }
-
-// // target the sibbling of input
-// input[type=checkbox]:checked + .off-canvas {
-//     right: 0;
-// }
-
-// input[type=checkbox]:checked + label {
-//     margin-right: 15em;
-// }
-
-// input[type=checkbox]:checked + .content {
-//     margin-left: -15em;
-// }
-
-// .open {
-//     cursor: pointer;
-//     margin-top: 25px;
-//     @include span(4 last);
-//     @include bleed-x(1.5em);
-//     z-index: 1;
-//     transition: margin-right .3s ease;
-//     @include breakpoint($small) {
-//         display: none;
-//     }
-// }
-
-// .close {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100vh;
-//     height: 100vh;
-//     pointer-events: none;
-// }
-
-// input:checked ~ .close {
-//     pointer-events: auto;
-// }
 
 .off-canvas {
-    // position: absolute;
-    // top: -6px;
-    // right: -15em;
-    // width: 15em;
-    // height: 200vh;
-    // background: #3F5357;
-    // transition: right .3s ease;
-    // z-index: 1;
     h4 {
         padding-left: span(1);
         color: $bleu;

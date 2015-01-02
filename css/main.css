@@ -321,6 +321,15 @@ strong {
   clear: both;
 }
 
+.icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 10px;
+  background-color: #4B818C;
+  -webkit-transition: right 0.3s ease;
+          transition: right 0.3s ease;
+}
 @media (min-width: 47.9375em) {
   .icon {
     display: none;
@@ -360,6 +369,16 @@ strong {
 
 .off-canvas:target ~ .icon {
   right: 17.5em;
+  background-color: #b6d5db;
+}
+.off-canvas:target ~ .icon:after {
+  content: "X";
+  font-family: sans-serif;
+  font-size: 3.4em;
+  color: #BE311A;
+  position: absolute;
+  right: 18px;
+  top: 6px;
 }
 
 .off-canvas:target ~ .body-close {
