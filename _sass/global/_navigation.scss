@@ -49,7 +49,6 @@
     top: 0;
     z-index: 1;
     background-color: #b6d5db;
-    border: 8px solid $bleu;
     &:after {
         content: "\02DF";
         font-family: sans-serif;
@@ -70,16 +69,8 @@
 }
 
 .off-canvas {
-    h4 {
-        padding-left: 40%;
-        color: #b6d5db;
-        font-size: 1.2em;
-    }
     @include breakpoint($small) {
         right: 0;
-        h4 {
-            display: none;
-        }
         @include span(7.5);
         height: auto;
         border-top: none;
@@ -114,7 +105,8 @@
 
 .navul {
     text-decoration: none;
-    line-height: 60px;
+    line-height: 50px;
+    margin-top: 6em;
     @include breakpoint($small) {
         margin: 0;
         padding-left: 0;
