@@ -378,6 +378,7 @@ strong {
   top: 0;
   z-index: 1;
   background-color: #b6d5db;
+  border: 8px solid #4B818C;
 }
 .off-canvas:target ~ .icon:after {
   content: "\02DF";
@@ -398,8 +399,8 @@ strong {
 }
 
 .off-canvas h4 {
-  padding-left: 8.33333%;
-  color: #4B818C;
+  padding-left: 40%;
+  color: #b6d5db;
   font-size: 1.2em;
 }
 @media (min-width: 47.9375em) {

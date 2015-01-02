@@ -49,6 +49,7 @@
     top: 0;
     z-index: 1;
     background-color: #b6d5db;
+    border: 8px solid $bleu;
     &:after {
         content: "\02DF";
         font-family: sans-serif;
@@ -70,8 +71,8 @@
 
 .off-canvas {
     h4 {
-        padding-left: span(1);
-        color: $bleu;
+        padding-left: 40%;
+        color: #b6d5db;
         font-size: 1.2em;
     }
     @include breakpoint($small) {
