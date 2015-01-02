@@ -39,14 +39,12 @@ $off-canvas-width: 260px;
 // close btn
 .close {
     padding-left: 1.5em;
-    border-bottom: 1px solid #ddd;
 }
 
 .close-btn {
     display: block;
-    margin-top: 1.75em;
+    margin-top: 25px;
     height: 1.5em;
-    margin-bottom: 1.75em;
     cursor: pointer;
     opacity: 0.7;
     transition: all 0.3s ease;
