@@ -1,8 +1,7 @@
-<div class="canvas">
-  <a href="#" class="body-close"></a>
-  
+<div class="on-canvas">
+
   <div class="content">
-    
+   <div class="transformer">
     <header class="site-header">
       <a href="{{ site.url }}" class="site-title">
         <img class="logo" src="/images/logo.png" alt="celie favre psychologue">
@@ -10,19 +9,24 @@
       
       <h4 class="celie">Célie Favre Psychologue</h4>
       
-      <section id="off-canvas" class="off-canvas">
-        <nav class="navigation" role="navigation">
-          <ul class="navul">
-            <li {% if page.url == '/emdr-enfants/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr-enfants/">Enfants</a></li>
-            <li {% if page.url == '/emdr-adultes/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr-adultes/">Adultes</a></li>
-            <li {% if page.url == '/emdr/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr/">EMDR</a></li>
-            <li {% if page.url == '/bilan-psychologique/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/bilan-psychologique/">Bilans</a></li>
-            <li {% if page.url == '/cabinet-psychologue-biarritz/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/cabinet-psychologue-biarritz/">Cabinet</a></li>
-            <li {% if page.url == '/tarifs-psychologue/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/tarifs-psychologue/">Tarifs</a></li>
-            <li {% if page.url == '/psychologue-favre/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/psychologue-favre/">A propos</a></li>
-          </ul>
-        </nav>
-        
-      </section>
-      <a href="#off-canvas" class="icon"><img src="/images/menu.svg" alt="logo psychologue" ></a>
+        <div class="menu">
+          <img src="/images/menu.svg" class="menu-toggle" alt="logo psychologue" >
+        </div>
+        <div class="off-canvas">
+          <div class="close">
+            <img class="close-btn" src="/images/park-icon.png" alt="">
+          </div>
+          <nav class="navigation" role="navigation">
+            <ul class="navul">
+              <li {% if page.url == '/emdr-enfants/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr-enfants/">Enfants</a></li>
+              <li {% if page.url == '/emdr-adultes/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr-adultes/">Adultes</a></li>
+              <li {% if page.url == '/emdr/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr/">EMDR</a></li>
+              <li {% if page.url == '/bilan-psychologique/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/bilan-psychologique/">Bilans</a></li>
+              <li {% if page.url == '/cabinet-psychologue-biarritz/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/cabinet-psychologue-biarritz/">Cabinet</a></li>
+              <li {% if page.url == '/tarifs-psychologue/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/tarifs-psychologue/">Tarifs</a></li>
+              <li {% if page.url == '/psychologue-favre/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/psychologue-favre/">A propos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>

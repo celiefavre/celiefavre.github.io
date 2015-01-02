@@ -1,74 +1,73 @@
-.icon {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    padding: 10px;
-    background-color: $bleu;
-    transition: right 0.3s ease;
+@mixin trans-prep {
+    // backface visibility
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    // Resets perspectives
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+}
+
+$off-canvas-width: 260px;
+
+.menu {
+    width: 5em;
+    float: right;
     @include breakpoint($small) {
         display: none;
     }
 }
 
-.body-close {
-    position: absolute;
-    top: 0;
-    right: 10em;
-    width: 5em;
-    height: 5em;
-    z-index: 2;
-    // pointer-events: none;
-    z-index: 2;
-    @include breakpoint($small) {
-        z-index: 0;
-    }
-}
-
-.off-canvas {
-    position: fixed;
-    right: -23em;
-    width: 23em;
-    height: 100%;
-    background: #3F5357;
-    transition: right 0.3s ease;
-    z-index: 1;
-}
-
-.canvas {
+.menu-toggle {
     position: relative;
-    left: 0;
-    transition: left .3s ease;
+    top: 22px;
+    cursor: pointer;
 }
 
-.off-canvas:target {
-    right: 0;
-}
-
-.off-canvas:target ~ .icon {
-    right: 10em;
-    top: 0;
-    z-index: 1;
-    background-color: #b6d5db;
-    &:after {
-        content: "\02DF";
-        font-family: sans-serif;
-        font-size: 10em;
-        color: #BE311A;
-        position: absolute;
-        right: 14px;
-        top: -32px;
+.content {
+    @include trans-prep;
+    transition: transform 1s ease;
+    &.is-open {
+        transform: translate3d(-$off-canvas-width, 0, 0);
     }
 }
 
-.off-canvas:target ~ .body-close {
-    pointer-events: auto;
+// close btn
+.close {
+    padding-left: 1.5em;
+    border-bottom: 1px solid #ddd;
 }
 
-.off-canvas:target ~ .wrapper {
-    left: -23em;
+.close-btn {
+    display: block;
+    margin-top: 1.75em;
+    height: 1.5em;
+    margin-bottom: 1.75em;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+    &:hover,
+    &:active,
+    &:focus {
+        opacity: 1;
+    }
+    @include breakpoint($small) {
+        display: none;
+    }
 }
 
 .off-canvas {
+    position: absolute;
+    width: $off-canvas-width;
+    right: -$off-canvas-width;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 1;
+    background: #3F5357;
     @include breakpoint($small) {
         right: 0;
         @include span(7.5);
@@ -81,6 +80,12 @@
     @include breakpoint($large) {
         @include span(7.5 last);
     }
+}
+
+.on-canvas {
+    position: relative;
+    left: 0;
+    transition: left .3s ease;
 }
 
 .navigation {

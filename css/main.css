@@ -321,82 +321,71 @@ strong {
   clear: both;
 }
 
-.icon {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  padding: 10px;
-  background-color: #4B818C;
-  -webkit-transition: right 0.3s ease;
-          transition: right 0.3s ease;
+.menu {
+  width: 5em;
+  float: right;
 }
 @media (min-width: 47.9375em) {
-  .icon {
+  .menu {
     display: none;
   }
 }
 
-.body-close {
-  position: absolute;
-  top: 0;
-  right: 10em;
-  width: 5em;
-  height: 5em;
-  z-index: 2;
-  z-index: 2;
+.menu-toggle {
+  position: relative;
+  top: 22px;
+  cursor: pointer;
+}
+
+.content {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transition: -webkit-transform 1s ease;
+          transition: transform 1s ease;
+}
+.content.is-open {
+  -webkit-transform: translate3d(-260px, 0, 0);
+          transform: translate3d(-260px, 0, 0);
+}
+
+.close {
+  padding-left: 1.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.close-btn {
+  display: block;
+  margin-top: 1.75em;
+  height: 1.5em;
+  margin-bottom: 1.75em;
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+.close-btn:hover, .close-btn:active, .close-btn:focus {
+  opacity: 1;
 }
 @media (min-width: 47.9375em) {
-  .body-close {
-    z-index: 0;
+  .close-btn {
+    display: none;
   }
 }
 
 .off-canvas {
-  position: fixed;
-  right: -23em;
-  width: 23em;
-  height: 100%;
-  background: #3F5357;
-  -webkit-transition: right 0.3s ease;
-          transition: right 0.3s ease;
-  z-index: 1;
-}
-
-.canvas {
-  position: relative;
-  left: 0;
-  -webkit-transition: left .3s ease;
-          transition: left .3s ease;
-}
-
-.off-canvas:target {
-  right: 0;
-}
-
-.off-canvas:target ~ .icon {
-  right: 10em;
-  top: 0;
-  z-index: 1;
-  background-color: #b6d5db;
-}
-.off-canvas:target ~ .icon:after {
-  content: "\02DF";
-  font-family: sans-serif;
-  font-size: 10em;
-  color: #BE311A;
   position: absolute;
-  right: 14px;
-  top: -32px;
+  width: 260px;
+  right: -260px;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 1;
+  background: #3F5357;
 }
-
-.off-canvas:target ~ .body-close {
-  pointer-events: auto;
-}
-
-.off-canvas:target ~ .wrapper {
-  left: -23em;
-}
-
 @media (min-width: 47.9375em) {
   .off-canvas {
     right: 0;
@@ -419,6 +408,13 @@ strong {
     padding-left: 0.83333%;
     padding-right: 0.83333%;
   }
+}
+
+.on-canvas {
+  position: relative;
+  left: 0;
+  -webkit-transition: left .3s ease;
+          transition: left .3s ease;
 }
 
 @media (min-width: 47.9375em) {
