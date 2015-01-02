@@ -339,7 +339,7 @@ strong {
 .body-close {
   position: absolute;
   top: 0;
-  right: 13em;
+  right: 10em;
   width: 5em;
   height: 5em;
   z-index: 2;
@@ -374,7 +374,7 @@ strong {
 }
 
 .off-canvas:target ~ .icon {
-  right: 13em;
+  right: 10em;
   top: 0;
   z-index: 1;
   background-color: #b6d5db;
