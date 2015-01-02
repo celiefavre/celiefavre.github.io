@@ -344,10 +344,12 @@ strong {
   -webkit-perspective: 1000;
   -ms-perspective: 1000;
   perspective: 1000;
-  -webkit-transition: -webkit-transform 1s ease;
-          transition: transform 1s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+          transition: transform 0.3s ease;
 }
 .content.is-open {
+  -webkit-transition: -webkit-transform 0.3s ease;
+          transition: transform 0.3s ease;
   -webkit-transform: translate3d(-260px, 0, 0);
           transform: translate3d(-260px, 0, 0);
 }
@@ -364,8 +366,8 @@ strong {
   margin-bottom: 1.75em;
   cursor: pointer;
   opacity: 0.7;
-  -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 .close-btn:hover, .close-btn:active, .close-btn:focus {
   opacity: 1;

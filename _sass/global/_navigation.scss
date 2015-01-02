@@ -29,8 +29,9 @@ $off-canvas-width: 260px;
 
 .content {
     @include trans-prep;
-    transition: transform 1s ease;
+    transition: transform 0.3s ease;
     &.is-open {
+        transition: transform 0.3s ease;
         transform: translate3d(-$off-canvas-width, 0, 0);
     }
 }
@@ -48,7 +49,7 @@ $off-canvas-width: 260px;
     margin-bottom: 1.75em;
     cursor: pointer;
     opacity: 0.7;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     &:hover,
     &:active,
     &:focus {
