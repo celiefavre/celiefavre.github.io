@@ -346,6 +346,7 @@ strong {
   perspective: 1000;
   -webkit-transition: -webkit-transform 0.3s ease;
           transition: transform 0.3s ease;
+  overflow: hidden;
 }
 .content.is-open {
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -383,7 +384,7 @@ strong {
   top: 0;
   bottom: 0;
   height: 200vh;
-  z-index: 1;
+  z-index: 2;
   background: #3F5357;
 }
 @media (min-width: 47.9375em) {

@@ -30,6 +30,7 @@ $off-canvas-width: 260px;
 .content {
     @include trans-prep;
     transition: transform 0.3s ease;
+    overflow: hidden;
     &.is-open {
         transition: transform 0.3s ease;
         transform: translate3d(-$off-canvas-width, 0, 0);
@@ -65,7 +66,7 @@ $off-canvas-width: 260px;
     top: 0;
     bottom: 0;
     height: 200vh;
-    z-index: 1;
+    z-index: 2;
     background: #3F5357;
     @include breakpoint($small) {
         right: 0;
