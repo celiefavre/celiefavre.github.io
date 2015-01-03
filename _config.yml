@@ -35,6 +35,7 @@ prose:
         field:
           element: "text"
           label: "title"
+          placeholder: 'choisis un titre'
       - name: "tags"
         field:
           element: 'multiselect'
