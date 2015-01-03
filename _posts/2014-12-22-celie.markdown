@@ -1,4 +1,9 @@
 ---
+layout: post
+published: false
+title: "vive l'emdr"
+tags: 
+  - emdr
 ---
 
 ## essai
