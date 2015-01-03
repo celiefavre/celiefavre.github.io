@@ -1,14 +1,18 @@
 ---
 layout: post
 published: true
-title: article
+title: article1
 tags: 
-  - emdr
-  - enfants
+  - psychologie
 ---
 
 ## mon titre h2
-le corps de mon texte
 
-### mon titre h3
-le corps du texte
+J'écris ici mon texte avec un saut à la ligne avant
+
+### Mon titre h3
+
+Je peux soit me servir de la barre en haut soir écrire moi même *par exemple en gras* ou en **italique** (c'est l'inverse lol)
+
+
+
