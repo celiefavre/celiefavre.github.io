@@ -24,3 +24,4 @@ exclude: [node_modules, gulpfile.js, package.json, gemfile, Gemfile.lock]
 prose:
   rooturl: '_posts'
   siteurl: 'http://www.psy-emdr.com'
+  ignore: ['_config.yml', '/_layouts', '/_includes']
