@@ -1,7 +1,11 @@
 ---
 layout: post
-title:  article
+title: article
 description: article EMDR
 categories: EMDR
+published: true
 ---
 
+# essai article
+
+Contenu de l'article
