@@ -30,7 +30,7 @@ prose:
       - name: "layout"
         field:
           element: "text"
-          value: "blog"
+          value: "default"
       - name: "title"
         field:
           element: "text"
@@ -45,3 +45,9 @@ prose:
              value: 'emdr'
            - name: 'Psychologie'
              value: 'psychologie'
+           - name: 'Enfants'
+             value: 'enfants'
+           - name: 'Adultes'
+             value: 'adultes'
+           - name: 'Bilans'
+             value: 'bilans'
