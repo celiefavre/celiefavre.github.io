@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "article celie"
+title:  "article"
 date:   2014-11-16 13:54:54
-categories: jekyll update
+categories: EMDR
 ---
 
