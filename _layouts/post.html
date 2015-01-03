@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
-	
 	{% include head.html %}
-	
 	<body>
-		
 		{% include header.html %}
-		
 		<div class="wrapper">
-			<div class="post-wrapper">
-				<header class="post-header">
-					<h1 class="post-title">{{ page.title }}</h1>
-					<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-				</header>
-				<article class="post-content">
+			<div class="main-content">
+				<h1 class="titre-article">{{ page.title }}</h1>
+				<p>{{ post.title }}</p>
+				<div class="content-left">
 					{{ content }}
-				</article>
+				</div>
+				<div class="content-right">
+					<h2>Articles récents</h2>
+					<ul class="post-list">
+						{% for post in site.posts %}
+							<li>
+								<a href="{{ post.url }}">{{ post.title }}</a>
+							<li>{% assign m = page.date | date: "%-m" %}
+								{{ page.date | date: "%-d" }}
+								{% case m %}
+									{% when '1' %}Janvier
+									{% when '2' %}Février
+									{% when '3' %}Mars
+									{% when '4' %}Avril
+									{% when '5' %}Mai
+									{% when '6' %}Juin
+									{% when '7' %}Juillet
+									{% when '8' %}Aout
+									{% when '9' %}Septembre
+									{% when '10' %}Octobre
+									{% when '11' %}Novembre
+									{% when '12' %}Décembre
+									{% endcase %}
+								{{ page.date | date: "%Y" }}</li>
+						</li>
+						
+					{% endfor %}
+				</ul>
 			</div>
+			
 		</div>
-		
-		{% include footer.html %}
-		
-	</body>
+	</div>
+	{% include footer.html %}
+</body>
 </html>
