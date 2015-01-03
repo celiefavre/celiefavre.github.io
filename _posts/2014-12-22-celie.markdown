@@ -1,18 +1,19 @@
 ---
 layout: post
 published: true
-title: article1
+title: article
 tags: 
   - psychologie
+  - adultes
 ---
 
 ## mon titre h2
 
-J'écris ici mon texte avec un saut à la ligne avant
+Ici je peux écrire mon texte avec des mots en *italique* ou en **gras**
 
-### Mon titre h3
+### Je peux aussi utiliser la barre du haut
 
-Je peux soit me servir de la barre en haut soir écrire moi même *par exemple en gras* ou en **italique** (c'est l'inverse lol)
+pour **formater** mon texte
 
-
+Je peux obtenir de l'aide sur la syntaxe 
 
