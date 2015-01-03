@@ -1,8 +1,13 @@
 ---
-layout: post
-title: article
+layout: layout
+title: EMDR
 description: article EMDR
 categories: EMDR
 published: true
+tags: 
+  - emdr
 ---
 
+# essai
+
+ljlqsdjk lsqkjflqsfj
