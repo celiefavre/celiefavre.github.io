@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "article"
+title:  article
 date:   2014-11-16 13:54:54
+description: article EMDR
 categories: EMDR
 ---
 
