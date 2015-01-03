@@ -13,7 +13,7 @@ site celie
 - [ ] page mentions légales
 - [ ] crédits
 - [x] horaires: du lundi, mardi 8h 16h, mercredi, jeudi 12h30 21h, vendredi 8h 21h, samedi 8h 21h
-- [ ] tarifs: psychothérapie adulte 55€ les 50 minutes, 80 € les 80 min (EMDR), 
+- [x] tarifs: psychothérapie adulte 55€ les 50 minutes, 80 € les 80 min (EMDR), 
 
 # Notes de débogage
 
@@ -24,8 +24,8 @@ site celie
 
 # Avant production :
 
-- [ ] vérifier baseurl
-- [ ] vérifier les liens
+- [x] vérifier baseurl
+- [x] vérifier les liens
 - [x] identifiants ndd
-- [ ] compte github ou autre
+- [x] compte github ou autre
 - [ ] minifier css
