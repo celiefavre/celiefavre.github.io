@@ -1,12 +1,4 @@
-# Site settings
-# title: psychologue biarritz
-# email: contact.nicodev@gmail.com
-# description: > # this means to ignore newlines until "baseurl:"
-#   Célie Favre, psychologue à Biarritz, Bayonne et Anglet. EMDR adultes et enfants, bilans et suivis psychologiques. 
-# baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://celiefavre.github.io" # the base hostname & protocol for your site
-# twitter_username: nicodevaux
-# github_username:  nicodev3
 
 # Build settings
 markdown: kramdown
@@ -26,27 +18,9 @@ kramdown:
 permalink: /:year/:month/:day/:title/
 
 comments: true
-# redcarpet:
-#   extensions:
-#     - hard_wrap
-#     - no_intra_emphasis
-#     - autolink
-#     - strikethrough
-#     - fenced_code_blocks
-# Exclude directories and/or files from the conversion.
+
 exclude: [node_modules, gulpfile.js, package.json, gemfile, Gemfile.lock]
 
-#defaults:
-#  -
-#    scope:
-#      path: "" # an empty string here means all files in the project
-#    values:
-#      layout: "default"
-
-#defaults:
-#  -
-#    scope:
-#      path: "" # an empty string here means all files in the project
-#      type: "posts" ou pages, drafts
-#    values:
-#      layout: "default"
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://www.psy-emdr.com'
