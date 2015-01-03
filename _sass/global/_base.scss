@@ -44,7 +44,6 @@ p {
 a {
 	font-family: 'Lora', serif;
 	color: $rouge;
-	display: inline-block;
 	text-decoration: none;
 	&:hover {
 		color: lighten($rouge, 10);
