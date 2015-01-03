@@ -47,7 +47,11 @@
         list-style-type: none;
         line-height: 25px;
     }
+    a {
+
+    }
     a, li {
+        font-family: 'Open Sans', sans-serif;
         color: rgba(168, 201, 209, .7);
     }
     a:hover {
