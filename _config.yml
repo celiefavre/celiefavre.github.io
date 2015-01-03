@@ -39,9 +39,9 @@ prose:
         field:
           element: 'multiselect'
           label: 'ajouter un tag'
-          placeholder: 'choisi un tag'
-        options:
-          - name: 'EMDR'
-            value: 'emdr'
-          - name: 'Psychologie'
-            value: 'psychologie'
+          placeholder: 'choisis un tag'
+          options:
+           - name: 'EMDR'
+             value: 'emdr'
+           - name: 'Psychologie'
+             value: 'psychologie'
