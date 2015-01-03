@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: EMDR
 description: article EMDR
 categories: EMDR
@@ -8,6 +8,6 @@ tags:
   - emdr
 ---
 
-# essai
+## essai
 
-ljlqsdjk lsqkjflqsfj
+blabla
