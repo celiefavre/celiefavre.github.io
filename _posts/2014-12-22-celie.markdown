@@ -1,5 +1,5 @@
 ---
-layout: layout
+layout: default
 title: EMDR
 description: article EMDR
 categories: EMDR
