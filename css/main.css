@@ -296,7 +296,6 @@ p {
 a {
   font-family: 'Lora', serif;
   color: #BE311A;
-  display: inline-block;
   text-decoration: none;
 }
 a:hover {
@@ -474,7 +473,7 @@ strong {
     font-size: 0.9em;
     text-decoration: none;
     display: block;
-    padding: 20px 0 15px 0;
+    padding: 15px 0 15px 0;
     text-align: center;
     line-height: 1.6em;
   }
@@ -1221,6 +1220,7 @@ strong {
   line-height: 25px;
 }
 .sitemap a, .sitemap li, .informations a, .informations li, .cabinet-footer a, .cabinet-footer li {
+  font-family: 'Open Sans', sans-serif;
   color: rgba(168, 201, 209, 0.7);
 }
 .sitemap a:hover, .informations a:hover, .cabinet-footer a:hover {
