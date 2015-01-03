@@ -6,6 +6,3 @@ categories: EMDR
 published: true
 ---
 
-# essai article
-
-Contenu de l'article
