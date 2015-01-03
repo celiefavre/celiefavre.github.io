@@ -30,7 +30,7 @@ metadata:
   _posts:
     - name: "layout"
       field:
-        element: "hidden"
+        element: "text"
         value: "blog"
     - name: "title"
       field:
