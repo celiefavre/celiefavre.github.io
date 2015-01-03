@@ -32,6 +32,10 @@ metadata:
       field:
         element: "hidden"
         value: "blog"
+    - name: "title"
+      field:
+        element: "text"
+        label: "title"
     - name: "tags"
       field:
         element: 'multiselect'
