@@ -21,7 +21,7 @@ gulp.task('styles', function() {
         }))
         //.pipe(notify('SASS compilé !'))
         .pipe(sass({
-            style: 'expanded',
+            style: 'compressed',
             lineNumbers: false,
             require: ['susy', 'breakpoint']
         }))
