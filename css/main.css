@@ -550,8 +550,11 @@ strong {
 .site-title:hover {
   -webkit-transform: rotateX(360deg);
           transform: rotateX(360deg);
-  -webkit-transition: 2s ease-in-out;
-          transition: 2s ease-in-out;
+  -webkit-transform-origin: middle;
+      -ms-transform-origin: middle;
+          transform-origin: middle;
+  -webkit-transition: 1s ease-in-out;
+          transition: 1s ease-in-out;
 }
 @media (min-width: 47.9375em) {
   .site-title {

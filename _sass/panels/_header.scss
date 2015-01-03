@@ -22,7 +22,8 @@
     border: none;
     &:hover {
         transform: rotateX(360deg);
-        transition: 2s ease-in-out;
+        transform-origin: middle;
+        transition: 1s ease-in-out;
     }
     @include breakpoint($small) {
         @include span(2);
