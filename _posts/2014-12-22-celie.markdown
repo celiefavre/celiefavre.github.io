@@ -1,2 +1,19 @@
-## essai
-bla bla
+---
+layout: post
+published: true
+title: article
+tags: 
+  - psychologie
+  - adultes
+---
+
+## mon titre h2
+
+Ici je peux écrire mon texte avec des mots en *italique* ou en **gras**
+
+### Je peux aussi utiliser la barre du haut
+
+pour **formater** mon texte
+
+Je peux obtenir de l'aide sur la syntaxe 
+
