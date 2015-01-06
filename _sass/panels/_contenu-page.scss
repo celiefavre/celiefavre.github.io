@@ -315,16 +315,47 @@
 }
 
 .table-tarifs {
-    thead {
-        background: $bleu;
-        color: $ecru;
+    tr {
+        border-bottom: 1px solid #eee;
     }
 }
-
-.bilan {
-    background: #B6D5DB;
+%caption {
+    color: $ecru;
+        height: 2.5em;
+        font-size: 1.2em;
+        line-height: 2.5em;
+        border-bottom: 1px solid #eee;
+}
+.caption-bilan {
+        @extend %caption;
+        background-color: $bleu;
+    }
+.caption-psycho {
+    @extend %caption;
+    height: 2.6em;
+    line-height: 2.6em;
+    background-color: darken($bleu, 5);
+}
+.fa-cogs:before, .fa-comments:before {
+    color: $ecru;
+}
+.presta {
+    width: 150px;
 }
 
+.col-left {
+    background-color: #B6D5DB;
+}
+.col-middle {
+   background-color: lighten(#B6D5DB, 3);
+}
+.col-right {
+   background-color: lighten(#B6D5DB, 5);
+   width: 25px; 
+}
+.prix-centre {
+    text-align: center;
+}
 .tarif-emdr {
     background-color: lighten(#B6D5DB, 5);
 }
