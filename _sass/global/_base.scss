@@ -5,13 +5,14 @@ body {
 h1, h2, h3, h4 {
 	font-family: 'Open Sans', sans-serif;
 }
+
 h1 {
 	font-size: $fs-h1--phone;
 	font-weight: 400;
 	color: darken($bleu, 6);
 	letter-spacing: -1;
 	border-bottom: 1px dotted #4A4A4A;
-	@include breakpoint($small) {
+	@include susy-breakpoint($small) {
 		font-size: $fs-h1--desktop;
 		padding-left: gutter();
 	}
@@ -20,7 +21,7 @@ h2 {
 	font-size: $fs-h2--phone;
 	font-weight: 200;
 	color: $bleu;
-	@include breakpoint($small) {
+	@include susy-breakpoint($small) {
 		font-size: $fs-h2--desktop;
 	}
 }
@@ -28,7 +29,7 @@ h3 {
 	font-size: $fs-h2--phone;
 	font-weight: 200;
 	color: lighten($bleu, 5);
-	@include breakpoint($small) {
+	@include susy-breakpoint($small) {
 		font-size: $fs-h3--desktop;
 	}
 }
@@ -36,7 +37,7 @@ p {
 	font-family: 'Lora', serif;
 	line-height: $lh-p;
 	hyphens: auto;
-	@include breakpoint($small) {
+	@include susy-breakpoint($small) {
 		hyphens: none;
 	}
 }

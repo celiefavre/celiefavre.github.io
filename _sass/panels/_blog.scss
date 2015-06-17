@@ -1,6 +1,6 @@
 .post-wrapper {
     @include full;
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         @include span(10);
         @include push(1);
     }

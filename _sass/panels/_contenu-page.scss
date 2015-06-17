@@ -8,7 +8,7 @@
 }
 
 .content-left {
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         @include span(7);
         padding-right: span(1);
     }
@@ -20,7 +20,7 @@
     border: 1px solid #ccc;
     padding-left: 5px;
     padding-bottom: span(1);
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         @include span(5 last);
         @include pad(2%);
         margin-top: em(40px);
@@ -53,14 +53,14 @@
 }
 
 .column-left {
-    @include breakpoint($medium) {
+    @include susy-breakpoint($medium) {
         @include span(6);
         padding-right: span(1);
     }
 }
 
 .column-right {
-    @include breakpoint($medium) {
+    @include susy-breakpoint($medium) {
         @include span(6 last);
         @include pad(2%);
     }
@@ -72,7 +72,7 @@
     border-left: 5px solid $rouge;
     color: darken($bleu, 20);
     padding: 5px 0 5px 15px;
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         padding: 5px 0 5px 30px;
         margin-left: 3%;
     }
@@ -82,11 +82,11 @@
     @include break;
     @include container(95%);
     margin-top: 2em;
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         margin-top: 3em;
     }
 
-    @include breakpoint($large) {
+    @include susy-breakpoint($large) {
         @include container(90%);
     }
 }
@@ -115,36 +115,36 @@
         width: 100%;
         text-align: center;
         font-weight: 500;
-        @include breakpoint($small) {
+        @include susy-breakpoint($small) {
             margin-bottom: 40px;
         }
     }
     p {
         color: #4A4A4A;
-        @include breakpoint($small) {
+        @include susy-breakpoint($small) {
             min-height: 130px;
         }
     }
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         margin-bottom: 40px;
         min-height: em(330px);
         position: relative;
         display: table;
     }
 
-    @include breakpoint($medium) {
+    @include susy-breakpoint($medium) {
         min-height: 320px;
     }
 
-    @include breakpoint($l-900) {
+    @include susy-breakpoint($l-900) {
         min-height: 270px;
     }
 
-    @include breakpoint($large) {
+    @include susy-breakpoint($large) {
         min-height: 290px;
     }
 
-    @include breakpoint($l-1300) {
+    @include susy-breakpoint($l-1300) {
         min-height: 250px;
     }
 }
@@ -155,27 +155,27 @@
         color: $rouge;
         font-size: 1.2em;
     }
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         display: table-footer-group;
     }
 }
 
 .emdr {
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         @include span(4);
         @include pad(1%);
     }
 }
 
 .evaluation {
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         @include span(4);
         @include pad(1%);
     }
 }
 
 .suivi {
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         @include span(4 last);
     }
 }
@@ -188,7 +188,7 @@
         color: lighten($rouge, 10);
         transition: .3s ease-in-out;
     }
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         display: block;
         text-align: center;
         line-height: 30px;
@@ -199,7 +199,7 @@
     font-family: Georgia, serif;
     color: #4A4A4A;
     margin-left: span(2);
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         margin-left: 0;
     }
 
@@ -246,7 +246,7 @@
         left: 10px;
         transform: skew(-8deg) rotate(-8deg);
     }
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         width: span(8);
         margin-left: span(2);
         margin-bottom: 22px;
@@ -275,7 +275,7 @@
         transform: rotate(360deg);
         transition: .5s ease-in-out;
     }
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         margin-bottom: 0;
     }
 }
@@ -285,18 +285,18 @@
     margin: 2em auto 0;
     width: 22em;
     padding: 0px;
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         width: 42em;
     }
 
-    @include breakpoint($large) {
+    @include susy-breakpoint($large) {
         width: 52em;
     }
 }
 
 .table-horaires, .table-tarifs {
     margin: 20px auto;
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         margin: 20px 0px 0px 0px;
     }
 

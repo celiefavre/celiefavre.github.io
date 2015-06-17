@@ -16,7 +16,7 @@ $off-canvas-width: 260px;
 .menu {
     width: 5em;
     float: right;
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         display: none;
     }
 }
@@ -39,7 +39,7 @@ $off-canvas-width: 260px;
 // close btn
 .close {
     padding-left: 1.5em;
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         display: none;
     }
 }
@@ -67,7 +67,7 @@ $off-canvas-width: 260px;
     height: 1000px;
     z-index: 2;
     background: #3F5357;
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         right: 0;
         @include span(7.5);
         height: auto;
@@ -76,7 +76,7 @@ $off-canvas-width: 260px;
         background: $bleu;
     }
 
-    @include breakpoint($large) {
+    @include susy-breakpoint($large) {
         @include span(7.5 last);
     }
 }
@@ -89,21 +89,21 @@ $off-canvas-width: 260px;
 }
 
 .navigation {
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         background: darken($bleu, 6);
         border-radius: 5px;
         width: 510px;
     }
 
-    @include breakpoint($l-900) {
+    @include susy-breakpoint($l-900) {
         width: 605px;
     }
 
-    @include breakpoint($l-950) {
+    @include susy-breakpoint($l-950) {
         width: 642px;
     }
 
-    @include breakpoint($large) {
+    @include susy-breakpoint($large) {
         margin-left: 100px;
     }
 }
@@ -111,7 +111,7 @@ $off-canvas-width: 260px;
 .navul {
     text-decoration: none;
     line-height: 50px;
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         margin: 0;
         padding-left: 0;
         line-height: 18px;
@@ -127,7 +127,7 @@ $off-canvas-width: 260px;
         font-family: 'Open Sans', sans-serif;
         color: $ecru;
     }
-    @include breakpoint($small) {
+    @include susy-breakpoint($small) {
         width: 62px;
         display: inline-block;
         padding-left: 5px;
@@ -148,7 +148,7 @@ $off-canvas-width: 260px;
         }
     }
 
-    @include breakpoint($l-900) {
+    @include susy-breakpoint($l-900) {
         width: 75px;
         padding-left: 6px;
         a {
@@ -156,7 +156,7 @@ $off-canvas-width: 260px;
         }
     }
 
-    @include breakpoint($menu) {
+    @include susy-breakpoint($menu) {
         width: 80px;
         padding-right: 0;
     }

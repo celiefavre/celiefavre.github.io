@@ -1,123 +1,133 @@
 .site-header {
-    background: $bleu;
-    height: em(100px);
-    position: relative;
-    @include breakpoint($small) {
-        height: em(120px);
-    }
-    @include breakpoint($l-900) {
-        height: em(125px);
-    }
-    @include breakpoint($xlarge) {
-        height: em(135px);
-    }
+	height     : em(100px);
+	position   : relative;
+	background : $bleu;
 
-    // super important sinon off-canvas marche pas, pourquoi???
+	@include susy-breakpoint($small) {
+		height : em(120px);
+	}
+
+	@include susy-breakpoint($l-900) {
+		height : em(125px);
+	}
+
+	@include susy-breakpoint($xlarge) {
+		height : em(135px);
+	}
+
+	// super important sinon off-canvas marche pas, pourquoi???
 }
 
 .site-title {
-    @include span(4);
-    @include push(0.2);
-    margin-top: 5px;
-    border: none;
-    &:hover {
-        transform: rotateX(360deg);
-        transform-origin: middle;
-        transition: 1s ease-in-out;
-    }
-    @include breakpoint($small) {
-        @include span(2);
-        margin-left: 0;
-    }
+	@include span(4);
+	@include push(0.2);
+	margin-top : 5px;
+	border     : none;
 
-    @include breakpoint($medium) {
-        width: 13.66667%;
-        margin-left: gutter();
-    }
+	&:hover {
+		transform        : rotateX(360deg);
+		transform-origin : middle;
+		transition       : 1s ease-in-out;
+	}
+
+	@include susy-breakpoint($small) {
+		@include span(2);
+		margin-left : 0;
+	}
+
+	@include susy-breakpoint($medium) {
+		width       : 13.66667%;
+		margin-left : gutter();
+	}
 }
 
 .logo {
-    width: 90px;
-    height: 90px;
-    @include breakpoint($small) {
-        width: 110px;
-        height: 110px;
-    }
+	width  : 90px;
+	height : 90px;
+	@include susy-breakpoint($small) {
+		width  : 110px;
+		height : 110px;
+	}
 }
 
 .celie {
-    font-size: 1.3em;
-    line-height: 30px;
-    color: lighten(#61A4B1, 25);
-    font-family: 'Parisienne', cursive;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    @include span(4.1);
-    @include breakpoint($small) {
-        font-size: 1.4em;
-        margin-top: 20px;
-        margin-bottom: 0;
-        line-height: 40px;
-        @include span(2);
-    }
-    @include breakpoint($l-900) {
-        font-size: 1.7em;
-    }
-    @include breakpoint($l-950) {
-        margin-top: 12px;
-        line-height: 50px;
-    }
-    @include breakpoint($large) {
-        font-size: 2em;
-        margin-left: 2em;
-    }
-    @include breakpoint($xlarge) {
-        font-size: 2.8em;
-        line-height: 59px;
-        margin-top: 13px;
-    }
+	font-size     : 1.3em;
+	line-height   : 30px;
+	color         : lighten(#61a4b1, 25);
+	font-family   : 'Parisienne', cursive;
+	margin-top    : 16px;
+	margin-bottom : 16px;
+	@include span(4.1);
+
+	@include susy-breakpoint($small) {
+		font-size     : 1.4em;
+		margin-top    : 20px;
+		margin-bottom : 0;
+		line-height   : 40px;
+		@include span(2);
+	}
+
+	@include susy-breakpoint($l-900) {
+		font-size : 1.7em;
+	}
+
+	@include susy-breakpoint($l-950) {
+		margin-top  : 12px;
+		line-height : 50px;
+	}
+
+	@include susy-breakpoint($large) {
+		font-size   : 2em;
+		margin-left : 2em;
+	}
+
+	@include susy-breakpoint($xlarge) {
+		font-size   : 2.8em;
+		line-height : 59px;
+		margin-top  : 13px;
+	}
 }
 
 .hero {
-    @include container(100%);
-    margin-top: 0;
-    margin-left: -5px;
-    border: 5px solid transparent;
-    -moz-border-image: -moz-linear-gradient(top left, #3078A8 0%, #F4C377 100%);
-    -webkit-border-image: -webkit-linear-gradient(top left, #3078A8 0%, #F4C377 100%);
-    border-image: linear-gradient(to bottom right, #3078A8 0%, #F4C377 100%);
-    border-image-slice: 1;
-    background-image: url("/images/psychomob.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 116px;
-    @include breakpoint($img520) {
-        background: url("/images/psycho520.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 189px;
-    }
+	@include container(100%);
+	margin-top           : 0;
+	margin-left          : -5px;
+	border               : 5px solid transparent;
+	-moz-border-image    : -moz-linear-gradient(top left, #3078a8 0%, #f4c377 100%);
+	-webkit-border-image : -webkit-linear-gradient(top left, #3078a8 0%, #f4c377 100%);
+	border-image         : linear-gradient(to bottom right, #3078a8 0%, #f4c377 100%);
+	border-image-slice   : 1;
+	background-image     : url("/images/psychomob.jpg");
+	background-position  : center center;
+	background-repeat    : no-repeat;
+	background-size      : cover;
+	width                : 100%;
+	height               : 116px;
+	@include susy-breakpoint($img520) {
+		background          : url("/images/psycho520.jpg");
+		background-position : center center;
+		background-repeat   : no-repeat;
+		background-size     : cover;
+		height              : 189px;
+	}
 
-    @include breakpoint($small) {
-        background: url("/images/psycho1000.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 333px;
-    }
+	@include susy-breakpoint($small) {
+		background          : url("/images/psycho1000.jpg");
+		background-position : center center;
+		background-repeat   : no-repeat;
+		background-size     : cover;
+		height              : 333px;
+	}
 
-    @include breakpoint($xlarge) {
-        background: url("/images/psychofull.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 370px;
-    }
+	@include susy-breakpoint($xlarge) {
+		background          : url("/images/psychofull.jpg");
+		background-position : center center;
+		background-repeat   : no-repeat;
+		background-size     : cover;
+		height              : 370px;
+	}
 }
 
 .essai {
-    @include full;
+	@include full;
 }
