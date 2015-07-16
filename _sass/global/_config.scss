@@ -36,12 +36,24 @@ $susy: (
         math: fluid,
         gutter-position: inside,
         debug: (
-                image: hide,
+                image: show,
                 color: rgba(#bada56, .40),
-                output: background,
+                output: overlay,
                 toggle: top right,
         ),
 );
+
+@include border-box-sizing;
+
+// Clearfix
+// --------
+@mixin cf {
+    &:after {
+        content : " ";
+        display : table;
+        clear   : both;
+    }
+}
 
 // calcul des valeurs en em
 @function em($target, $context: 16px) {

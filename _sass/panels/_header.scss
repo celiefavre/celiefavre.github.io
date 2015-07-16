@@ -19,8 +19,8 @@
 }
 
 .site-title {
-	@include span(4);
-	@include push(0.2);
+	@include span(50px);
+    margin-left : 10px;
 	margin-top : 5px;
 	border     : none;
 
@@ -31,12 +31,11 @@
 	}
 
 	@include susy-breakpoint($small) {
-		@include span(2);
+		@include span(100px);
 		margin-left : 0;
 	}
 
 	@include susy-breakpoint($medium) {
-		width       : 13.66667%;
 		margin-left : gutter();
 	}
 }
@@ -64,7 +63,8 @@
 		margin-top    : 20px;
 		margin-bottom : 0;
 		line-height   : 40px;
-		@include span(2);
+		@include span(170px);
+
 	}
 
 	@include susy-breakpoint($l-900) {
@@ -78,13 +78,14 @@
 
 	@include susy-breakpoint($large) {
 		font-size   : 2em;
-		margin-left : 2em;
+		margin-left : 1em;
 	}
 
 	@include susy-breakpoint($xlarge) {
 		font-size   : 2.8em;
 		line-height : 59px;
 		margin-top  : 13px;
+        @include span(240px);
 	}
 }
 

@@ -195,7 +195,7 @@
     }
 }
 
-#schema {
+.schema {
     font-family: Georgia, serif;
     color: #4A4A4A;
     margin-left: span(2);
@@ -220,13 +220,14 @@
     background-color: whitesmoke;
     font-size: 1.2em;
     padding: 10px;
-    margin-top: 12px;
+    margin : 2em auto 2em;
     text-align: center;
-    width: span(8);
+    width: 45%;
     color: $rouge;
     border: 1px solid #DDD9D9;
     border-radius: 0 0 120px 120px / 0 0 6px 6px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
     &:before, &:after {
         content: '';
         position: absolute;
@@ -247,9 +248,8 @@
         transform: skew(-8deg) rotate(-8deg);
     }
     @include susy-breakpoint($small) {
-        width: span(8);
-        margin-left: span(2);
-        margin-bottom: 22px;
+        width: 70%;
+
     }
 }
 
@@ -283,15 +283,8 @@
 #map-canvas {
     height: 22em;
     margin: 2em auto 0;
-    width: 22em;
+    width: 100%;
     padding: 0px;
-    @include susy-breakpoint($small) {
-        width: 42em;
-    }
-
-    @include susy-breakpoint($large) {
-        width: 52em;
-    }
 }
 
 .table-horaires, .table-tarifs {
@@ -302,7 +295,7 @@
 
     td {
         padding: 10px;
-        width: 110px;
+        width: 130px;
     }
 }
 
@@ -368,4 +361,28 @@
 
 .title-center {
     text-align: center;
+}
+
+.img-thumbs {
+   @include cf;
+    ul {
+        padding-left : 0;
+        li {
+            list-style-type: none;
+
+            @include susy-breakpoint($small) {
+                @include gallery(6);
+
+            }
+        }
+    }
+}
+
+.horaires {
+    margin : 0 auto;
+    width: 350px;
+    padding-left : 40px;
+    padding-right : 40px;
+    border-radius: 5px;
+    border: 1px solid #4B818C;
 }

@@ -1,174 +1,185 @@
 @mixin trans-prep {
     // backface visibility
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
+    -webkit-backface-visibility : hidden;
+    -moz-backface-visibility    : hidden;
+    -ms-backface-visibility     : hidden;
+    backface-visibility         : hidden;
     // Resets perspectives
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    -ms-perspective: 1000;
-    perspective: 1000;
+    -webkit-perspective         : 1000;
+    -moz-perspective            : 1000;
+    -ms-perspective             : 1000;
+    perspective                 : 1000;
 }
 
-$off-canvas-width: 260px;
+$off-canvas-width : 260px;
 
 .menu {
-    width: 5em;
-    float: right;
+    width : 5em;
+    float : right;
+
     @include susy-breakpoint($small) {
-        display: none;
+        display : none;
     }
 }
 
 .menu-toggle {
-    position: relative;
-    top: 22px;
-    cursor: pointer;
+    position : relative;
+    top      : 22px;
+    cursor   : pointer;
 }
 
 .content {
+    transition : transform .3s ease;
+
     @include trans-prep;
-    transition: transform 0.3s ease;
     &.is-open {
-        transition: transform 0.3s ease;
-        transform: translate3d(-$off-canvas-width, 0, 0);
+        transform  : translate3d(-$off-canvas-width, 0, 0);
+        transition : transform .3s ease;
     }
 }
 
 // close btn
 .close {
-    padding-left: 1.5em;
+    padding-left : 1.5em;
+
     @include susy-breakpoint($small) {
-        display: none;
+        display : none;
     }
 }
 
 .close-btn {
-    display: block;
-    margin-top: 25px;
-    height: 1.5em;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: all 0.3s ease;
+    display    : block;
+    height     : 1.5em;
+    margin-top : 25px;
+    transition : all .3s ease;
+    cursor     : pointer;
+    opacity    : .7;
     &:hover,
     &:active,
     &:focus {
-        opacity: 1;
+        opacity : 1;
     }
 }
 
 .off-canvas {
-    position: absolute;
-    width: $off-canvas-width;
-    right: -$off-canvas-width;
-    top: 0;
-    bottom: 0;
-    height: 1000px;
-    z-index: 2;
-    background: #3F5357;
-    @include susy-breakpoint($small) {
-        right: 0;
-        @include span(7.5);
-        height: auto;
-        border-top: none;
-        position: relative;
-        background: $bleu;
-    }
+    position   : absolute;
+    top        : 0;
+    right      : -$off-canvas-width;
+    bottom     : 0;
+    width      : $off-canvas-width;
+    height     : 1000px;
+    background : #3f5357;
+    z-index    : 2;
 
+    @include susy-breakpoint($small) {
+        position   : relative;
+        right      : 0;
+        height     : auto;
+        border-top : none;
+        background : $bleu;
+
+        @include span(7.5);
+    }
     @include susy-breakpoint($large) {
         @include span(7.5 last);
     }
 }
 
 .on-canvas {
-    position: relative;
-    left: 0;
-    overflow: hidden;
-    transition: left .3s ease;
+    position   : relative;
+    left       : 0;
+    transition : left .3s ease;
+    overflow   : hidden;
 }
 
 .navigation {
-    @include susy-breakpoint($small) {
-        background: darken($bleu, 6);
-        border-radius: 5px;
-        width: 510px;
-    }
-
-    @include susy-breakpoint($l-900) {
-        width: 605px;
-    }
-
-    @include susy-breakpoint($l-950) {
-        width: 642px;
-    }
-
-    @include susy-breakpoint($large) {
-        margin-left: 100px;
-    }
+    //@include susy-breakpoint($small) {
+    //    float : right;
+    //    width: 510px;
+    //    border-radius: 5px;
+    //    background: darken($bleu, 6);
+    //}
+    //@include susy-breakpoint($l-900) {
+    //    width: 1100px;
+    //}
+    //@include susy-breakpoint($l-950) {
+    //}
+    //@include susy-breakpoint($large) {
+    //}
 }
 
 .navul {
-    text-decoration: none;
-    line-height: 50px;
+    padding-left    : 0;
+    background      : darken($bleu, 6);
+    line-height     : 50px;
+    text-decoration : none;
+
     @include susy-breakpoint($small) {
-        margin: 0;
-        padding-left: 0;
-        line-height: 18px;
+        float : right;
+        width        : 1020px;
+        margin       : 0 15px 0 0;
+        padding-left : 0;
+        line-height  : 18px;
     }
 }
 
+
 .navli {
-    list-style-type: none;
-    width: 150px;
-    padding-left: 4em;
-    a {
-        text-decoration: none;
-        font-family: 'Open Sans', sans-serif;
-        color: $ecru;
-    }
+    width           : 168px;
+    margin          : 0 auto;
+
     @include susy-breakpoint($small) {
-        width: 62px;
-        display: inline-block;
-        padding-left: 5px;
+        display      : inline-block;
+        width        : 150px;
+        padding-left : 5px;
+
         a {
-            color: $ecru;
-            font-size: 0.9em;
-            text-decoration: none;
-            display: block;
-            padding: 15px 0 15px 0;
-            text-align: center;
-            line-height: 1.6em;
+            display         : block;
+            padding         : 15px 0 15px 0;
+            color           : $ecru;
+            font-size       : .8em;
+            line-height     : 1.6em;
+            text-align      : center;
+            text-decoration : none;
+
             &:hover {
-                background: lighten($rouge, 15);
-                color: lighten(#61A4B1, 35);
-                transition: .3s ease-in-out;
+                transition : .3s ease-in-out;
+                background : lighten($rouge, 15);
+                color      : lighten(#61a4b1, 35);
+
                 @include bleed-x(7px);
             }
         }
     }
-
     @include susy-breakpoint($l-900) {
-        width: 75px;
-        padding-left: 6px;
+        width         : 110px;
+        padding-right : 6px;
+        padding-left  : 6px;
+        border-right  : 1px solid #eee;
+        &:last-of-type {
+            border-right : none;
+        }
         a {
-            font-size: 1em;
+            font-size : 1em;
         }
     }
 
-    @include susy-breakpoint($menu) {
-        width: 80px;
-        padding-right: 0;
+    list-style-type : none;
+
+    a {
+        color           : $ecru;
+        font-family     : 'Open Sans', sans-serif;
+        text-decoration : none;
     }
 }
 
 .active {
-    background: $bleu;
-    box-shadow: 3px 7px 0px darken($bleu, 6);
+    background : $bleu;
+    box-shadow : 3px 7px 0 darken($bleu, 6);
 }
 
 .content {
-    width: 100%;
-    height: 100vh;
-    transition: margin-left .3s ease;
+    width      : 100%;
+    height     : 100vh;
+    transition : margin-left .3s ease;
 }

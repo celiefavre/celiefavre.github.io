@@ -23,19 +23,23 @@ description: Célie Favre, psychologue. EMDR, suivi psychologique, bilans psycho
 </section>
 <section class="rang-un">
 	<div class="carre emdr">
-		<a href="#"><h2>Derniers articles</h2></a>
-		<ul class="post-list">
-			{% for post in site.posts %}
-				<li>
-					<span class="post-meta">{{ post.date | date: "%-d %b, %Y" }}</span>
-					<h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-				</li>
-			{% endfor %}
-		</ul>
+		<a href="{{ prepend: site.url }}/psychologue-bayonne/"><h2>Cabinet de Bayonne</h2></a>
+		<div class="schema" itemscope itemtype="http://schema.org/Person">
+			<span itemprop="name">Célie Favre</span><br/>
+			<span itemprop="jobTitle">Psychologue</span>
+			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<span itemprop="streetAddress"> 28, rue Lormande </span><br>
+				<span itemprop="postalCode">64100</span>
+				<span itemprop="addressLocality">Bayonne</span>
+			</div>
+			<span itemprop="telephone" class="tel">06 52 46 76 36</span>
+		</div>
+		<p> En savoir plus sur le <a href="{{ prepend: site.url }}/cabinet-psychologue-biarritz/" class="lien-dans-carre">cabinet de psychologie à Bayonne</a></p>
 	</div>
+
 	<div class="carre evaluation">
-		<a href="{{ prepend: site.url }}/cabinet-psychologue-biarritz/"><h2>Cabinet</h2></a>
-		<div id="schema" itemscope itemtype="http://schema.org/Person">
+		<a href="{{ prepend: site.url }}/cabinet-psychologue-biarritz/"><h2>Cabinet de Biarritz</h2></a>
+		<div class="schema" itemscope itemtype="http://schema.org/Person">
 			<span itemprop="name">Célie Favre</span><br/>
 			<span itemprop="jobTitle">Psychologue</span>
 			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
