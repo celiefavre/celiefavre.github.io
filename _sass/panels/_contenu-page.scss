@@ -8,7 +8,7 @@
 }
 
 .content-left {
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         padding-right : span(1);
 
         @include span(7);
@@ -22,7 +22,7 @@
     border           : 1px solid #ccc;
     background-color : darken($ecru, 2);
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         margin-top : em(40px);
 
         @include span(5 last);
@@ -57,7 +57,7 @@
 }
 
 .column-left {
-    @include susy-breakpoint($medium) {
+    @include susy-breakpoint($tablet-paysage) {
         padding-right : span(1);
 
         @include span(6);
@@ -65,7 +65,7 @@
 }
 
 .column-right {
-    @include susy-breakpoint($medium) {
+    @include susy-breakpoint($tablet-paysage) {
         @include span(6 last);
         @include pad(2%);
     }
@@ -78,7 +78,7 @@
     border-radius : 15px;
     color         : darken($bleu, 20);
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         margin-left : 3%;
         padding     : 5px 0 5px 30px;
     }
@@ -89,35 +89,21 @@
 
     @include break;
     @include container(95%);
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         margin-top : 3em;
-    }
-    @include susy-breakpoint($large) {
-        @include container(90%);
     }
 }
 
 .carre {
     margin-bottom : span(1);
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         display       : table;
         position      : relative;
         min-height    : em(330px);
         margin-bottom : 40px;
     }
-    @include susy-breakpoint($medium) {
-        min-height : 320px;
-    }
-    @include susy-breakpoint($l-900) {
-        min-height : 270px;
-    }
-    @include susy-breakpoint($large) {
-        min-height : 290px;
-    }
-    @include susy-breakpoint($l-1300) {
-        min-height : 250px;
-    }
+
     a {
         display         : inline;
         color           : $rouge;
@@ -142,21 +128,21 @@
         font-weight    : 500;
         text-align     : center;
 
-        @include susy-breakpoint($small) {
+        @include susy-breakpoint($tablet-portrait) {
             margin-bottom : 40px;
         }
     }
     p {
         color : #4a4a4a;
 
-        @include susy-breakpoint($small) {
+        @include susy-breakpoint($tablet-portrait) {
             min-height : 130px;
         }
     }
 }
 
 .carre p:last-of-type {
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         display : table-footer-group;
     }
     &:before {
@@ -167,27 +153,27 @@
 }
 
 .emdr {
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         @include span(4);
         @include pad(1%);
     }
 }
 
 .evaluation {
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         @include span(4);
         @include pad(1%);
     }
 }
 
 .suivi {
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         @include span(4 last);
     }
 }
 
 .lien-dans-carre {
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         display     : block;
         line-height : 30px;
         text-align  : center;
@@ -202,11 +188,10 @@
 }
 
 .schema {
-    margin-left : span(2);
     color       : #4a4a4a;
     font-family : Georgia, serif;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         margin-left : 0;
     }
 
@@ -224,7 +209,7 @@
 .tel {
     display          : block;
     position         : relative;
-    width            : 45%;
+    width            : 150px;
     margin           : 2em auto 2em;
     padding          : 10px;
     border           : 1px solid #ddd9d9;
@@ -235,8 +220,12 @@
     text-align       : center;
     box-shadow       : 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         width : 70%;
+    }
+
+    @include susy-breakpoint($tablet-paysage) {
+        width:150px;
     }
 
     &:before,
@@ -281,7 +270,7 @@
     border-radius : 15px;
     background    : lighten(#61a4b1, 25);
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         margin-bottom : 0;
     }
     &:hover {
@@ -301,7 +290,7 @@
 .table-tarifs {
     margin : 20px auto;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         margin : 20px 0 0 0;
     }
 
@@ -392,7 +381,7 @@
     ul {
         padding-left : 0;
         li {
-            @include susy-breakpoint($small) {
+            @include susy-breakpoint($tablet-portrait) {
                 @include gallery(6);
             }
 
@@ -411,17 +400,17 @@
 }
 
 .with-outline {
-    border     : 1px solid #fbfbf9;
-    background : mix(#ece9df, #fff, 65%);
-    box-shadow : 3px 3px 3px 0 RGBA(45, 45, 45, .3);
+    border         : 1px solid #fbfbf9;
+    background     : mix(#ece9df, #fff, 65%);
+    box-shadow     : 3px 3px 3px 0 RGBA(45, 45, 45, .3);
     padding-bottom : gutter();
-    padding-left : gutter();
-    
+    padding-left   : gutter();
+
     &--dark {
-        background : mix(#ece9df, #4180B1, 95%);
+        //background : mix(#ece9df, #4180B1, 95%);
     }
 
     &--blue {
-        background : mix(#ece9df, #2F4732, 95%);
+        //background : mix(#ece9df, #2F4732, 95%);
     }
 }

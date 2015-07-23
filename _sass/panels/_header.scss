@@ -3,16 +3,12 @@
 	position   : relative;
 	background : $bleu;
 
-	@include susy-breakpoint($small) {
+	@include susy-breakpoint($tablet-portrait) {
 		height : em(120px);
 	}
 
-	@include susy-breakpoint($l-900) {
+	@include susy-breakpoint($tablet-paysage) {
 		height : em(125px);
-	}
-
-	@include susy-breakpoint($xlarge) {
-		height : em(135px);
 	}
 
 	// super important sinon off-canvas marche pas, pourquoi???
@@ -30,12 +26,12 @@
 		transition       : 1s ease-in-out;
 	}
 
-	@include susy-breakpoint($small) {
+	@include susy-breakpoint($tablet-portrait) {
 		@include span(100px);
 		margin-left : 0;
 	}
 
-	@include susy-breakpoint($medium) {
+	@include susy-breakpoint($tablet-paysage) {
 		margin-left : gutter();
 	}
 }
@@ -43,7 +39,7 @@
 .logo {
 	width  : 90px;
 	height : 90px;
-	@include susy-breakpoint($small) {
+	@include susy-breakpoint($tablet-portrait) {
 		width  : 110px;
 		height : 110px;
 	}
@@ -58,34 +54,13 @@
 	margin-bottom : 16px;
 	@include span(4.1);
 
-	@include susy-breakpoint($small) {
+	@include susy-breakpoint($tablet-portrait) {
 		font-size     : 1.4em;
 		margin-top    : 20px;
 		margin-bottom : 0;
 		line-height   : 40px;
 		@include span(170px);
 
-	}
-
-	@include susy-breakpoint($l-900) {
-		font-size : 1.7em;
-	}
-
-	@include susy-breakpoint($l-950) {
-		margin-top  : 12px;
-		line-height : 50px;
-	}
-
-	@include susy-breakpoint($large) {
-		font-size   : 2em;
-		margin-left : 1em;
-	}
-
-	@include susy-breakpoint($xlarge) {
-		font-size   : 2.8em;
-		line-height : 59px;
-		margin-top  : 13px;
-        @include span(240px);
 	}
 }
 
@@ -104,28 +79,14 @@
 	background-size      : cover;
 	width                : 100%;
 	height               : 116px;
-	@include susy-breakpoint($img520) {
-		background          : url("/images/psycho520.jpg");
-		background-position : center center;
-		background-repeat   : no-repeat;
-		background-size     : cover;
-		height              : 189px;
-	}
 
-	@include susy-breakpoint($small) {
+
+	@include susy-breakpoint($tablet-portrait) {
 		background          : url("/images/psycho1000.jpg");
 		background-position : center center;
 		background-repeat   : no-repeat;
 		background-size     : cover;
 		height              : 333px;
-	}
-
-	@include susy-breakpoint($xlarge) {
-		background          : url("/images/psychofull.jpg");
-		background-position : center center;
-		background-repeat   : no-repeat;
-		background-size     : cover;
-		height              : 370px;
 	}
 }
 

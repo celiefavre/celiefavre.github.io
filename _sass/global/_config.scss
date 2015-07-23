@@ -59,12 +59,6 @@ $susy: (
   @return ($target / $context) * 1em;
 }
 // breakpoints
-$img520 : em(520px);
-$small  : em(767px);
-$medium : em(840px);
-$l-900  : em(900px);
-$l-950  : em(950px);
-$menu   : em(980px);
-$large  : em(1200px);
-$l-1300 : em(1300px);
-$xlarge : em(1680px);
+$tablet-portrait : em(768px);
+$tablet-paysage: em(1024px);
+$desktop : em(1280px);

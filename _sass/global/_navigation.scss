@@ -17,7 +17,7 @@ $off-canvas-width : 260px;
     width : 5em;
     float : right;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         display : none;
     }
 }
@@ -42,7 +42,7 @@ $off-canvas-width : 260px;
 .close {
     padding-left : 1.5em;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         display : none;
     }
 }
@@ -71,7 +71,7 @@ $off-canvas-width : 260px;
     background : #3f5357;
     z-index    : 2;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         position   : relative;
         right      : 0;
         height     : auto;
@@ -79,9 +79,6 @@ $off-canvas-width : 260px;
         background : $bleu;
 
         @include span(7.5);
-    }
-    @include susy-breakpoint($large) {
-        @include span(7.5 last);
     }
 }
 
@@ -92,29 +89,13 @@ $off-canvas-width : 260px;
     overflow   : hidden;
 }
 
-.navigation {
-    //@include susy-breakpoint($small) {
-    //    float : right;
-    //    width: 510px;
-    //    border-radius: 5px;
-    //    background: darken($bleu, 6);
-    //}
-    //@include susy-breakpoint($l-900) {
-    //    width: 1100px;
-    //}
-    //@include susy-breakpoint($l-950) {
-    //}
-    //@include susy-breakpoint($large) {
-    //}
-}
-
 .navul {
     padding-left    : 0;
     background      : darken($bleu, 6);
     line-height     : 50px;
     text-decoration : none;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         float : right;
         width        : 1020px;
         margin       : 0 15px 0 0;
@@ -128,7 +109,7 @@ $off-canvas-width : 260px;
     width           : 168px;
     margin          : 0 auto;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         display      : inline-block;
         width        : 150px;
         padding-left : 5px;
@@ -151,7 +132,7 @@ $off-canvas-width : 260px;
             }
         }
     }
-    @include susy-breakpoint($l-900) {
+    @include susy-breakpoint($tablet-paysage) {
         width         : 110px;
         padding-right : 6px;
         padding-left  : 6px;

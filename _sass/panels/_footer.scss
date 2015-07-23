@@ -8,27 +8,27 @@
     background-attachment: fixed;
     padding-top: 2em;
     margin-top: span(1);
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
        margin-top: 47px; 
     }
 }
 
 .sitemap {
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         @include span(4);
         @include prefix(10%);
     }
 }
 
 .informations {
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         @include span(4);
         @include prefix(10%);
     }
 }
 
 .cabinet-footer {
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         @include span(4 last);
         @include prefix(5%);
     }
@@ -36,7 +36,7 @@
 
 .sitemap, .informations, .cabinet-footer {
     margin-left: span(3);
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         margin-left: 0;
     }
     h3 {
