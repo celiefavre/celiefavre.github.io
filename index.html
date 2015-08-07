@@ -3,41 +3,66 @@ layout: default
 title: Psychologue EMDR Biarritz
 description: Célie Favre, psychologue. EMDR, suivi psychologique, bilans psychologique. 4, rue de l'imprimerie, 64200 Biarritz. 06 52 46 76 36
 ---
-<div class="hero" role="img" aria-label="photo plage biarritz"></div>
-<section class="rang-un">
-	<div class="carre emdr with-outline">
+<div class="wrapper-home">
+	<section class="carre with-outline">
 		<a href="{{ prepend: site.url }}/emdr/"><h1>EMDR</h1></a>
-		<p>L’EMDR est une thérapie reconnue par l’OMS et la HAS en France. Elle permet de « digérer » les expériences douloureuses et s’adresse aussi bien aux <a href="{{ prepend: site.url }}/emdr-adultes/">adultes</a> qu'aux <a href="{{ prepend: site.url }}/emdr-enfants/">enfants</a>.</p>
-		<p>	En savoir plus sur <a href="{{ prepend: site.url }}/emdr/" class="lien-dans-carre"> la thérapie EMDR</a></p>
-	</div>
-	<div class="carre evaluation with-outline">
+		<p>L’EMDR est une thérapie reconnue par l’OMS et la HAS en France. Elle permet de « digérer » les expériences douloureuses et s’adresse aussi bien aux
+			<a href="{{ prepend: site.url }}/emdr-adultes/">adultes</a> qu'aux
+			<a href="{{ prepend: site.url }}/emdr-enfants/">enfants</a>.</p>
+		<p> En savoir plus sur <a href="{{ prepend: site.url }}/emdr/" class="lien-dans-carre"> la thérapie EMDR</a></p>
+	</section>
+	<section class="carre with-outline">
 		<a href="{{ prepend: site.url }}/bilan-psychologique/"><h2>Evaluation</h2></a>
 		<p>Les tests psychologiques permettent d’appréhender le fonctionnement cognitif et psychoaffectif des enfants et adolescents en difficulté ou suspectés de haut potentiel.</p>
-		<p>	En savoir plus sur <a href="{{ prepend: site.url }}/bilan-psychologique/" class="lien-dans-carre"> l'évaluation psychologique</a></p>
-	</div>
-	<div class="carre suivi with-outline">
+		<p> En savoir plus sur
+			<a href="{{ prepend: site.url }}/bilan-psychologique/" class="lien-dans-carre"> l'évaluation psychologique</a>
+		</p>
+		<div class="school-svg">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" version="1.1">
+				<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<g id="Group" stroke="#979797">
+						<path d="M0.671875 0.6171875L0.671875 200.410715 201.664143 200.410715" id="chart-border"/>
+						<path class="chart-stroke chart-stroke--1" d="M29 180L29 105" stroke-linecap="round"/>
+						<path class="chart-stroke chart-stroke--2" d="M57 180L57 120" stroke-linecap="round"/>
+						<path class="chart-stroke chart-stroke--3" d="M85 180L85 100" stroke-linecap="round"/>
+						<path class="chart-stroke chart-stroke--4" d="M141 180L141 103" stroke-linecap="round"/>
+						<path class="chart-stroke chart-stroke--5" d="M113 180L113 80" stroke-linecap="round"/>
+						<path class="chart-stroke chart-stroke--6" d="M169 180L169 80" stroke-linecap="round"/>
+					</g>
+				</g>
+			</svg>
+
+		</div>
+	</section>
+
+	<section class="carre with-outline">
 		<a href="{{ prepend: site.url }}/psychologue-favre/"><h2>Psychologue à Bayonne et Biarritz</h2></a>
 		<p>Célie Favre est psychologue diplômée d'&Eacute;tat et praticien EMDR. Elle reçoit les adultes, enfants et adolescents dans son cabinet de Biarritz.</p>
-		<p>	En savoir plus sur <a href="{{ prepend: site.url }}/psychologue-favre/" class="lien-dans-carre"> Célie Favre, psychologue</a></p>
-	</div>
-</section>
-<section class="rang-un">
-	<div class="carre emdr with-outline with-outline--dark">
+		<p> En savoir plus sur
+			<a href="{{ prepend: site.url }}/psychologue-favre/" class="lien-dans-carre"> Célie Favre, psychologue</a>
+		</p>
+	</section>
+
+	<section class="carre with-outline with-outline--dark">
 		<a href="{{ prepend: site.url }}/psychologue-bayonne/"><h2>Cabinet de Bayonne</h2></a>
 		<div class="schema" itemscope itemtype="http://schema.org/Person">
 			<span itemprop="name">Célie Favre</span><br/>
 			<span itemprop="jobTitle">Psychologue</span>
 			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-				<span itemprop="streetAddress"> 28, rue Lormande </span><br>
+				<span itemprop="streetAddress"> 28, rue Lormand </span><br>
 				<span itemprop="postalCode">64100</span>
 				<span itemprop="addressLocality">Bayonne</span>
 			</div>
 			<span itemprop="telephone" class="tel">06 52 46 76 36</span>
 		</div>
-		<p> En savoir plus sur le <a href="{{ prepend: site.url }}/cabinet-psychologue-biarritz/" class="lien-dans-carre">cabinet de psychologie à Bayonne</a></p>
-	</div>
+		<p> En savoir plus sur le
+			<a href="{{ prepend: site.url }}/cabinet-psychologue-biarritz/" class="lien-dans-carre">cabinet de psychologie à Bayonne</a>
+		</p>
+	</section>
 
-	<div class="carre evaluation with-outline with-outline--blue">
+	<section class="carre hero" role="img" aria-label="photo plage biarritz"></section>
+
+	<section class="carre with-outline with-outline--blue">
 		<a href="{{ prepend: site.url }}/cabinet-psychologue-biarritz/"><h2>Cabinet de Biarritz</h2></a>
 		<div class="schema" itemscope itemtype="http://schema.org/Person">
 			<span itemprop="name">Célie Favre</span><br/>
@@ -49,9 +74,18 @@ description: Célie Favre, psychologue. EMDR, suivi psychologique, bilans psycho
 			</div>
 			<span itemprop="telephone" class="tel">06 52 46 76 36</span>
 		</div>
-			<p> En savoir plus sur le <a href="{{ prepend: site.url }}/cabinet-psychologue-biarritz/" class="lien-dans-carre">cabinet de psychologie à Biarritz</a></p>
-	</div>
-	<div class="carre suivi">
-		<img class="map" src="https://maps.googleapis.com/maps/api/staticmap?center=43.482147,-1.554812\&amp;zoom=15&amp;size=350x300&amp;maptype=roadmap&amp;language=fr&amp;markers=color:0xBE311A%7C43.482147,-1.554812&amp;style=feature:poi%7Cvisibility:off&amp;style=feature:transit%7Cvisibility:on" alt="cabinet psychologie biarritz">
-	</div>
-</section>
+		<p> En savoir plus sur le
+			<a href="{{ prepend: site.url }}/cabinet-psychologue-biarritz/" class="lien-dans-carre">cabinet de psychologie à Biarritz</a>
+		</p>
+	</section>
+	<section class="carre with-outline">
+		<img class="map" src="http://maps.googleapis.com/maps/api/staticmap?center=4,+rue+de+l'imprimerie++64200+Biarritz&zoom=15&scale=false&size=350x350&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff5435%7Clabel:A%7C4,+rue+de+l'imprimerie++64200+Biarritz" alt="Google Map of 4, rue de l'imprimerie  64200 Biarritz">
+	</section>
+
+	<section class="carre"></section>
+
+	<section class="carre with-outline">
+		<img class="map" src="http://maps.googleapis.com/maps/api/staticmap?center=28+r+Lormand,+64100+BAYONNE&zoom=15&scale=false&size=350x350&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff5435%7Clabel:B%7C28+r+Lormand,+64100+BAYONNE" alt="Google Map of 28 r Lormand, 64100 BAYONNE">	</section>
+</div>
+
+

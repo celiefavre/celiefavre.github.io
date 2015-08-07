@@ -1,15 +1,10 @@
 .site-footer {
     @include full;
-    background-color: $bleu;
-    background-image: url("/images/footer.png");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 1136px 283px;
-    background-attachment: fixed;
-    padding-top: 2em;
+    background : $bleu url("/images/footer.png") no-repeat bottom / cover;
+    padding-top: gutter();
     margin-top: span(1);
     @include susy-breakpoint($tablet-portrait) {
-       margin-top: 47px; 
+        margin-top : gutter();
     }
 }
 

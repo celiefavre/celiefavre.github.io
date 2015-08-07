@@ -84,57 +84,70 @@
     }
 }
 
-.rang-un {
-    margin-top : 2em;
+/* home gallery
+  ============================= */
 
-    @include break;
-    @include container(95%);
+.wrapper-home {
+    padding: gutter();
+
+}
+
+.wrapper-home section {
+    margin-bottom : gutter();
     @include susy-breakpoint($tablet-portrait) {
-        margin-top : 3em;
+        @include gallery(6);
+    }
+
+    @include susy-breakpoint($tablet-paysage) {
+        @include gallery(4);
     }
 }
 
 .carre {
-    margin-bottom : span(1);
 
     @include susy-breakpoint($tablet-portrait) {
-        display       : table;
         position      : relative;
         min-height    : em(330px);
-        margin-bottom : 40px;
     }
 
     a {
         display         : inline;
         color           : $rouge;
         text-decoration : none;
+
         &:hover {
             color : #e24329;
         }
     }
+
     h1 {
         padding-left : 0;
     }
+
     h2 {
         margin : .67em 0;
     }
+
     h1,
     h2 {
-        width          : 100%;
-        padding-bottom : 8px;
+        margin : 0;
+        height: 50px;
+        line-height : 50px;
         border-bottom  : 1px dotted #4a4a4a;
         color          : $rouge;
         font-size      : 1.5em;
         font-weight    : 500;
         text-align     : center;
+        background : RGBA(233, 221, 177, .8);
 
         @include susy-breakpoint($tablet-portrait) {
             margin-bottom : 40px;
         }
     }
+
     p {
         color : #4a4a4a;
-
+        @include pad(3%);
         @include susy-breakpoint($tablet-portrait) {
             min-height : 130px;
         }
@@ -142,9 +155,7 @@
 }
 
 .carre p:last-of-type {
-    @include susy-breakpoint($tablet-portrait) {
-        display : table-footer-group;
-    }
+
     &:before {
         color     : $rouge;
         font-size : 1.2em;
@@ -152,24 +163,51 @@
     }
 }
 
-.emdr {
-    @include susy-breakpoint($tablet-portrait) {
-        @include span(4);
-        @include pad(1%);
+.school-svg {
+    position : absolute;
+    bottom: 45px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+#test {
+    stroke: #1C3F5B;
+}
+
+#chart-border {
+    stroke-width: 5px;
+    stroke: #000;
+}
+
+.chart-stroke {
+    stroke-width: 20px;
+
+    &--1 {
+        stroke: #9000FD;
+    }
+
+    &--2 {
+        stroke: #4F0088;
+    }
+
+    &--3 {
+        stroke: #0002F9;
+    }
+    &--5 {
+        stroke: #00FF03;
+    }
+    &--4 {
+        stroke: #FFFB13;
+    }
+    &--6 {
+        stroke: #FC8100;
     }
 }
 
-.evaluation {
-    @include susy-breakpoint($tablet-portrait) {
-        @include span(4);
-        @include pad(1%);
-    }
-}
-
-.suivi {
-    @include susy-breakpoint($tablet-portrait) {
-        @include span(4 last);
-    }
+.test1 {
+    stroke: lighten(#000, 30);
+    stroke-width: 15px;
 }
 
 .lien-dans-carre {
@@ -203,7 +241,6 @@
 .map {
     width         : 100%;
     height        : auto;
-    margin-bottom : 3em;
 }
 
 .tel {
@@ -219,14 +256,6 @@
     font-size        : 1.2em;
     text-align       : center;
     box-shadow       : 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;
-
-    @include susy-breakpoint($tablet-portrait) {
-        width : 70%;
-    }
-
-    @include susy-breakpoint($tablet-paysage) {
-        width:150px;
-    }
 
     &:before,
     &:after {
@@ -401,10 +430,7 @@
 
 .with-outline {
     border         : 1px solid #fbfbf9;
-    background     : mix(#ece9df, #fff, 65%);
     box-shadow     : 3px 3px 3px 0 RGBA(45, 45, 45, .3);
-    padding-bottom : gutter();
-    padding-left   : gutter();
 
     &--dark {
         //background : mix(#ece9df, #4180B1, 95%);

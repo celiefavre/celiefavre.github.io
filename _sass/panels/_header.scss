@@ -65,30 +65,11 @@
 }
 
 .hero {
-	@include container(100%);
-	margin-top           : 0;
-	margin-left          : -5px;
-	border               : 5px solid transparent;
-	-moz-border-image    : -moz-linear-gradient(top left, #3078a8 0%, #f4c377 100%);
-	-webkit-border-image : -webkit-linear-gradient(top left, #3078a8 0%, #f4c377 100%);
-	border-image         : linear-gradient(to bottom right, #3078a8 0%, #f4c377 100%);
-	border-image-slice   : 1;
-	background-image     : url("/images/psychomob.jpg");
-	background-position  : center center;
-	background-repeat    : no-repeat;
-	background-size      : cover;
-	width                : 100%;
-	height               : 116px;
-
-
 	@include susy-breakpoint($tablet-portrait) {
-		background          : url("/images/psycho1000.jpg");
-		background-position : center center;
-		background-repeat   : no-repeat;
-		background-size     : cover;
-		height              : 333px;
+		background          : url("/images/gustav-klimt-arbre-de-vie.jpg") no-repeat center center / cover;
 	}
 }
+
 
 .essai {
 	@include full;

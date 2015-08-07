@@ -1,6 +1,8 @@
 .wrapper {
-	@include break;
-	@include container(100%);
-	height: auto;
-	position: relative;
+    @include break;
+    @include container();
+    background-color : $ecru;
+    height           : auto;
+    position         : relative;
+    margin-top : gutter();
 }
