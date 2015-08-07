@@ -88,26 +88,27 @@
   ============================= */
 
 .wrapper-home {
-    padding: gutter();
-
+    padding : gutter();
 }
 
 .wrapper-home section {
     margin-bottom : gutter();
+
     @include susy-breakpoint($tablet-portrait) {
         @include gallery(6);
     }
-
     @include susy-breakpoint($tablet-paysage) {
         @include gallery(4);
     }
 }
 
 .carre {
+    position : relative;
+    z-index  : 1;
 
     @include susy-breakpoint($tablet-portrait) {
-        position      : relative;
-        min-height    : em(330px);
+        position   : relative;
+        min-height : em(330px);
     }
 
     a {
@@ -120,42 +121,41 @@
         }
     }
 
-    h1 {
-        padding-left : 0;
-    }
-
-    h2 {
-        margin : .67em 0;
-    }
-
-    h1,
-    h2 {
-        margin : 0;
-        height: 50px;
-        line-height : 50px;
-        border-bottom  : 1px dotted #4a4a4a;
-        color          : $rouge;
-        font-size      : 1.5em;
-        font-weight    : 500;
-        text-align     : center;
-        background : RGBA(233, 221, 177, .8);
-
-        @include susy-breakpoint($tablet-portrait) {
-            margin-bottom : 40px;
-        }
-    }
-
     p {
         color : #4a4a4a;
+
         @include pad(3%);
-        @include susy-breakpoint($tablet-portrait) {
-            min-height : 130px;
-        }
+    }
+}
+
+.home-title {
+    height                  : 50px;
+    margin                  : 0;
+    border-bottom           : 1px dotted #032e45;
+    border-top-right-radius : 10px;
+    background              : RGBA(233, 221, 177, .7);
+    color                   : $rouge;
+    font-size               : 1.5em;
+    font-weight             : 500;
+    line-height             : 50px;
+    text-align              : center;
+
+    @include susy-breakpoint($tablet-portrait) {
+        margin-bottom : 40px;
+    }
+
+    &--orange {
+        background : #dc3d24;
+        color      : #eee3c2;
+    }
+
+    &--blue {
+        background : #0F7179;
+        color      : #eee3c2;
     }
 }
 
 .carre p:last-of-type {
-
     &:before {
         color     : $rouge;
         font-size : 1.2em;
@@ -164,50 +164,59 @@
 }
 
 .school-svg {
-    position : absolute;
-    bottom: 45px;
-    right: 100px;
-    width: 100px;
-    height: 100px;
+    display : none;
+    width   : 80px;
+    height  : 80px;
+    //position : absolute;
+    //bottom: 10px;
+    //right : 150px;
+    margin  : 0 auto gutter();
+
+    @include susy-breakpoint($tablet-paysage) {
+        display : block;
+    }
 }
 
 #test {
-    stroke: #1C3F5B;
+    stroke : #1c3f5b;
 }
 
 #chart-border {
-    stroke-width: 5px;
-    stroke: #000;
+    stroke-width : 5px;
+    stroke       : #000;
 }
 
 .chart-stroke {
-    stroke-width: 20px;
+    stroke-width : 20px;
 
     &--1 {
-        stroke: #9000FD;
+        stroke : #9000fd;
     }
 
     &--2 {
-        stroke: #4F0088;
+        stroke : #4f0088;
     }
 
     &--3 {
-        stroke: #0002F9;
+        stroke : #0002f9;
     }
-    &--5 {
-        stroke: #00FF03;
-    }
+
     &--4 {
-        stroke: #FFFB13;
+        stroke : #fffb13;
     }
+
+    &--5 {
+        stroke : #00ff03;
+    }
+
     &--6 {
-        stroke: #FC8100;
+        stroke : #fc8100;
     }
 }
 
 .test1 {
-    stroke: lighten(#000, 30);
-    stroke-width: 15px;
+    stroke       : lighten(#000, 30);
+    stroke-width : 15px;
 }
 
 .lien-dans-carre {
@@ -217,20 +226,17 @@
         text-align  : center;
     }
     &:hover {
-        padding       : 0 2px 0 2px;
         transition    : .3s ease-in-out;
-        border-radius : 10px;
-        background    : darken($ecru, 10);
         color         : lighten($rouge, 10);
     }
 }
 
 .schema {
-    color       : #4a4a4a;
-    font-family : Georgia, serif;
+    padding-left : gutter();
+    color        : #4a4a4a;
+    font-family  : Georgia, serif;
 
     @include susy-breakpoint($tablet-portrait) {
-        margin-left : 0;
     }
 
     span {
@@ -239,23 +245,25 @@
 }
 
 .map {
-    width         : 100%;
-    height        : auto;
+    width                     : 100%;
+    height                    : auto;
+    border-top-right-radius   : 10px;
+    border-bottom-left-radius : 10px;
 }
 
 .tel {
-    display          : block;
-    position         : relative;
-    width            : 150px;
-    margin           : 2em auto 2em;
-    padding          : 10px;
-    border           : 1px solid #ddd9d9;
-    border-radius    : 0 0 120px 120px / 0 0 6px 6px;
-    background-color : whitesmoke;
-    color            : $rouge;
-    font-size        : 1.2em;
-    text-align       : center;
-    box-shadow       : 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;
+    display       : block;
+    position      : relative;
+    width         : 150px;
+    margin        : 2em auto 2em;
+    padding       : 10px;
+    border        : 1px solid #ddd9d9;
+    border-radius : 0 0 120px 120px / 0 0 6px 6px;
+    background    : whitesmoke;
+    color         : $rouge;
+    font-size     : 1.2em;
+    text-align    : center;
+    box-shadow    : 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;
 
     &:before,
     &:after {
@@ -429,14 +437,9 @@
 }
 
 .with-outline {
-    border         : 1px solid #fbfbf9;
-    box-shadow     : 3px 3px 3px 0 RGBA(45, 45, 45, .3);
-
-    &--dark {
-        //background : mix(#ece9df, #4180B1, 95%);
-    }
-
-    &--blue {
-        //background : mix(#ece9df, #2F4732, 95%);
-    }
+    border                    : 1px solid #032e45;
+    border-top-right-radius   : 10px;
+    border-bottom-left-radius : 10px;
+    background                : mix(#fff, #000, 95%);
+    box-shadow                : 3px 3px 3px 0 RGBA(45, 45, 45, .3);
 }

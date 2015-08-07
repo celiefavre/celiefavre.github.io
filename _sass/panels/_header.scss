@@ -60,17 +60,21 @@
 		margin-bottom : 0;
 		line-height   : 40px;
 		@include span(170px);
+	}
 
+	@include susy-breakpoint($tablet-paysage) {
+		@include span(110px);
+	}
+
+	@include susy-breakpoint($desktop) {
+		@include span(150px);
+		font-size : 2em;
 	}
 }
 
 .hero {
 	@include susy-breakpoint($tablet-portrait) {
-		background          : url("/images/gustav-klimt-arbre-de-vie.jpg") no-repeat center center / cover;
+		margin-top : 2em;
+		background          : #032E45 url("/images/gustav-klimt-arbre-de-vie.jpg") no-repeat center center / contain;
 	}
-}
-
-
-.essai {
-	@include full;
 }

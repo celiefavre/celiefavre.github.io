@@ -71,7 +71,7 @@ $off-canvas-width : 260px;
     background : #3f5357;
     z-index    : 2;
 
-    @include susy-breakpoint($tablet-portrait) {
+    @include susy-breakpoint($tablet-paysage) {
         position   : relative;
         right      : 0;
         height     : auto;
@@ -96,29 +96,43 @@ $off-canvas-width : 260px;
     text-decoration : none;
 
     @include susy-breakpoint($tablet-portrait) {
-        float : right;
-        width        : 1020px;
-        margin       : 0 15px 0 0;
+        margin : 0;
         padding-left : 0;
         line-height  : 18px;
     }
+
+    @include susy-breakpoint($tablet-paysage) {
+        width: 800px;
+        margin-right : 0;
+    }
+
+    @include susy-breakpoint($desktop) {
+        width:calc(96px*8);
+        float : right;
+    }
 }
 
-
 .navli {
-    width           : 168px;
-    margin          : 0 auto;
+    width  : 168px;
+    margin : 0 auto;
 
-    @include susy-breakpoint($tablet-portrait) {
-        display      : inline-block;
-        width        : 150px;
-        padding-left : 5px;
+    @include susy-breakpoint($tablet-paysage) {
+        display       : inline-block;
+        width         : 90px;
+        padding-right : 6px;
+        padding-left  : 6px;
+        border-right  : 1px solid #eee;
+
+        &:last-of-type {
+            border-right : none;
+        }
 
         a {
             display         : block;
             padding         : 15px 0 15px 0;
             color           : $ecru;
-            font-size       : .8em;
+            font-family     : 'Open Sans', sans-serif;
+            font-size       : .7em;
             line-height     : 1.6em;
             text-align      : center;
             text-decoration : none;
@@ -131,26 +145,6 @@ $off-canvas-width : 260px;
                 @include bleed-x(7px);
             }
         }
-    }
-    @include susy-breakpoint($tablet-paysage) {
-        width         : 110px;
-        padding-right : 6px;
-        padding-left  : 6px;
-        border-right  : 1px solid #eee;
-        &:last-of-type {
-            border-right : none;
-        }
-        a {
-            font-size : 1em;
-        }
-    }
-
-    list-style-type : none;
-
-    a {
-        color           : $ecru;
-        font-family     : 'Open Sans', sans-serif;
-        text-decoration : none;
     }
 }
 
