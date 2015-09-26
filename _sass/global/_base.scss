@@ -1,10 +1,5 @@
-body {
-    //background:
-    //radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #225371 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
-    //radial-gradient(at 100% 100%,     rgba(96, 16, 48, 0) 9px, #225371 10px, rgba(96, 16, 48, 0) 11px),
-    //#1C3F5B;
-    //background-size: 20px 20px;
 
+body {
     background:
     radial-gradient(rgba(100,100,100,0) 0, rgba(100,100,100,.15) 30%, rgba(100,100,100,.3) 32%, rgba(100,100,100,0) 33%) 0 0,
     radial-gradient(rgba(100,100,100,0) 0, rgba(100,100,100,.1) 11%, rgba(100,100,100,.3) 13%, rgba(100,100,100,0) 14%) 0 0,
@@ -13,7 +8,7 @@ body {
     radial-gradient(rgba(100,100,100,0) 0, rgba(100,100,100,.2) 11%, rgba(100,100,100,.4) 13%, rgba(100,100,100,0) 14%) 130px 370px,
     radial-gradient(rgba(100,100,100,0) 0, rgba(100,100,100,.1) 11%, rgba(100,100,100,.2) 13%, rgba(100,100,100,0) 14%) 0 0;
     background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
-    background-color: #172d44;
+    background-color: RGBA(0, 61, 90, 1);
 }
 
 h1, h2, h3, h4 {

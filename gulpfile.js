@@ -1,6 +1,8 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
+var uglify      = require('gulp-uglify');
+var notify      = require('gulp-notify');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 
@@ -48,8 +50,21 @@ gulp.task('sass', function () {
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/css'))
+        .pipe(notify('sass compilé'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('css'));
+});
+
+// compress js
+
+gulp.task('compress', function() {
+    return gulp.src('js/main.js')
+        .pipe(uglify({
+            onError: browserSync.notify
+        }))
+        .pipe(gulp.dest('_site/js'))
+        .pipe(notify('js minifié'))
+        .pipe(browserSync.reload({stream:true}));
 });
 
 /**
@@ -58,6 +73,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('_sass/**/*.scss', ['sass']);
+    gulp.watch('js/main.js', ['compress']);
     gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_includes/*.html'], ['jekyll-rebuild']);
 });
 

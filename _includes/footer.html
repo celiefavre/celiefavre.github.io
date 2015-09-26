@@ -36,18 +36,3 @@
 </footer>
 </div>  <!-- end content -->
 </div> <!-- end canvas -->
-<script>
-jQuery(document).ready(function($) {
-  var $transformer = $('.content');
-  var $menuToggle = $('.menu-toggle');
-  $('.menu-toggle').on('click', function(event) {
-    event.preventDefault();
-    $transformer.toggleClass('is-open');
-  });
-
-  $('.close-btn').on('click', function(event) {
-    event.preventDefault();
-    $transformer.removeClass('is-open');
-  });
-});
-</script>

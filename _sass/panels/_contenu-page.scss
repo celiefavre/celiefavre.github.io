@@ -86,19 +86,51 @@
 
 /* home gallery
   ============================= */
-
 .wrapper-home {
-    padding : gutter();
+    position : relative;
 }
 
-.wrapper-home section {
+.section-container {
+    @include pad(gutter());
+}
+
+.section-container section {
+    margin-top    : gutter();
     margin-bottom : gutter();
 
     @include susy-breakpoint($tablet-portrait) {
-        @include gallery(6);
+        &:nth-of-type(1) {
+            @include span(6);
+        }
+        &:nth-of-type(2) {
+            @include span(6 last);
+        }
+        &:nth-of-type(3) {
+            @include span(6);
+        }
+        &:nth-of-type(4) {
+            @include span(6 last);
+        }
+        &:nth-of-type(5) {
+            @include span(6);
+        }
     }
     @include susy-breakpoint($tablet-paysage) {
-        @include gallery(4);
+        &:nth-of-type(1) {
+            @include span(4);
+        }
+        &:nth-of-type(2) {
+            @include span(4);
+        }
+        &:nth-of-type(3) {
+            @include span(4 last);
+        }
+        &:nth-of-type(4) {
+            @include span(6);
+        }
+        &:nth-of-type(5) {
+            @include span(6 last);
+        }
     }
 }
 
@@ -144,13 +176,13 @@
         margin-bottom : 40px;
     }
 
-    &--orange {
-        background : #dc3d24;
+    &--biarritz {
+        background : RGBA(0, 63, 91, .8);
         color      : #eee3c2;
     }
 
-    &--blue {
-        background : #0F7179;
+    &--bayonne {
+        background : #0f7179;
         color      : #eee3c2;
     }
 }
@@ -163,26 +195,8 @@
     }
 }
 
-.school-svg {
-    display : none;
-    width   : 80px;
-    height  : 80px;
-    //position : absolute;
-    //bottom: 10px;
-    //right : 150px;
-    margin  : 0 auto gutter();
-
-    @include susy-breakpoint($tablet-paysage) {
-        display : block;
-    }
-}
-
-#test {
-    stroke : #1c3f5b;
-}
-
 #chart-border {
-    stroke-width : 5px;
+    stroke-width : 1px;
     stroke       : #000;
 }
 
@@ -226,8 +240,8 @@
         text-align  : center;
     }
     &:hover {
-        transition    : .3s ease-in-out;
-        color         : lighten($rouge, 10);
+        transition : .3s ease-in-out;
+        color      : lighten($rouge, 10);
     }
 }
 
@@ -244,18 +258,35 @@
     }
 }
 
+.home-map {
+    position : absolute;
+    top      : 60px;
+    right    : 10px;
+    width    : 100px;
+    height   : 100px;
+
+    @include susy-breakpoint($tablet-portrait) {
+        width  : 150px;
+        height : 120px;
+    }
+    @include susy-breakpoint($tablet-paysage) {
+        width : 200px;
+    }
+}
+
 .map {
     width                     : 100%;
     height                    : auto;
     border-top-right-radius   : 10px;
     border-bottom-left-radius : 10px;
+    box-shadow : 3px 3px 4px 0 #4a4a4a;
 }
 
 .tel {
     display       : block;
     position      : relative;
     width         : 150px;
-    margin        : 2em auto 2em;
+    margin        : 2em 2em;
     padding       : 10px;
     border        : 1px solid #ddd9d9;
     border-radius : 0 0 120px 120px / 0 0 6px 6px;
@@ -440,6 +471,5 @@
     border                    : 1px solid #032e45;
     border-top-right-radius   : 10px;
     border-bottom-left-radius : 10px;
-    background                : mix(#fff, #000, 95%);
     box-shadow                : 3px 3px 3px 0 RGBA(45, 45, 45, .3);
 }

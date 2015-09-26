@@ -1,0 +1,40 @@
+.home-anim-word {
+    display       : block;
+    position      : absolute;
+    bottom        : 10px;
+    padding       : 10px;
+    border-radius : 2px;
+    background    : rgba(0, 61, 90, .8);
+    color         : whitesmoke;
+    font-family   : 'Open Sans', sans-serif;
+    font-size     : 2em;
+}
+.eye-svg {
+    position : relative;
+    display : none;
+    width   : 80px;
+    height  : 80px;
+    margin  : 0 auto gutter();
+
+    @include susy-breakpoint($tablet-paysage) {
+        display : block;
+    }
+}
+
+#eye-move {
+    position : absolute;
+    top: 0;
+}
+
+
+
+.school-svg {
+    display : none;
+    width   : 80px;
+    height  : 80px;
+    margin  : 0 auto gutter();
+
+    @include susy-breakpoint($tablet-paysage) {
+        display : block;
+    }
+}
