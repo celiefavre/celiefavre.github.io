@@ -1,8 +1,9 @@
 .site-footer {
+    margin-top  : span(1);
+    padding-top : gutter();
+    background  : $bleu url('/images/footer.png') no-repeat bottom / cover;
+
     @include full;
-    background : $bleu url("/images/footer.png") no-repeat bottom / cover;
-    padding-top: gutter();
-    margin-top: span(1);
     @include susy-breakpoint($tablet-portrait) {
         margin-top : gutter();
     }
@@ -29,41 +30,58 @@
     }
 }
 
-.sitemap, .informations, .cabinet-footer {
-    margin-left: span(3);
+.sitemap,
+.informations,
+.cabinet-footer {
+    margin-left : span(3);
+
     @include susy-breakpoint($tablet-portrait) {
-        margin-left: 0;
+        margin-left : 0;
     }
     h3 {
-        color: lighten(#61A4B1, 25);
+        color : lighten(#61a4b1, 25);
     }
     ul {
-        padding-left: 0;
-        list-style-type: none;
-        line-height: 25px;
-    }
-    a {
+        padding-left    : 0;
+        line-height     : 25px;
 
+        list-style-type : none;
     }
-    a, li {
-        font-family: 'Open Sans', sans-serif;
-        color: rgba(168, 201, 209, .7);
+
+    a,
+    li {
+        color       : rgba(168, 201, 209, .7);
+        font-family : 'Open Sans', sans-serif;
     }
     a:hover {
-        color: $ecru;
+        color : $ecru;
     }
 }
 
-.fa-info, .fa-sitemap, .fa-map-marker {
+.fa-info,
+.fa-sitemap,
+.fa-map-marker {
     &:before {
-        color: $ecru;
-        font-size: em(20px);
+        color     : $ecru;
+        font-size : em(20px);
     }
 }
 
 .fa {
-    color: $rouge;
+    color : $rouge;
 }
-.fa-child:before, .fa-eye:before {
-    font-size: 1.5em;
+
+.fa-child:before,
+.fa-eye:before {
+    font-size : 1.5em;
+}
+
+.plan-site li {
+    font-size       : 2em;
+
+    list-style-type : none;
+
+    a {
+        font-family : 'Open Sans';
+    }
 }
