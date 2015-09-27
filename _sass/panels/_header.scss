@@ -1,90 +1,90 @@
 .site-header {
-	height     : em(100px);
-	position   : relative;
-	background : $bleu;
+    position   : relative;
+    height     : em(100px);
+    background : $bleu;
 
-	@include susy-breakpoint($tablet-portrait) {
-		height : em(120px);
-	}
+    @include susy-breakpoint($tablet-portrait) {
+        height : em(120px);
+    }
+    @include susy-breakpoint($tablet-paysage) {
+        height : em(125px);
+    }
 
-	@include susy-breakpoint($tablet-paysage) {
-		height : em(125px);
-	}
-
-	// super important sinon off-canvas marche pas, pourquoi???
+    // super important sinon off-canvas marche pas, pourquoi???
 }
 
 .site-title {
-	@include span(50px);
+    margin-top  : 5px;
     margin-left : 10px;
-	margin-top : 5px;
-	border     : none;
+    border      : none;
 
-	&:hover {
-		transform        : rotateX(360deg);
-		transform-origin : middle;
-		transition       : 1s ease-in-out;
-	}
+    @include span(50px);
+    @include susy-breakpoint($tablet-portrait) {
+        margin-left : 0;
 
-	@include susy-breakpoint($tablet-portrait) {
-		@include span(100px);
-		margin-left : 0;
-	}
+        @include span(100px);
+    }
+    @include susy-breakpoint($tablet-paysage) {
+        margin-left : gutter();
+    }
 
-	@include susy-breakpoint($tablet-paysage) {
-		margin-left : gutter();
-	}
+    &:hover {
+        transform        : rotateX(360deg);
+        transition       : 1s ease-in-out;
+
+        transform-origin : middle;
+    }
 }
 
 .logo {
-	width  : 90px;
-	height : 90px;
-	@include susy-breakpoint($tablet-portrait) {
-		width  : 110px;
-		height : 110px;
-	}
+    width  : 90px;
+    height : 90px;
+
+    @include susy-breakpoint($tablet-portrait) {
+        width  : 110px;
+        height : 110px;
+    }
 }
 
 .celie {
-	font-size     : 1.3em;
-	line-height   : 30px;
-	color         : lighten(#61a4b1, 25);
-	font-family   : 'Parisienne', cursive;
-	margin-top    : 16px;
-	margin-bottom : 16px;
-	@include span(4.4);
-    margin-left : 40px;
+    margin-top    : 16px;
+    margin-bottom : 16px;
+    margin-left   : 40px;
+    color         : lighten(#61a4b1, 25);
+    font-family   : 'Parisienne', cursive;
+    font-size     : 1.3em;
+    line-height   : 30px;
 
-	@include susy-breakpoint($tablet-portrait) {
-		font-size     : 1.4em;
-        margin: 20px 0 0 20px;
-		line-height   : 40px;
-		@include span(170px);
-	}
+    @include span(4.4);
+    @include susy-breakpoint($tablet-portrait) {
+        margin      : 20px 0 0 20px;
+        font-size   : 1.4em;
+        line-height : 40px;
 
-	@include susy-breakpoint($tablet-paysage) {
-		@include span(110px);
-	}
+        @include span(170px);
+    }
+    @include susy-breakpoint($tablet-paysage) {
+        @include span(110px);
+    }
+    @include susy-breakpoint($desktop) {
+        font-size : 2em;
 
-	@include susy-breakpoint($desktop) {
-		@include span(150px);
-		font-size : 2em;
-	}
+        @include span(150px);
+    }
 }
 
 .hero {
-    position : relative;
-    width: 100%;
-    height: 7em;
-    background          : RGBA(0, 61, 90, 1) url("/images/psychomob.jpg") no-repeat center center / cover;
+    position   : relative;
+    width      : 100%;
+    height     : 7em;
+    background : RGBA(0, 61, 90, 1) url('/images/psychomob.jpg') no-repeat center center / cover;
 
     @include susy-breakpoint($tablet-portrait) {
-        background          : RGBA(0, 61, 90, 1) url("/images/psycho520.jpg") no-repeat center center / cover;
-        height: 17em;
+        height     : 17em;
+        background : RGBA(0, 61, 90, 1) url('/images/psycho520.jpg') no-repeat center center / cover;
     }
-
     @include susy-breakpoint($tablet-paysage) {
-        background          : RGBA(0, 61, 90, 1) url("/images/psychofull.jpg") no-repeat center center / cover;
-        height: 18em;
+        height     : 18em;
+        background : RGBA(0, 61, 90, 1) url('/images/psychofull.jpg') no-repeat center center / cover;
     }
 }
