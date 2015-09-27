@@ -7,7 +7,11 @@
     background    : rgba(0, 61, 90, .8);
     color         : whitesmoke;
     font-family   : 'Open Sans', sans-serif;
-    font-size     : 2em;
+    font-size     : 1em;
+
+    @include susy-breakpoint($tablet-portrait) {
+        font-size : 2em;
+    }
 }
 .eye-svg {
     position : relative;

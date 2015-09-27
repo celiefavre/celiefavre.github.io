@@ -75,9 +75,16 @@
 .hero {
     position : relative;
     width: 100%;
-    height: 19em;
-    overflow: auto;
-    background          : RGBA(0, 61, 90, 1) url("/images/psychofull.jpg") no-repeat center center / contain;
+    height: 7em;
+    background          : RGBA(0, 61, 90, 1) url("/images/psychomob.jpg") no-repeat center center / cover;
+
     @include susy-breakpoint($tablet-portrait) {
-	}
+        background          : RGBA(0, 61, 90, 1) url("/images/psycho520.jpg") no-repeat center center / cover;
+        height: 17em;
+    }
+
+    @include susy-breakpoint($tablet-paysage) {
+        background          : RGBA(0, 61, 90, 1) url("/images/psychofull.jpg") no-repeat center center / cover;
+        height: 18em;
+    }
 }

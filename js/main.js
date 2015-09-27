@@ -24,9 +24,9 @@ jQuery(document).ready(function ($) {
     });
 
     tlAnimMots
-        .fromTo($emdr, 1, {x: -400}, {x: 10, ease: Power2.easeOut})
-        .fromTo($psychotherapies, 1, {x: -400}, {x: 130, ease: Power2.easeOut})
-        .fromTo($evaluation, 3, {x: -400}, {x: 407, ease: Elastic.easeOut.config(1, 0.5)})
+        .fromTo($emdr, 1, {xPercent: -400}, {xPercent: 10, ease: Power2.easeOut})
+        .fromTo($psychotherapies, 1, {xPercent: -400}, {xPercent: 50, ease: Power2.easeOut})
+        .fromTo($evaluation, 3, {xPercent: -400}, {xPercent: 235, ease: Elastic.easeOut.config(1, 0.5)})
     ;
 
     // svg
