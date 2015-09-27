@@ -46,18 +46,20 @@
 }
 
 .celie {
+    // debug
+    background : rgba(249, 144, 0, .5);
 	font-size     : 1.3em;
 	line-height   : 30px;
 	color         : lighten(#61a4b1, 25);
 	font-family   : 'Parisienne', cursive;
 	margin-top    : 16px;
 	margin-bottom : 16px;
-	@include span(4.1);
+	@include span(4.4);
+    margin-left : 40px;
 
 	@include susy-breakpoint($tablet-portrait) {
 		font-size     : 1.4em;
-		margin-top    : 20px;
-		margin-bottom : 0;
+        margin: 20px 0 0 20px;
 		line-height   : 40px;
 		@include span(170px);
 	}

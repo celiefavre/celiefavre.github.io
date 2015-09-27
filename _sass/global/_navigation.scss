@@ -115,8 +115,9 @@ $off-canvas-width : 260px;
 .navli {
     width  : 168px;
     margin : 0 auto;
+    list-style-type: none;
 
-    @include susy-breakpoint($tablet-paysage) {
+    @include susy-breakpoint($tablet-portrait) {
         display       : inline-block;
         width         : 90px;
         padding-right : 6px;
@@ -131,7 +132,6 @@ $off-canvas-width : 260px;
             display         : block;
             padding         : 15px 0 15px 0;
             color           : $ecru;
-            font-family     : 'Open Sans', sans-serif;
             font-size       : .7em;
             line-height     : 1.6em;
             text-align      : center;
@@ -146,6 +146,11 @@ $off-canvas-width : 260px;
             }
         }
     }
+}
+
+.navli a {
+    color: whitesmoke;
+    font-family     : 'Open Sans', sans-serif;
 }
 
 .active {
