@@ -1,0 +1,24 @@
+.caption--bilan:after ,
+.caption--psycho:after {
+    margin-left: 1em;
+    font-family: icomoon;
+}
+
+.caption--bilan:after {
+    content: '\e904';
+}
+
+.caption--psycho:after {
+    content: '\e903';
+}
+
+.icon-home,
+.icon-automobile,
+.icon-wheelchair {
+    padding-right :.5em;
+
+    &:before {
+        font-size :1.5em;
+        color: $rouge;
+    }
+}

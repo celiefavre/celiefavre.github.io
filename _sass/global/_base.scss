@@ -19,6 +19,8 @@ h1 {
 	font-size: $fs-h1--phone;
 	font-weight: 400;
 	color: darken($bleu, 6);
+    background: mix($bleu, #fff, 5);
+    line-height :2;
 	letter-spacing: -1;
 	border-bottom: 1px dotted #4A4A4A;
 	@include susy-breakpoint($tablet-portrait) {

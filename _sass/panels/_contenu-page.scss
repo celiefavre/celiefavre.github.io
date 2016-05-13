@@ -1,64 +1,78 @@
 .main-content {
     @include full;
     @include pad(5%);
+    margin-bottom : gutter();
+
     section {
-        padding-top    : 32px;
-        padding-bottom : 32px;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
-.content-left {
-    @include susy-breakpoint($tablet-portrait) {
-        padding-right : span(1);
+.content-left ,
+.content-right,
+.content-under,
+.column-left,
+.column-right {
+    border-radius: 4px;
+    background: #fff;
 
+    padding: gutter();
+}
+
+
+.content-left {
+    opacity: 9;
+
+    @include susy-breakpoint($tablet-portrait) {
         @include span(7);
     }
 }
 
 .content-right {
-    position         : relative;
-    padding-bottom   : span(1);
-    padding-left     : 5px;
-    border           : 1px solid #ccc;
-    background-color : darken($ecru, 2);
+    position: relative;
+    padding-bottom: span(1);
+    border: 1px solid #ccc;
+    opacity: .8;
+    z-index: 1;
 
     @include susy-breakpoint($tablet-portrait) {
-        margin-top : em(40px);
+        margin-top: em(40px);
 
         @include span(5 last);
-        @include pad(2%);
-        &:before,
+
+
+        &:before ,
         &:after {
-            position : absolute;
-            width    : 100%;
-            height   : 100%;
-            border   : 1px solid #ccc;
-            content  : '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ccc;
+            background: #fff;
+            content: '';
         }
         &:before {
-            top              : 7px;
-            left             : 10px;
-            transform        : rotateZ(1deg);
-            background-color : darken($ecru, 5);
-            z-index          : -1;
+            transform: rotateZ(1deg);
+            z-index: -10;
         }
         &:after {
-            top              : 7px;
-            left             : 11px;
-            transform        : rotateZ(3deg);
-            background-color : darken($ecru, 10);
-            z-index          : -2;
+            transform: rotateZ(-1deg);
+            z-index: -20;
         }
     }
 }
 
 .content-under {
     @include full;
+    margin-top :1em;
 }
 
 .column-left {
+    @include pad(gutter());
     @include susy-breakpoint($tablet-paysage) {
-        padding-right : span(1);
+        padding-right: span(1);
 
         @include span(6);
     }
@@ -72,22 +86,22 @@
 }
 
 .info {
-    margin-left   : 1%;
-    padding       : 5px 0 5px 15px;
-    border-left   : 5px solid $rouge;
-    border-radius : 15px;
-    color         : darken($bleu, 20);
+    margin-left: 1%;
+    padding: 5px 0 5px 15px;
+    border-left: 5px solid $rouge;
+    border-radius: 15px;
+    color: darken($bleu, 20);
 
     @include susy-breakpoint($tablet-portrait) {
-        margin-left : 3%;
-        padding     : 5px 0 5px 30px;
+        margin-left: 3%;
+        padding: 5px 0 5px 30px;
     }
 }
 
 /* home gallery
   ============================= */
 .wrapper-home {
-    position : relative;
+    position: relative;
 }
 
 .section-container {
@@ -95,8 +109,8 @@
 }
 
 .section-container section {
-    margin-top    : gutter();
-    margin-bottom : gutter();
+    margin-top: gutter();
+    margin-bottom: gutter();
 
     @include susy-breakpoint($tablet-portrait) {
         &:nth-of-type(1) {
@@ -135,342 +149,292 @@
 }
 
 .carre {
-    position : relative;
-    z-index  : 1;
+    position: relative;
+    z-index: 1;
 
     @include susy-breakpoint($tablet-portrait) {
-        position   : relative;
-        min-height : em(330px);
+        position: relative;
+        min-height: em(330px);
     }
 
     a {
-        display         : inline;
-        color           : $rouge;
-        text-decoration : none;
+        display: inline;
+        color: $rouge;
+        text-decoration: none;
 
         &:hover {
-            color : #e24329;
+            color: #e24329;
         }
     }
 
     p {
-        color : #4a4a4a;
+        color: #4a4a4a;
 
         @include pad(3%);
     }
 }
 
 .home-title {
-    height                  : 50px;
-    margin                  : 0;
-    border-bottom           : 1px dotted #032e45;
-    border-top-right-radius : 10px;
-    background              : rgba(185, 178, 155, 0.3);
-    color                   : $rouge;
-    font-size               : 1.5em;
-    font-weight             : 500;
-    line-height             : 50px;
-    text-align              : center;
+    height: 50px;
+    margin: 0;
+    border-bottom: 1px dotted #032e45;
+    border-top-right-radius: 10px;
+    background: rgba(185, 178, 155, .3);
+    color: $rouge;
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 50px;
+    text-align: center;
 
     @include susy-breakpoint($tablet-portrait) {
-        margin-bottom : 40px;
+        margin-bottom: 40px;
     }
 
     &--biarritz {
-        background : RGBA(0, 63, 91, .8);
-        color      : #eee3c2;
+        background: RGBA(0, 63, 91, .8);
+        color: #eee3c2;
     }
 
     &--bayonne {
-        background : #0f7179;
-        color      : #eee3c2;
+        background: #0f7179;
+        color: #eee3c2;
     }
 }
 
 .carre p:last-of-type {
     &:before {
-        color     : $rouge;
-        font-size : 1.2em;
-        content   : '\003E';
+        color: $rouge;
+        font-size: 1.2em;
+        content: '\003E';
     }
 }
 
 #chart-border {
-    stroke-width : 1px;
-    stroke       : #000;
+    stroke-width: 1px;
+    stroke: #000;
 }
 
 .chart-stroke {
-    stroke-width : 20px;
+    stroke-width: 20px;
 
     &--1 {
-        stroke : #9000fd;
+        stroke: #9000fd;
     }
 
     &--2 {
-        stroke : #4f0088;
+        stroke: #4f0088;
     }
 
     &--3 {
-        stroke : #0002f9;
+        stroke: #0002f9;
     }
 
     &--4 {
-        stroke : #fffb13;
+        stroke: #fffb13;
     }
 
     &--5 {
-        stroke : #00ff03;
+        stroke: #00ff03;
     }
 
     &--6 {
-        stroke : #fc8100;
+        stroke: #fc8100;
     }
 }
 
 .test1 {
-    stroke       : lighten(#000, 30);
-    stroke-width : 15px;
+    stroke: lighten(#000, 30);
+    stroke-width: 15px;
 }
 
 .lien-dans-carre {
     @include susy-breakpoint($tablet-portrait) {
-        display     : block;
-        line-height : 30px;
-        text-align  : center;
+        display: block;
+        line-height: 30px;
+        text-align: center;
     }
     &:hover {
-        transition : .3s ease-in-out;
-        color      : lighten($rouge, 10);
+        transition: .3s ease-in-out;
+        color: lighten($rouge, 10);
     }
 }
 
 .schema {
-    padding-left : gutter();
-    color        : #4a4a4a;
-    font-family  : Georgia, serif;
+    padding-left: gutter();
+    color: #4a4a4a;
+    font-family: Georgia, serif;
 
     @include susy-breakpoint($tablet-portrait) {
     }
 
     span {
-        line-height : $lh-p;
+        line-height: $lh-p;
     }
 }
 
 .home-map {
-    position : absolute;
-    top      : 60px;
-    right    : 10px;
-    width    : 100px;
-    height   : 100px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
 
     @include susy-breakpoint($tablet-portrait) {
-        width  : 150px;
-        height : 120px;
+        width: 150px;
+        height: 120px;
     }
     @include susy-breakpoint($tablet-paysage) {
-        width : 200px;
+        width: 200px;
     }
 }
 
 .map {
-    width                     : 100%;
-    height                    : auto;
-    border-top-right-radius   : 10px;
-    border-bottom-left-radius : 10px;
-    box-shadow : 3px 3px 4px 0 #4a4a4a;
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 3px 3px 4px 0 #4a4a4a;
 }
 
 .tel {
-    display       : block;
-    position      : relative;
-    width         : 150px;
-    margin        : 2em 2em;
-    padding       : 10px;
-    border        : 1px solid #ddd9d9;
-    border-radius : 0 0 120px 120px / 0 0 6px 6px;
-    background    : whitesmoke;
-    color         : $rouge;
-    font-size     : 1.2em;
-    text-align    : center;
-    box-shadow    : 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;
-    font-family : Georgia, serif;
+    display: block;
+    position: relative;
+    width: 150px;
+    margin: 2em 2em;
+    padding: 10px;
+    border: 1px solid #ddd9d9;
+    border-radius: 0 0 120px 120px / 0 0 6px 6px;
+    background: whitesmoke;
+    color: $rouge;
+    font-family: Georgia, serif;
+    font-size: 1.2em;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;
 
-    &:before,
+    &:before ,
     &:after {
-        position   : absolute;
-        bottom     : 15px;
-        left       : 10px;
-        width      : 60%;
-        height     : 20%;
-        box-shadow : 0 13px 12px rgba(31, 31, 31, .7);
-        content    : '';
-        z-index    : -1;
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+        width: 60%;
+        height: 20%;
+        box-shadow: 0 13px 12px rgba(31, 31, 31, .7);
+        content: '';
+        z-index: -1;
     }
     &:after {
-        right     : 10px;
-        left      : auto;
-        transform : skew(8deg) rotate(8deg);
+        right: 10px;
+        left: auto;
+        transform: skew(8deg) rotate(8deg);
     }
     &:before {
-        left      : 10px;
-        transform : skew(-8deg) rotate(-8deg);
+        left: 10px;
+        transform: skew(-8deg) rotate(-8deg);
     }
 }
 
-.liste,
+.liste ,
 .liste-ordo {
-    font-family : 'Lora', serif;
-    line-height : 30px;
+    font-family: 'Lora', serif;
+    line-height: 30px;
 }
 
 .liste-ordo {
     li {
-        padding-bottom : 20px;
-        line-height    : 25px;
+        padding-bottom: 20px;
+        line-height: 25px;
     }
 }
 
 .image-icone {
-    display       : block;
-    position      : relative;
-    margin        : 37px auto 37px;
-    border-radius : 15px;
-    background    : lighten(#61a4b1, 25);
+    display: block;
+    position: relative;
+    margin: 37px auto 37px;
+    border-radius: 15px;
+    background: lighten(#61a4b1, 25);
 
     @include susy-breakpoint($tablet-portrait) {
-        margin-bottom : 0;
+        margin-bottom: 0;
     }
     &:hover {
-        transform  : rotate(360deg);
-        transition : .5s ease-in-out;
+        transform: rotate(360deg);
+        transition: .5s ease-in-out;
     }
 }
 
 #map-canvas {
-    width   : 100%;
-    height  : 22em;
-    margin  : 2em auto 0;
-    padding : 0;
+    width: 100%;
+    height: 22em;
+    margin: 2em auto 0;
+    padding: 0;
 }
 
-.table-horaires,
-.table-tarifs {
-    margin : 20px auto;
-
-    @include susy-breakpoint($tablet-portrait) {
-        margin : 20px 0 0 0;
-    }
-
-    td {
-        width   : 130px;
-        padding : 10px;
-    }
-}
-
-.table-horaires {
-    tr {
-        &:nth-child(odd) {
-            background-color : lighten($ecru, 3);
-        }
-    }
-}
-
-.table-tarifs {
-    tr {
-        border-bottom : 1px solid #eee;
-    }
-}
-
-%caption {
-    height        : 2.5em;
-    border-bottom : 1px solid #eee;
-    color         : $ecru;
-    font-size     : 1.2em;
-    line-height   : 2.5em;
-}
-
-.caption-bilan {
-    background-color : $bleu;
-
-    @extend %caption;
-}
-
-.caption-psycho {
-    height           : 2.6em;
-    background-color : darken($bleu, 5);
-    line-height      : 2.6em;
-
-    @extend %caption;
-}
-
-.fa-cogs:before,
+.fa-cogs:before ,
 .fa-comments:before {
-    color : $ecru;
+    color: $ecru;
 }
 
 .presta {
-    width : 150px;
+    width: 150px;
 }
 
 .col-left {
-    background-color : #b6d5db;
+    background-color: #b6d5db;
 }
 
 .col-middle {
-    background-color : lighten(#b6d5db, 3);
+    background-color: lighten(#b6d5db, 3);
 }
 
 .col-right {
-    width            : 25px;
-    background-color : lighten(#b6d5db, 5);
+    width: 25px;
+    background-color: lighten(#b6d5db, 5);
 }
 
 .prix-centre {
-    text-align : center;
+    text-align: center;
 }
 
 .tarif-emdr {
-    background-color : lighten(#b6d5db, 5);
+    background-color: lighten(#b6d5db, 5);
 }
 
 .image-cabinet {
-    display    : block;
-    margin     : 40px auto;
-    box-shadow : 1px 1px 1px 10px rgba(255, 255, 255, .8);
+    display: block;
+    margin: 40px auto;
+    box-shadow: 1px 1px 1px 10px rgba(255, 255, 255, .8);
 }
 
 .title-center {
-    text-align : center;
+    text-align: center;
 }
 
 .img-thumbs {
     @include cf;
     ul {
-        padding-left : 0;
+        padding-left: 0;
         li {
             @include susy-breakpoint($tablet-portrait) {
                 @include gallery(6);
             }
 
-            list-style-type : none;
+            list-style-type: none;
         }
     }
 }
 
 .horaires {
-    width         : 350px;
-    margin        : 0 auto;
-    padding-right : 40px;
-    padding-left  : 40px;
-    border        : 1px solid #4b818c;
-    border-radius : 5px;
+    width: 350px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+    border: 1px solid #4b818c;
+    border-radius: 5px;
 }
 
 .with-outline {
-    border                    : 1px solid #032e45;
-    border-top-right-radius   : 10px;
-    border-bottom-left-radius : 10px;
-    box-shadow                : 3px 3px 3px 0 RGBA(45, 45, 45, .3);
+    border: 1px solid #032e45;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 3px 3px 3px 0 RGBA(45, 45, 45, .3);
 }

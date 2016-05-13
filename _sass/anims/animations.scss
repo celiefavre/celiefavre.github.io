@@ -42,3 +42,13 @@
         display : block;
     }
 }
+
+.anim-cabinet {
+    background : $rouge;
+    color: #fff;
+    line-height :2;
+    font-size :1.2em;
+    padding : gutter();
+    margin :0 0 1em 0;
+
+}

@@ -1,0 +1,53 @@
+.table-horaires ,
+.table-tarifs {
+    margin: 20px auto;
+
+    @include susy-breakpoint($tablet-portrait) {
+        margin: 20px 0 0 0;
+    }
+
+    td {
+        width: 130px;
+        padding: 10px;
+        line-height: 2;
+
+        @include susy-breakpoint($tablet-portrait) {
+            width :200px;
+        }
+    }
+}
+
+.table-horaires {
+    tr {
+        &:nth-child(odd) {
+            background-color: lighten($ecru, 3);
+        }
+    }
+}
+
+.table-tarifs {
+    tr {
+        border-bottom: 1px solid #eee;
+    }
+
+    &:last-of-type {
+        margin-bottom: 3em;
+    }
+}
+
+.caption {
+    border-bottom: 1px solid #eee;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: $ecru;
+    font-size: 1.2em;
+    line-height: 2.5em;
+    background: linear-gradient(to bottom, $bleu, lighten($bleu, 5));
+}
+
+tfoot {
+    background : mix($rouge, #000, 80);
+    color: #fff;
+    font-family : 'Lora', serif;
+    text-align :center;
+}

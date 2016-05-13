@@ -1,10 +1,13 @@
 jQuery(document).ready(function ($) {
     'use strict';
     // variables
-    var $transformer = $('.content');
-    var $emdr = $('.home-anim-word--1');
-    var $psychotherapies = $('.home-anim-word--2');
-    var $evaluation = $('.home-anim-word--3');
+    var $transformer = $('.content'),
+      $emdr = $('.home-anim-word--1'),
+      $psychotherapies = $('.home-anim-word--2'),
+      $evaluation = $('.home-anim-word--3'),
+      $animCab = $('.anim-cabinet');
+
+  TweenMax.to($animCab, .4, {opacity: 0.8, yoyo: true, repeat: -1, repeatDelay: 3, ease: Power2.easeInOut});
 
     // menu
     $('.menu-toggle').on('click', function (event) {
