@@ -4,7 +4,7 @@
   "description": "Site pour Célie",
   "main": "index.js",
   "dependencies": {
-    "gulp": "~3.8.9"
+    "gulp": "~3.9.1"
   },
   "devDependencies": {
     "browser-sync": "^2.7.12",
