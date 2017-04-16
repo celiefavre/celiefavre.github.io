@@ -30,35 +30,6 @@ $bleu : #4B818C;
 $ecru : #ECE9DF;
 $rouge: #BE311A;
 
-$susy: (
-        columns: 12,
-        gutters: 1/4,
-        math: fluid,
-        container: 1300px,
-        debug: (
-                image: hide,
-                color: rgba(#bada56, .40),
-                output: background,
-                toggle: top right,
-        ),
-);
-
-@include border-box-sizing;
-
-// Clearfix
-// --------
-@mixin cf {
-    &:after {
-        content : " ";
-        display : table;
-        clear   : both;
-    }
-}
-
-// calcul des valeurs en em
-@function em($target, $context: 16px) {
-  @return ($target / $context) * 1em;
-}
 // breakpoints
 $tablet-portrait : em(768px);
 $tablet-paysage: em(1024px);

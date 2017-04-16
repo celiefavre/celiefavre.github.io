@@ -1,8 +1,12 @@
 .wrapper {
     @include break;
     @include container();
-    background-color : $ecru;
+    background-color : color-lighter(primary-color-light, 8);
     height           : auto;
     position         : relative;
     margin-top : gutter();
+}
+
+.l-container {
+    @include container();
 }

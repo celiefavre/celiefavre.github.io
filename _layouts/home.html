@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+{% include head.html %}
+<body>
+{% include header.html %}
+<div class="hero">
+    <div class="l-container">
+        <span class="home-anim-word home-anim-word--1">EMDR</span>
+        <span class="home-anim-word home-anim-word--2">Psychothérapies</span>
+        <span class="home-anim-word home-anim-word--3">&Eacute;valuation</span>
+    </div>
+</div>
+<div class="wrapper">
+    {{ content }}
+</div>
+{% include footer.html %}
+<script src = "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="{{ '/js/DrawSVGPlugin.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/main.js'  | prepend: site.baseurl }}"></script>
+</body>
+</html>

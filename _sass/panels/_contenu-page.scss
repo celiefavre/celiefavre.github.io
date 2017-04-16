@@ -177,8 +177,8 @@
     margin: 0;
     border-bottom: 1px dotted #032e45;
     border-top-right-radius: 10px;
-    background: rgba(185, 178, 155, .3);
-    color: $rouge;
+    background-color: color(primary-color-dark);
+    color: color(accent-color);
     font-size: 1.5em;
     font-weight: 500;
     line-height: 50px;
@@ -436,4 +436,13 @@
     border-bottom-left-radius: 10px;
     box-shadow: 3px 3px 3px 0 RGBA(45, 45, 45, .3);
     background-color: #fcfcfc;
+}
+
+.tarif {
+
+    color: $rouge;
+    font-weight: 700;
+    padding: .4rem .6rem;
+    border-radius: 0 5px 0 5px;
+    box-shadow: 4px 4px 4px -3px #ccc;
 }

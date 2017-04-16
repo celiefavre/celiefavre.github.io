@@ -75,9 +75,8 @@ $off-canvas-width: 260px;
         right: 0;
         height: auto;
         border-top: none;
-        background: $bleu;
-
-        @include span(7.5);
+        background-color: color(primary-color);
+        width: 73%;
     }
 }
 
@@ -90,13 +89,12 @@ $off-canvas-width: 260px;
 
 .navul {
     padding-left: 0;
-    line-height: 50px;
     text-decoration: none;
 
     @include susy-breakpoint($tablet-portrait) {
         margin: 0;
         padding-left: 0;
-        line-height: 18px;
+        width: 100%;
     }
 
     @include susy-breakpoint($tablet-paysage) {
@@ -116,27 +114,25 @@ $off-canvas-width: 260px;
 
     @include susy-breakpoint($tablet-portrait) {
         float: left;
-        border-right: 1px solid #eee;
-        width: 104px;
-        background: #32575e;
+        border-right: 1px solid #b6b6b6;
+        width: 120px;
+        height: 80px;
+        background-color: color(primary-color-dark);
+
+        &:first-of-type {
+            border-bottom-left-radius: 8px;
+
+            a {
+                border-bottom-left-radius: 8px;
+            }
+        }
 
         &:last-of-type {
             border-right: none;
-        }
+            border-bottom-right-radius: 8px;
 
-        a {
-            display: block;
-            padding: 15px 6px;
-            color: $ecru;
-            font-size: .8em;
-            line-height: 1.6em;
-            text-align: center;
-            text-decoration: none;
-
-            &:hover {
-                transition: .3s ease-in-out;
-                background: lighten($rouge, 15);
-                color: lighten(#61a4b1, 35);
+            a {
+                border-bottom-right-radius: 8px;
             }
         }
     }
@@ -144,6 +140,25 @@ $off-canvas-width: 260px;
 
 .navli a {
     font-family: 'Open Sans', sans-serif;
+
+    @include susy-breakpoint($tablet-portrait) {
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        color: $ecru;
+        font-size: .8em;
+        line-height: 1.6em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &:hover {
+            transition: .3s ease-in-out;
+            background: lighten($rouge, 15);
+            color: lighten(#61a4b1, 35);
+        }
+    }
 }
 
 .active {

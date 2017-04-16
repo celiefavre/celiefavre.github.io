@@ -1,8 +1,9 @@
 /*# sourceMappingURL=main.css.map */
-@import "../bower_components/susy/sass/susy",
-"global/index",
-'panels/index',
-"debug/debug",
-'anims/index',
-'components/main',
-'vendor/main';
+@import "../bower_components/susy/sass/susy";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "global/index";
+@import "panels/index";
+@import "anims/index";
+@import "components/main";
+@import 'vendor/main';

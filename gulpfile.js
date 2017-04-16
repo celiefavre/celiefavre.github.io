@@ -84,7 +84,7 @@ gulp.task('deploy', function () {
     './_site/robots.txt'];
   // using base = '.' will transfer everything to /public_html correctly
   // turn off buffering in gulp.src for best performance
-  return gulp.src(globs, {base: './site/', buffer: false})
+  return gulp.src(globs, {base: './', buffer: false})
     .pipe(conn.differentSize('/public_html/')) // only upload newer files
     .pipe(conn.dest('/public_html/'));
 

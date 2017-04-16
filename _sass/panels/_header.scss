@@ -1,7 +1,7 @@
 .site-header {
     position   : relative;
     height     : em(100px);
-    background : $bleu;
+    background-color : color-opa(primary-color, .9);
 
     @include susy-breakpoint($tablet-portrait) {
         height : em(120px);
@@ -46,33 +46,6 @@
     }
 }
 
-.celie {
-    margin-top    : 16px;
-    margin-bottom : 16px;
-    margin-left   : 40px;
-    color         : lighten(#61a4b1, 25);
-    font-family   : 'Parisienne', cursive;
-    font-size     : 1.3em;
-    line-height   : 30px;
-
-    @include span(4.4);
-    @include susy-breakpoint($tablet-portrait) {
-        margin      : 20px 0 0 20px;
-        font-size   : 1.4em;
-        line-height : 40px;
-
-        @include span(180px);
-    }
-    @include susy-breakpoint($tablet-paysage) {
-        @include span(110px);
-    }
-    @include susy-breakpoint($desktop) {
-        font-size : 2em;
-
-        @include span(170px);
-    }
-}
-
 .hero {
     position   : relative;
     width      : 100%;
@@ -84,7 +57,7 @@
         background : RGBA(0, 61, 90, 1) url('/images/psycho520.jpg') no-repeat center center / cover;
     }
     @include susy-breakpoint($tablet-paysage) {
-        height     : 18em;
+        height     : 20em;
         background : RGBA(0, 61, 90, 1) url('/images/psychofull.jpg') no-repeat center center / cover;
     }
 }
