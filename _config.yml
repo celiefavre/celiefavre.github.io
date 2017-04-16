@@ -1,4 +1,4 @@
-url: "http://celiefavre.github.io" # the base hostname & protocol for your site
+url: "https://psy-emdr.com/" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
@@ -19,7 +19,7 @@ permalink: /:year/:month/:day/:title/
 
 comments: true
 
-exclude: [node_modules, gulpfile.js, package.json, gemfile, Gemfile.lock]
+exclude: [node_modules, gulpfile.js, package.json, gemfile, Gemfile.lock, yarn.lock, gulp.config.js, README.md, selection.json, CNAME]
 
 prose:
   rooturl: '_posts'

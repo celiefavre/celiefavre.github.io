@@ -1,7 +1,7 @@
 .main-content {
     @include full;
     @include pad(5%);
-    margin-bottom : gutter();
+    margin-bottom: gutter();
 
     section {
         padding-top: 32px;
@@ -9,7 +9,7 @@
     }
 }
 
-.content-left ,
+.content-left,
 .content-right,
 .content-under,
 .column-left,
@@ -19,7 +19,6 @@
 
     padding: gutter();
 }
-
 
 .content-left {
     opacity: 9;
@@ -41,8 +40,7 @@
 
         @include span(5 last);
 
-
-        &:before ,
+        &:before,
         &:after {
             position: absolute;
             top: 0;
@@ -66,7 +64,7 @@
 
 .content-under {
     @include full;
-    margin-top :1em;
+    margin-top: 1em;
 }
 
 .column-left {
@@ -311,7 +309,7 @@
     text-align: center;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;
 
-    &:before ,
+    &:before,
     &:after {
         position: absolute;
         bottom: 15px;
@@ -333,7 +331,7 @@
     }
 }
 
-.liste ,
+.liste,
 .liste-ordo {
     font-family: 'Lora', serif;
     line-height: 30px;
@@ -369,7 +367,7 @@
     padding: 0;
 }
 
-.fa-cogs:before ,
+.fa-cogs:before,
 .fa-comments:before {
     color: $ecru;
 }
@@ -437,4 +435,5 @@
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     box-shadow: 3px 3px 3px 0 RGBA(45, 45, 45, .3);
+    background-color: #fcfcfc;
 }

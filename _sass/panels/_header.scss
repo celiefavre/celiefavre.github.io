@@ -61,7 +61,7 @@
         font-size   : 1.4em;
         line-height : 40px;
 
-        @include span(170px);
+        @include span(180px);
     }
     @include susy-breakpoint($tablet-paysage) {
         @include span(110px);
@@ -69,7 +69,7 @@
     @include susy-breakpoint($desktop) {
         font-size : 2em;
 
-        @include span(150px);
+        @include span(170px);
     }
 }
 
