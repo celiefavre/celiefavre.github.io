@@ -1,3 +1,8 @@
+.home-svg {
+    width: 6em;
+    margin: 0 auto;
+}
+
 .home-anim-word {
     display       : block;
     position      : absolute;
@@ -13,35 +18,6 @@
         font-size : 2em;
     }
 }
-.eye-svg {
-    position : relative;
-    display : none;
-    width   : 80px;
-    height  : 80px;
-    margin  : 0 auto gutter();
-
-    @include susy-breakpoint($tablet-paysage) {
-        display : block;
-    }
-}
-
-#eye-move {
-    position : absolute;
-    top: 0;
-}
-
-
-
-.school-svg {
-    display : none;
-    width   : 80px;
-    height  : 80px;
-    margin  : 0 auto gutter();
-
-    @include susy-breakpoint($tablet-paysage) {
-        display : block;
-    }
-}
 
 .anim-cabinet {
     background : $rouge;
@@ -50,5 +26,16 @@
     font-size :1.2em;
     padding : gutter();
     margin :0 0 1em 0;
+}
 
+.anim-svg {
+    width: 8em;
+}
+
+.svg-car {
+    fill: color(primary-color);
+}
+
+.svg-permis {
+    fill: color(accent-color);
 }

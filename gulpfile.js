@@ -8,10 +8,17 @@ var cp          = require('child_process');
 var gutil       = require('gulp-util');
 var ftp         = require('vinyl-ftp');
 var sourcemaps = require('gulp-sourcemaps');
+var rev = require('gulp-rev');
 
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
+
+gulp.task('rev', function () {
+  return gulp.src('./css/main.css')
+    .pipe(rev())
+    .pipe(gulp.dest('./'))
+});
 
 /**
  * Build the Jekyll Site

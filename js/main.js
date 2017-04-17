@@ -5,9 +5,22 @@ jQuery(document).ready(function ($) {
       $emdr = $('.home-anim-word--1'),
       $psychotherapies = $('.home-anim-word--2'),
       $evaluation = $('.home-anim-word--3'),
-      $animCab = $('.anim-cabinet');
+      $animCab = $('.anim-cabinet'),
+      $animCar = $('.anim-car'),
+      tlAnimCar;
 
   TweenMax.to($animCab, .4, {opacity: 0.8, yoyo: true, repeat: -1, repeatDelay: 3, ease: Power2.easeInOut});
+
+  tlAnimCar = new TimelineMax({
+    delay: 1,
+    repeat: -1,
+    repeatDelay: 8
+  });
+  tlAnimCar
+    .to($animCar, 1.5, {x: '350%', ease: Power2.easeInOut})
+    .to($animCar, 0.3, {rotationY: '180deg'})
+    .to($animCar, 1.6, {x: '0%', ease: Power3.easeOut})
+    .to($animCar, 0.3, {rotationY: '0deg'});
 
     // menu
     $menuToggle.on('click', function (event) {
