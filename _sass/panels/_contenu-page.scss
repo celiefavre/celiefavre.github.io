@@ -62,6 +62,48 @@
     }
 }
 
+.l-span-full {
+    @include susy-media($tablet-paysage) {
+        @include full();
+    }
+}
+
+.l-span-6 {
+    @include susy-media($tablet-paysage) {
+        @include span(6);
+    }
+}
+
+.l-span-6--last {
+    @include susy-media($tablet-paysage) {
+        @include span(6 last);
+    }
+}
+
+.l-span-9 {
+    @include susy-media($tablet-paysage) {
+        @include span(9);
+    }
+}
+
+.l-span-3--last {
+    @include susy-media($tablet-paysage) {
+        @include span(3 last);
+    }
+}
+
+.home-aside {
+    background-color: color(primary-white);
+    min-height: 100vh;
+    margin-top: gutter();
+}
+
+.home-aside h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
 .content-under {
     @include full;
     margin-top: 1em;
@@ -102,6 +144,15 @@
     position: relative;
 }
 
+.c-section {
+    background-color: color(primary-white);
+    padding: gutter(10);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 2px 2px 1px -1px color(primary-color);
+
+}
+
 .section-container {
     @include pad(gutter());
 }
@@ -109,41 +160,6 @@
 .section-container section {
     margin-top: gutter();
     margin-bottom: gutter();
-
-    @include susy-breakpoint($tablet-portrait) {
-        &:nth-of-type(1) {
-            @include span(6);
-        }
-        &:nth-of-type(2) {
-            @include span(6 last);
-        }
-        &:nth-of-type(3) {
-            @include span(6);
-        }
-        &:nth-of-type(4) {
-            @include span(6 last);
-        }
-        &:nth-of-type(5) {
-            @include span(6);
-        }
-    }
-    @include susy-breakpoint($tablet-paysage) {
-        &:nth-of-type(1) {
-            @include span(4);
-        }
-        &:nth-of-type(2) {
-            @include span(4);
-        }
-        &:nth-of-type(3) {
-            @include span(4 last);
-        }
-        &:nth-of-type(4) {
-            @include span(6);
-        }
-        &:nth-of-type(5) {
-            @include span(6 last);
-        }
-    }
 }
 
 .carre {
@@ -177,8 +193,7 @@
     margin: 0;
     border-bottom: 1px dotted #032e45;
     border-top-right-radius: 10px;
-    background-color: color(primary-color-dark);
-    color: color(accent-color);
+    color: color(primary-color-dark);
     font-size: 1.5em;
     font-weight: 500;
     line-height: 50px;
@@ -259,10 +274,11 @@
 
 .schema {
     padding-left: gutter();
-    color: #4a4a4a;
-    font-family: Georgia, serif;
+    font-size: 1.1em;
+    font-family: 'Lora', serif;
 
     @include susy-breakpoint($tablet-portrait) {
+        @include span(6)
     }
 
     span {
@@ -271,34 +287,24 @@
 }
 
 .home-map {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 100px;
-    height: 100px;
-
     @include susy-breakpoint($tablet-portrait) {
-        width: 150px;
-        height: 120px;
-    }
-    @include susy-breakpoint($tablet-paysage) {
-        width: 200px;
+        @include span(6 last);
+
     }
 }
 
 .map {
     width: 100%;
     height: auto;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    box-shadow: 3px 3px 4px 0 #4a4a4a;
+    border-radius: 50%;
+    border: 1px solid color-lighter(divider-color, 6);
 }
 
 .tel {
     display: block;
     position: relative;
-    width: 150px;
-    margin: 2em 2em;
+    max-width: 10em;
+    margin: 2em 0;
     padding: 10px;
     border: 1px solid #ddd9d9;
     border-radius: 0 0 120px 120px / 0 0 6px 6px;
@@ -428,14 +434,6 @@
     padding-left: 40px;
     border: 1px solid #4b818c;
     border-radius: 5px;
-}
-
-.with-outline {
-    border: 1px solid #032e45;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    box-shadow: 3px 3px 3px 0 RGBA(45, 45, 45, .3);
-    background-color: #fcfcfc;
 }
 
 .tarif {

@@ -14,6 +14,7 @@
     "gulp-plumber": "^1.0.1",
     "gulp-ruby-sass": "^2.0.6",
     "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.8",
     "vinyl-ftp": "^0.6.0"

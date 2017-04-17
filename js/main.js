@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
     'use strict';
     // variables
-    var $transformer = $('.content'),
+    var $menuToggle = $('.icon-menu'),
       $emdr = $('.home-anim-word--1'),
       $psychotherapies = $('.home-anim-word--2'),
       $evaluation = $('.home-anim-word--3'),
@@ -10,15 +10,11 @@ jQuery(document).ready(function ($) {
   TweenMax.to($animCab, .4, {opacity: 0.8, yoyo: true, repeat: -1, repeatDelay: 3, ease: Power2.easeInOut});
 
     // menu
-    $('.menu-toggle').on('click', function (event) {
+    $menuToggle.on('click', function (event) {
         event.preventDefault();
-        $transformer.toggleClass('is-open');
+        $menuToggle.toggleClass('menu-on');
     });
 
-    $('.close-btn').on('click', function (event) {
-        event.preventDefault();
-        $transformer.removeClass('is-open');
-    });
 
     // animations
     var tlAnimMots = new TimelineMax({
@@ -54,5 +50,9 @@ jQuery(document).ready(function ($) {
             left: 10,
             ease: Power0.easeNone
         });
+
+  $('.ui.dropdown')
+    .dropdown()
+  ;
 
 });

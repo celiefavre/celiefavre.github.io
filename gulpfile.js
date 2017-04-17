@@ -7,6 +7,7 @@ var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var gutil       = require('gulp-util');
 var ftp         = require('vinyl-ftp');
+var sourcemaps = require('gulp-sourcemaps');
 
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -44,12 +45,14 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function () {
  */
 gulp.task('sass', function () {
   return gulp.src('./_sass/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: ['sass/**/index.scss', 'bower_components/susy/sass/susy'],
       outputStyle: 'compressed',
       onError: browserSync.notify
     }))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('_site/css'))
     .pipe(notify('sass compilé'))
     .pipe(browserSync.reload({stream: true}))

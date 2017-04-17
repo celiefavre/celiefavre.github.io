@@ -1,7 +1,7 @@
 .site-footer {
     margin-top  : span(1);
     padding-top : gutter();
-    background  : $bleu url('/images/footer.png') no-repeat bottom / cover;
+    background  : color(primary-color-dark) url('/images/footer.png') no-repeat bottom / cover;
 
     @include full;
     @include susy-breakpoint($tablet-portrait) {

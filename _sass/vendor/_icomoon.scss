@@ -24,6 +24,13 @@ i {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu:before {
+    content: "\e90b";
+}
+
+.icon-arrow-down:before {
+    content: "\e90a";
+}
 .icon-clock:before {
     content: "\e900";
 }

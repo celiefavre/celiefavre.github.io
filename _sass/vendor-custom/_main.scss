@@ -1,0 +1,10 @@
+.ui.menu {
+    width: 100%;
+    display: none;
+    @include susy-media($tablet-portrait) {
+        display: flex;
+        float: right;
+        width: auto;
+    }
+}
+

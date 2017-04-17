@@ -1,29 +1,28 @@
-<div class="on-canvas">
-	<div class="content">
-		<div class="transformer">
-			<header class="site-header">
-                <div class="l-container">
-                    <a href="{{ site.url }}" class="site-title"><img class="logo" src="/images/logo.png" alt="celie favre psychologue"></a>
-                    <div class="menu">
-                        <img src="/images/menu.svg" class="menu-toggle" alt="logo psychologue">
-                    </div>
-                    <div class="off-canvas">
-                        <div class="close">
-                            <i class="fa fa-times fa-3x close-btn"></i>
-                        </div>
-                        <nav class="navigation" role="navigation">
-                            <ul class="navul">
-                                <li {% if page.url== '/emdr-enfants/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr-enfants/">Psychologue Enfants</a></li>
-                                <li {% if page.url== '/emdr-adultes/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr-adultes/">Psychologue Adultes</a></li>
-                                <li {% if page.url== '/emdr/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/emdr/">Thérapie EMDR</a></li>
-                                <li {% if page.url== '/bilan-psychologique/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/bilan-psychologique/">Bilans psychologiques</a></li>
-                                <li {% if page.url== '/tests-psychotechniques-automobilistes/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/tests-psychotechniques-automobilistes/">Tests psychotechniques automobilistes</a></li>
-                                <li {% if page.url== '/psychologue-bayonne/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/psychologue-bayonne/">Cabinet de Bayonne</a></li>
-                                <li {% if page.url== '/honoraires-du-psychologue/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/honoraires-du-psychologue/">Honoraires du Psychologue</a></li>
-                                <li {% if page.url== '/psychologue-favre/index.html' %} class="navli active" {% else %} class="navli" {% endif %}><a href="/psychologue-favre/">A propos de moi</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-			</header>
-		</div>
+<header class="site-header">
+    <div class="l-container">
+        <a href="{{ site.url }}" class="site-title"><img class="logo" src="/images/logo.png" alt="celie favre psychologue"></a>
+        <i class="icon-menu"></i>
+        <nav class="ui stackable pointing menu">
+            <div class="ui dropdown link item">
+                <span class="text">Psychothérapies</span>
+                <i class="icon-arrow-down"></i>
+                <ul class="menu">
+                    <li class="item"><a href="/emdr-enfants/">Psychothérapies enfants</a></li>
+                    <li class="item"><a href="/emdr-adultes/">Psychothérapies adultes</a></li>
+                    <li class="item"><a href="/emdr/">Thérapie EMDR</a></li>
+                </ul>
+            </div>
+            <div class="ui dropdown link item">
+                <span class="text">Bilans et tests</span>
+                <i class="icon-arrow-down"></i>
+                <ul class="menu">
+                    <li class="item"><a href="/bilan-psychologique/">Bilans psychologiques</a></li>
+                    <li class="item"><a href="/tests-psychotechniques-automobilistes/">Tests psychotechniques automobilistes</a></li>
+                </ul>
+            </div>
+            <a class="item" href="/honoraires-du-psychologue/">Honoraires du psychologue</a>
+            <a class="item" href="/psychologue-bayonne/">Cabinet de Bayonne</a>
+            <a class="item" href="/psychologue-favre/">&Agrave; propos de moi</a>
+        </nav>
+    </div>
+</header>

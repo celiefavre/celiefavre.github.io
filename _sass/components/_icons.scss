@@ -1,4 +1,17 @@
-.caption--bilan:after ,
+.icon-menu {
+    font-size: 4em;
+    color: color(primary-color-dark);
+    position: absolute;
+    right: .3em;
+    top: .3em;
+    cursor: pointer;
+
+    @include susy-media($tablet-portrait) {
+        display: none;
+    }
+}
+
+.caption--bilan:after,
 .caption--psycho:after {
     margin-left: 1em;
     font-family: icomoon;
@@ -15,10 +28,26 @@
 .icon-home,
 .icon-automobile,
 .icon-wheelchair {
-    padding-right :.5em;
+    padding-right: .5em;
 
     &:before {
-        font-size :1.5em;
+        font-size: 1.5em;
         color: $rouge;
     }
+}
+
+.icon-arrow-down {
+    margin-left: .3em;
+}
+
+.icon-arrow-down:before {
+    font-size: .8em;
+}
+
+.svg-primary {
+    fill: color(primary-color-dark);
+}
+
+.svg-primary-light {
+    fill: color-darker(primary-color, 4);
 }

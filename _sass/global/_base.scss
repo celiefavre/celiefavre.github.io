@@ -9,15 +9,14 @@ h1, h2, h3, h4 {
 
 h1 {
 	font-size: $fs-h1--phone;
+    margin-top: 0;
 	font-weight: 400;
-	color: darken($bleu, 6);
-    background: mix($bleu, #fff, 5);
-    line-height :2;
+	color: color(primary-color-dark);
 	letter-spacing: -1;
-	border-bottom: 1px dotted #4A4A4A;
+	border-bottom: 1px dotted color(divider-color);
 	@include susy-breakpoint($tablet-portrait) {
 		font-size: $fs-h1--desktop;
-		padding-left: gutter();
+        line-height: 2;
 	}
 }
 h2 {
@@ -56,4 +55,8 @@ a {
 
 strong {
 	color: darken($bleu, 10);
+}
+
+li {
+    list-style-type: none;
 }
