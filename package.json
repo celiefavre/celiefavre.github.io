@@ -8,7 +8,7 @@
     "browser-sync": "^2.7.12",
     "csscomb": "^4.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-livereload": "^3.8.0",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.0.1",

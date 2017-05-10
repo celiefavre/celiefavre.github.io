@@ -13,9 +13,23 @@ description: Célie Favre, psychologue à Bayonne. Thérapie EMDR, bilans, adult
 			<p><i class="icon-wheelchair"></i>Le cabinet est situé au troisième étage et l'immeuble possède un ascenseur.</p>
 			<h2><i class="icon-phone"></i> Contact et prise de RV</h2>
 			<span class="tel">06 52 46 76 36</span>
-			<p>Si je suis en consultation, veuillez laissez un message avec vos coordonnées afin d'être rappelé.</p>
+			<p>Si je suis en consultation, laisser un message avec vos coordonnées afin d'être rappelé.</p>
 			<h3>Plan d'accès</h3>
-			<div id="map-canvas"></div>
+            <div id="map-canvas"></div>
+            <script>
+              function initMap() {
+                var celie = {lat: 43.4936981, lng: -1.4765989999999647};
+                var map = new google.maps.Map(document.getElementById('map-canvas'), {
+                  center: celie,
+                  scrollwheel: false,
+                  zoom: 14
+                });
+                var marker = new google.maps.Marker({
+                  position: celie,
+                  map: map
+                });
+              }
+            </script>
 		</div>
 
 		<div class="column-right">
